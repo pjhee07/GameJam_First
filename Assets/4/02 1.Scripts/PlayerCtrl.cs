@@ -36,6 +36,7 @@ public class PlayerCtrl : MonoBehaviour
     private void Update()
     {
         Facing();
+        Attack();
     }
     private void FixedUpdate()
     {
@@ -80,7 +81,7 @@ public class PlayerCtrl : MonoBehaviour
 
     void Attack()
     {
-        if (Input.GetButtonDown("0"))
+        if (Input.GetMouseButtonDown(0))
         {
 
         }
