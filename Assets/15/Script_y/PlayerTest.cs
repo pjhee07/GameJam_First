@@ -20,7 +20,14 @@ public class PlayerTest : MonoBehaviour
         transform.position += new Vector3(x, 0,0) * speed * Time.deltaTime;
 
         
-        
+        if(x==0)
+        {
+            GameManager.Instance.Movement = false;
+        }
+        else
+        {
+            GameManager.Instance.Movement = true;
+        }
        
     }
 }

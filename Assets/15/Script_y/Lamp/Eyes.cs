@@ -9,17 +9,23 @@ public class Eyes : MonoBehaviour
 
     [SerializeField] private GameObject eye;
 
-    private void Start()
+   
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (GameManager.Instance.Movement==false)
+        if (collision.CompareTag("Player") && GameManager.Instance.Movement == true)
         {
-            Debug.Log("dsasdfs");
-        
+            Debug.Log("ddddddddddd");
         }
-        
     }
 
-  
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player") && GameManager.Instance.Movement == true)
+        {
+            Debug.Log("asfsadfdasf");
+        }
+    }
 
 
 

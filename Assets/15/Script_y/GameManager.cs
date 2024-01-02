@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
-    public bool Movement;
+    public bool Movement = false;
 }
