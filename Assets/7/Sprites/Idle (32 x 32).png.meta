@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8dec929e4a7655c44bdf6841b9228094
+guid: dee039c61990cf6419568285b1f81447
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -149,43 +149,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Trailer Assets_0
+      name: Idle (32 x 32)_0
       rect:
         serializedVersion: 2
-        x: 166
-        y: 239
-        width: 27
-        height: 36
+        x: 6
+        y: 0
+        width: 19
+        height: 25
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 344f3227d8c93b34fbffd629d4b1ad99
-      internalID: 996220404
+      spriteID: 291c4a28ac8d7cc4890d2637777694bc
+      internalID: -786156753
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Trailer Assets_1
+      name: Idle (32 x 32)_1
       rect:
         serializedVersion: 2
-        x: 112
-        y: 431
-        width: 27
-        height: 36
+        x: 38
+        y: 0
+        width: 19
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 1, w: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01c66ca4e2bb10546baf82f0f70879c6
-      internalID: -1176462737
+      spriteID: a4543897e842b4f4fa1e7351f66b34da
+      internalID: 335808824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle (32 x 32)_2
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 0
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbe703604d6b62740be0a56524edd4c7
+      internalID: -1244751411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle (32 x 32)_3
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 0
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a89f820e1664af94cb63c8822d24ca42
+      internalID: -92385875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle (32 x 32)_4
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 0
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4efddcc4667994847a38f812427f3590
+      internalID: -2013429843
       vertices: []
       indices: 
       edges: []
@@ -201,8 +264,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Trailer Assets_0: 996220404
-      Trailer Assets_1: -1176462737
+      Idle (32 x 32)_0: -786156753
+      Idle (32 x 32)_1: 335808824
+      Idle (32 x 32)_2: -1244751411
+      Idle (32 x 32)_3: -92385875
+      Idle (32 x 32)_4: -2013429843
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
