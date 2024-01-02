@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+using Random = UnityEngine.Random;
 
 public class EnemyMove : MonoBehaviour
 {
@@ -8,6 +10,7 @@ public class EnemyMove : MonoBehaviour
     public int nextMove; //행동지표를 결정할 변수
     SpriteRenderer spriteRenderer;
 
+    public Action<int> onMoveChanged;
 
     void Awake()
     {
@@ -34,7 +37,7 @@ public class EnemyMove : MonoBehaviour
 
         if (rayHit.collider == null)
         {
-            Debug.Log("경고! 이 앞 낭떨어지다!");
+            Debug.Log("떨어진다aaaa");
             nextMove = nextMove * (-1); // 낭떠러지에 닿으면 1보 후퇴
             CancelInvoke(); //모든 Invoke함수를 멈추고 다시 생각
             Invoke("Think", 5);
@@ -50,18 +53,25 @@ public class EnemyMove : MonoBehaviour
     {
         nextMove = Random.Range(-1, 2); //-1이면 왼쪽, 0이면 멈추기, 
         // 1이면 오른쪽으로 이동
-        Invoke("Think", 5);
+        float nextThinkTime = Random.Range(2, 5);
+        Invoke("Think", nextThinkTime); //재귀
+        onMoveChanged?.Invoke(nextMove);
+
     }
 
     void Facing()
     {
         if (nextMove < 0)
-            spriteRenderer.flipX = false;
-        else if (nextMove > 0)
             spriteRenderer.flipX = true;
+        else if (nextMove > 0)
+            spriteRenderer.flipX = false;
         //0일때는 그대로
+            
+    }
 
-            
-            
+    void Attack()
+    {
+        //플레이어 감지 시 이동 멈추고 공격
+        //RaycastHit2D DetectPlayer = Physics2D.Raycast()
     }
 }
