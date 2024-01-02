@@ -28,7 +28,7 @@ public class Enemy : MonoBehaviour
     private void Awake()
     {
         mainCam = Camera.main;
-        playerCtrl = GameObject.Find("Player").GetComponent<PlayerCtrl>();
+        playerCtrl = GameObject.FindWithTag("PLAYER").GetComponent<PlayerCtrl>();
         
     }
 
@@ -64,7 +64,7 @@ public class Enemy : MonoBehaviour
         atkSpeed = _atkSpeed;
     }
 
-    private void OnTriggerEnter2D(Collider2D col)
+    private void OnTriggerStay2D(Collider2D col) //stay?
     {
         if (col.gameObject.CompareTag("HAMMER"))
         {
