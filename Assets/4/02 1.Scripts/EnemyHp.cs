@@ -10,6 +10,7 @@ public class EnemyHp : MonoBehaviour
     RectTransform hpBar;
 
     public float height = 1.7f;
+    Camera mainCam = Camera.main;
 
     void Start()
     {
@@ -20,7 +21,7 @@ public class EnemyHp : MonoBehaviour
     void Update()
     {
         Vector3 _hpBarPos =
-            Camera.main.WorldToScreenPoint(new Vector3(transform.position.x, transform.position.y + height, 0)); //¿ùµå ÁÂÇ¥¸¦ ½ºÅ©¸° ÁÂÇ¥ Áï, UIÁÂÇ¥·Î ¹Ù²ãÁÜ.
+            mainCam.WorldToScreenPoint(new Vector3(transform.position.x, transform.position.y + height, 0)); //¿ùµå ÁÂÇ¥¸¦ ½ºÅ©¸° ÁÂÇ¥ Áï, UIÁÂÇ¥·Î ¹Ù²ãÁÜ.
         hpBar.position = _hpBarPos; //½ºÅ©¸° ÁÂÇ¥·Î ¹Ù²Û °ªÀ¸·Î Ã¼·Â¹Ù¸¦ ÀÌµ¿½ÃÄ×½À´Ï´Ù.
     }
 }
