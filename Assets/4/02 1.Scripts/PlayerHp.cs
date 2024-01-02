@@ -18,7 +18,7 @@ public class PlayerHp : MonoBehaviour
 
     private void Update()
     {
-        currentHpBar.fillAmount = (float)currentHp / (float)maxHp; //전체체력 분의 현재체력
+      //currentHpBar.fillAmount = (float)currentHp / (float)maxHp; //전체체력 분의 현재체력
         
     }
 
