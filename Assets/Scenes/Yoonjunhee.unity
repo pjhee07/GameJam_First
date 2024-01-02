@@ -1016,6 +1016,7 @@ GameObject:
   m_Component:
   - component: {fileID: 893251265}
   - component: {fileID: 893251264}
+  - component: {fileID: 893251266}
   m_Layer: 0
   m_Name: 4_NPC
   m_TagString: Untagged
@@ -1090,6 +1091,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &893251266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 893251263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb2a8a93b99c88e45816a078db67322d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextCanvas: {fileID: 1708452095}
+  textso: {fileID: 11400000, guid: e66327f30bcecdb4593223c2ae7ffffe, type: 2}
+  Textdiaglue:
+  - 
+  - 
+  - 
+  diagule: []
 --- !u!1 &936650354
 GameObject:
   m_ObjectHideFlags: 0
@@ -2338,7 +2358,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2009401562}
-  - component: {fileID: 2009401561}
   m_Layer: 0
   m_Name: TextManager
   m_TagString: Untagged
@@ -2346,24 +2365,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2009401561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2009401560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb2a8a93b99c88e45816a078db67322d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TextCanvas: {fileID: 1708452095}
-  Textdiaglue:
-  - helll world
-  - asdfsfsd
-  - wat the fuck
-  diagule: []
 --- !u!4 &2009401562
 Transform:
   m_ObjectHideFlags: 0

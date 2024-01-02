@@ -7,21 +7,19 @@ public class TextManager : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI TextCanvas;
 
-    [SerializeField] private string[] Textdiaglue;
-
-    [SerializeField] private string[] diagule;
-
-    int num;
-
+    [SerializeField] private TextSO textso;
+   
+    int num=0;
 
     private void Start()
     {
-        StartTalking(Textdiaglue);
+        StartTalking(textso.text);
     }
-    private void StartTalking(string[] talk)
+
+    public void StartTalking(string[] talk)
     {
-        diagule = talk;
-        StartCoroutine(TextRotine(diagule[num]));
+        //textso.text = talk;
+        StartCoroutine(TextRotine(talk[num]));
     }
 
     private void NextTalk()
@@ -29,13 +27,13 @@ public class TextManager : MonoBehaviour
         TextCanvas.text = null;
 
         num++;
-        if(num==diagule.Length)
+        if(num==textso.text.Length)
         {
             EndTalking();
             return;
         }
 
-        StartCoroutine(TextRotine(diagule[num]));
+        StartCoroutine(TextRotine(textso.text[num]));
     }
 
     private void EndTalking()
@@ -49,7 +47,7 @@ public class TextManager : MonoBehaviour
 
         for(int i=0; i<Story.Length;i++)
         {
-            TextCanvas.text += Story[i];
+            TextCanvas.text = TextCanvas.text + Story[i];
             yield return new WaitForSeconds(0.05f);
         }
 
