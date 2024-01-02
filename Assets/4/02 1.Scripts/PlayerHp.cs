@@ -7,21 +7,18 @@ public class PlayerHp : MonoBehaviour
 {
     public int maxHp;
     public int currentHp;
-    
-    public Image currentHpBar;
+
+    [SerializeField] Image currentHpBar;
 
     private void Start()
     {
         maxHp = 5;
         currentHp = maxHp;
+        currentHpBar.fillAmount = (float)currentHp / (float)maxHp;
     }
 
-    private void Update()
+    void TakeDamage(int damageAmount)
     {
-      //currentHpBar.fillAmount = (float)currentHp / (float)maxHp; //전체체력 분의 현재체력
-        
+
     }
-
-
-
 }

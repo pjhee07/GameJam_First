@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using System;
 public class Enemy : MonoBehaviour
 {
     public GameObject prfHpBar;
@@ -22,11 +22,14 @@ public class Enemy : MonoBehaviour
     PlayerCtrl playerCtrl;
     Image currentHpbar;
 
+    public Action onDeadChanged;
+
 
     private void Awake()
     {
         mainCam = Camera.main;
-        playerCtrl = transform.Find("Player").gameObject.GetComponent<PlayerCtrl>();
+        playerCtrl = GameObject.Find("Player").GetComponent<PlayerCtrl>();
+        
     }
 
     void Start()
@@ -61,4 +64,23 @@ public class Enemy : MonoBehaviour
         atkSpeed = _atkSpeed;
     }
 
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.CompareTag("HAMMER"))
+        {
+            Debug.Log(col.gameObject.tag);
+            if (playerCtrl.attacked)
+            {
+                currentHp -= playerCtrl.atkDmg;
+                Debug.Log(currentHp);
+                if (currentHp <= 0) //Àû »ç¸Á
+                {
+                    //»ç¸Á ¾Ö´Ï¸ÞÀÌ¼Ç
+                    onDeadChanged.Invoke();
+                    
+                    
+                }
+            }
+        }
+    }
 }

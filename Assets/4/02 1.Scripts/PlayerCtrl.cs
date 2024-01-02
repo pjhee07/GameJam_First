@@ -53,8 +53,6 @@ public class PlayerCtrl : MonoBehaviour
     }
 
         
-        
-
 
     private void Update()
     {
