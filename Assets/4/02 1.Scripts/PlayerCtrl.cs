@@ -9,6 +9,8 @@ public class PlayerCtrl : MonoBehaviour
     [SerializeField] float jumpForce = 7f;
     [SerializeField] float moveSpeed;
     [SerializeField] bool isJump;
+    [SerializeField] bool isDash;
+    [SerializeField] float dashCoolTime = 3f;
 
     float hor;
     float defaultSpeed = 3f;
@@ -18,9 +20,11 @@ public class PlayerCtrl : MonoBehaviour
     public Action<float> onRunChanged;
     public Action<bool> onJumpChanged;
     public Action onAttackChanged;
+    public Action onDashChanged;
 
     Camera mainCam;
     SpriteRenderer spriteRenderer;
+    TrailRenderer trailRenderer;
 
 
 
@@ -29,8 +33,10 @@ public class PlayerCtrl : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         moveSpeed = defaultSpeed;
         isJump = false;
+        isDash = false;
         mainCam = Camera.main;
         spriteRenderer = GetComponent<SpriteRenderer>();
+        trailRenderer = GetComponentInChildren<TrailRenderer>();
     }
 
 
@@ -38,6 +44,7 @@ public class PlayerCtrl : MonoBehaviour
     {
         Facing();
         Attack();
+        Dash();
     }
     private void FixedUpdate()
     {
@@ -49,7 +56,26 @@ public class PlayerCtrl : MonoBehaviour
     {
         hor = Input.GetAxisRaw("Horizontal");
         rigid.velocity = new Vector2(hor * moveSpeed, rigid.velocity.y);
-        onRunChanged?.Invoke(rigid.velocity.magnitude);
+        onRunChanged?.Invoke(hor*moveSpeed);
+    }
+
+    void Dash()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftShift) && !isDash)
+            StartCoroutine(DashRoutine()); //startCoroutine
+        
+    }
+
+    IEnumerator DashRoutine()
+    {
+        isDash = true;
+        moveSpeed = dashSpeed;
+        trailRenderer.emitting = true;
+        yield return new WaitForSeconds(0.5f);
+        trailRenderer.emitting = false;
+        moveSpeed = defaultSpeed;
+        yield return new WaitForSeconds(dashCoolTime);
+        isDash = false;
     }
 
     void Facing()
@@ -92,8 +118,10 @@ public class PlayerCtrl : MonoBehaviour
     void OnCollisionEnter2D(Collision2D coll)
     {
         if (coll.collider.CompareTag("MAP"))
+        {
             isJump = false;
-        onJumpChanged?.Invoke(isJump);
+            onJumpChanged?.Invoke(isJump);
+        }
 
     }
 

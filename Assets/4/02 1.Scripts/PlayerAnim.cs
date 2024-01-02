@@ -7,10 +7,10 @@ public class PlayerAnim : MonoBehaviour
     Animator anim;
     PlayerCtrl playerCtrl;
 
-
     private void Awake()
     {
         playerCtrl = GetComponent<PlayerCtrl>(); //¡÷¿«
+
     }
 
     private void Start()
@@ -29,7 +29,8 @@ public class PlayerAnim : MonoBehaviour
 
     void onRun(float hor)
     {
-        anim.SetFloat("Hor", hor);
+        //Mathf.Abs(hor);
+        anim.SetFloat("Hor", Mathf.Abs(hor));
     }
 
     void onJump(bool isJump)
@@ -41,6 +42,7 @@ public class PlayerAnim : MonoBehaviour
     {
         anim.SetTrigger("Attack");
     }
+
 
 
 }
