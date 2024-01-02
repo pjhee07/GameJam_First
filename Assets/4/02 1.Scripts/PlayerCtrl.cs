@@ -17,6 +17,7 @@ public class PlayerCtrl : MonoBehaviour
     Rigidbody2D rigid;
     public Action<float> onRunChanged;
     public Action<bool> onJumpChanged;
+    public Action onAttackChanged;
 
     Camera mainCam;
     SpriteRenderer spriteRenderer;
@@ -68,12 +69,13 @@ public class PlayerCtrl : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            onJumpChanged?.Invoke(isJump);
+            
             if (!isJump)
             {
                 isJump = true;
                 rigid.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             }
+            onJumpChanged?.Invoke(isJump);
 
 
         }
@@ -83,7 +85,7 @@ public class PlayerCtrl : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-
+            onAttackChanged?.Invoke();   
         }
     }
 

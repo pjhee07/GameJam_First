@@ -18,6 +18,13 @@ public class PlayerAnim : MonoBehaviour
         anim = GetComponent<Animator>();
         playerCtrl.onRunChanged += onRun;
         playerCtrl.onJumpChanged += onJump;
+        playerCtrl.onAttackChanged += onAttack;
+    }
+
+    private void OnDestroy()
+    {
+        playerCtrl.onRunChanged -= onRun;
+        playerCtrl.onJumpChanged -= onJump;
     }
 
     void onRun(float hor)
@@ -28,6 +35,11 @@ public class PlayerAnim : MonoBehaviour
     void onJump(bool isJump)
     {
         anim.SetBool("Jump", isJump);
+    }
+
+    void onAttack()
+    {
+        anim.SetTrigger("Attack");
     }
 
 
