@@ -11,10 +11,15 @@ public class PlayerCtrl : MonoBehaviour
     [SerializeField] bool isJump;
     [SerializeField] bool isDash;
     [SerializeField] float dashCoolTime = 3f;
+    public int atkDmg;
+
+    public bool attacked = false; //여러번 공격 방지용
 
     float hor;
     float defaultSpeed = 3f;
     float dashSpeed = 7f;
+
+
 
     Rigidbody2D rigid;
     public Action<float> onRunChanged;
@@ -28,16 +33,27 @@ public class PlayerCtrl : MonoBehaviour
 
 
 
-    void Start()
+    private void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
-        moveSpeed = defaultSpeed;
-        isJump = false;
-        isDash = false;
         mainCam = Camera.main;
         spriteRenderer = GetComponent<SpriteRenderer>();
         trailRenderer = GetComponentInChildren<TrailRenderer>();
     }
+
+
+    void Start()
+    {
+
+        moveSpeed = defaultSpeed;
+        isJump = false;
+        isDash = false;
+
+        atkDmg = 1;
+    }
+
+        
+        
 
 
     private void Update()
@@ -45,6 +61,7 @@ public class PlayerCtrl : MonoBehaviour
         Facing();
         Attack();
         Dash();
+        Talk();
     }
     private void FixedUpdate()
     {
@@ -107,14 +124,6 @@ public class PlayerCtrl : MonoBehaviour
         }
     }
 
-    void Attack()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            onAttackChanged?.Invoke();   
-        }
-    }
-
     void OnCollisionEnter2D(Collision2D coll)
     {
         if (coll.collider.CompareTag("MAP"))
@@ -125,6 +134,33 @@ public class PlayerCtrl : MonoBehaviour
 
     }
 
+    void Attack()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            onAttackChanged?.Invoke();   
+        }
+    }
+
+
+    void AttackTrue()
+    {
+        attacked = true;
+    }
+
+    void AttackFalse()
+    {
+        attacked = false;
+    }
+
+
+    void Talk()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+
+        }
+    }
 
 
 }
