@@ -6,12 +6,12 @@ public class PlayerTest : MonoBehaviour
 {
 
     int speed = 4;
-    public static bool Movement = false;
-
    
 
-    
-    
+
+
+
+
     void Update()
     {
        
@@ -20,9 +20,7 @@ public class PlayerTest : MonoBehaviour
         transform.position += new Vector3(x, 0,0) * speed * Time.deltaTime;
 
         
-        if(x==0)
-        {
-            Movement = true;
-        }
+        
+       
     }
 }
