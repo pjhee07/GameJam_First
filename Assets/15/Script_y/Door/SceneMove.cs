@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item : MonoBehaviour
+public class SceneMove : MonoBehaviour
 {
     [SerializeField] private GameObject EImage;
 
-
+    [SerializeField] private string SceneName;
     private void Update()
     {
         if (EImage.activeSelf && Input.GetKeyDown(KeyCode.E))
         {
-            GameManager.Instance.ItemCountSet();
-            Destroy(gameObject);
+            GameManager.Instance.SceneMovement(SceneName);
+           
         }
 
     }
