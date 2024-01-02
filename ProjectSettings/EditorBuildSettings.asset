@@ -8,4 +8,34 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Map/1_lobe.unity
+    guid: b3886a762790e5d4eba38fd37b0acdce
+  - enabled: 1
+    path: Assets/Scenes/Map/2.unity
+    guid: d627a88954ad8cd4bad41bb2b1cf2887
+  - enabled: 1
+    path: Assets/Scenes/Map/3.unity
+    guid: 3b2764316dac9c54b8d5ce9080bc31e9
+  - enabled: 1
+    path: Assets/Scenes/Map/4.unity
+    guid: a55f97f8e2bc38141aae9b835c3a0472
+  - enabled: 1
+    path: Assets/Scenes/Map/4-2.unity
+    guid: 1c1946136b5ad8342a2bd774f44d0ad2
+  - enabled: 1
+    path: Assets/Scenes/Map/4-3.unity
+    guid: eb20bfcfec2477c459cc9275a1e59bfb
+  - enabled: 1
+    path: Assets/Scenes/Map/4-4.unity
+    guid: 9b67a31733a69934e81f48cec7ab5031
+  - enabled: 1
+    path: Assets/Scenes/Map/5.unity
+    guid: 0a5bd8ee85cd01e47aa35d8785f5cbba
+  - enabled: 1
+    path: Assets/Scenes/Map/6.unity
+    guid: 240f33bae41e48d4f8810e800d7867d4
+  - enabled: 1
+    path: Assets/Scenes/Map/Ending.unity
+    guid: 113cbb7035ae9ce43bcd5aa2c87b61d5
   m_configObjects: {}

@@ -20,16 +20,7 @@ public class Line : MonoBehaviour
         lineRenderer.positionCount = 2;
         LineRendering();
     }
-    private void Start()
-    {
-        mypos = transform.position;
-        currentPos = Target.transform.position;
-        dir = currentPos - mypos;
-        dis = dir.normalized * 7;
-
-      
-    }
-
+   
     
 
     private void LineRendering()
@@ -37,7 +28,7 @@ public class Line : MonoBehaviour
        
         lineRenderer.SetPosition(0, transform.position);
 
-        lineRenderer.SetPosition(1, dis);
+        lineRenderer.SetPosition(1, Target.transform.position);
         Debug.Log("draw");
     }
 }
