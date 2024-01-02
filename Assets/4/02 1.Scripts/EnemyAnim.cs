@@ -23,15 +23,15 @@ public class EnemyAnim : MonoBehaviour
         enemy.onDeadChanged -= OnDead;
     }
 
-
     void OnDead()
     {
         anim.SetTrigger("Dead");
+        
     }
 
     public void DeadAniEvent()
     {
+        Destroy(GameObject.Find("bghp_bar(Clone)"));
         Destroy(gameObject);
-        Destroy(transform.parent.gameObject);
     }
 }
