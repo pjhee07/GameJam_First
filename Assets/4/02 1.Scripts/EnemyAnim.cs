@@ -28,4 +28,9 @@ public class EnemyAnim : MonoBehaviour
     {
         anim.SetTrigger("Dead");
     }
+
+    public void DeadAniEvent()
+    {
+        Destroy(gameObject);
+    }
 }

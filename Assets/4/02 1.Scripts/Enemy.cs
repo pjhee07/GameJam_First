@@ -19,7 +19,7 @@ public class Enemy : MonoBehaviour
     public int atkDmg;
     public int atkSpeed;
 
-    PlayerCtrl playerCtrl;
+    public PlayerCtrl playerCtrl;
     Image currentHpbar;
 
     public Action onDeadChanged;
@@ -28,7 +28,7 @@ public class Enemy : MonoBehaviour
     private void Awake()
     {
         mainCam = Camera.main;
-        playerCtrl = transform.Find("Player").gameObject.GetComponent<PlayerCtrl>();
+        
     }
 
     void Start()
@@ -65,7 +65,7 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.CompareTag("Player"))
+        if (col.gameObject.CompareTag("HAMMER"))
         {
             if (playerCtrl.attacked)
             {
@@ -75,7 +75,7 @@ public class Enemy : MonoBehaviour
                 {
                     //사망 애니메이션
                     onDeadChanged.Invoke();
-                    Destroy(hpBar.gameObject);
+                    
                     
                 }
             }
