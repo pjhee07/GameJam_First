@@ -2311,7 +2311,7 @@ GameObject:
   - component: {fileID: 2069062643}
   - component: {fileID: 2069062645}
   - component: {fileID: 2069062644}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Field
   m_TagString: MAP
   m_Icon: {fileID: 0}

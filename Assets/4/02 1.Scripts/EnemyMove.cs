@@ -30,7 +30,7 @@ public class EnemyMove : MonoBehaviour
         Vector2 frontVec = new Vector2(rigid.position.x + nextMove*0.2f, rigid.position.y);
         Debug.DrawRay(frontVec, Vector3.down, new Color(0, 1, 0)); //시작점,방향,색깔
 
-        RaycastHit2D rayHit = Physics2D.Raycast(frontVec, Vector3.down, 1, LayerMask.GetMask("MAP")); //시작,방향,거리,레이어마스크
+        RaycastHit2D rayHit = Physics2D.Raycast(frontVec, Vector3.down, 1, LayerMask.GetMask("TILEMAP")); //시작,방향,거리,레이어마스크
 
         if (rayHit.collider == null)
         {
