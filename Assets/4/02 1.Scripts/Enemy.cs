@@ -64,7 +64,7 @@ public class Enemy : MonoBehaviour
         atkSpeed = _atkSpeed;
     }
 
-    private void OnTriggerStay2D(Collider2D col) //stay?
+    private void OnTriggerStay2D(Collider2D col) //공격받음
     {
         if (col.gameObject.CompareTag("HAMMER"))
         {
@@ -83,4 +83,6 @@ public class Enemy : MonoBehaviour
             }
         }
     }
+
+
 }
