@@ -32,7 +32,11 @@ public class TextManager : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        EImage.SetActive(true);
+        if(collision.CompareTag("Player"))
+        {
+            EImage.SetActive(true);
+        }
+        
         
     }
 

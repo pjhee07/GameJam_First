@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class Quest : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private GameObject Laber;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        Laber.SetActive(false);
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(GameManager.Flage==true)
+        {
+            Laber.SetActive(true);
+        }
     }
 }
