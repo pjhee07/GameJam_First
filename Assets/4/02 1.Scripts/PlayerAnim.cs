@@ -6,11 +6,12 @@ public class PlayerAnim : MonoBehaviour
 {
     Animator anim;
     PlayerCtrl playerCtrl;
+    public float atkSpeed = 1;
 
     private void Awake()
     {
         playerCtrl = GetComponent<PlayerCtrl>(); //¡÷¿«
-
+        
     }
 
     private void Start()
@@ -19,6 +20,7 @@ public class PlayerAnim : MonoBehaviour
         playerCtrl.onRunChanged += onRun;
         playerCtrl.onJumpChanged += onJump;
         playerCtrl.onAttackChanged += onAttack;
+        SetAttackSpeed(1.5f);
     }
 
     private void OnDestroy()
@@ -43,6 +45,13 @@ public class PlayerAnim : MonoBehaviour
         anim.SetTrigger("Attack");
     }
 
+
+    void SetAttackSpeed(float speed)
+    {
+        anim.SetFloat("AtkSpeed", speed);
+        atkSpeed = speed;
+
+    }
 
 
 }
