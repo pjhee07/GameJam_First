@@ -2124,9 +2124,9 @@ GameObject:
   m_Component:
   - component: {fileID: 595854935769361937}
   - component: {fileID: 4795486998096762840}
-  - component: {fileID: 681324129516026204}
   - component: {fileID: 8739880459590722420}
   - component: {fileID: 3482161495053823691}
+  - component: {fileID: 8739880459590722421}
   m_Layer: 0
   m_Name: Laber
   m_TagString: Untagged
@@ -2215,20 +2215,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 250c32a9d08bde24ba6ceec9ebdaf809, type: 3}
---- !u!114 &681324129516026204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 204665902795272678}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a89b31ade1e49b468a7e140551aac52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EImage: {fileID: 6352605684836493038}
-  dor2: {fileID: 2568317921463555431}
 --- !u!212 &939233385649487354
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2574,6 +2560,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &8739880459590722421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204665902795272678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c8d0a1cd18ac3147bc379203e8ee972, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EImage: {fileID: 6352605684836493038}
+  dor2: {fileID: 2568317921463555431}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
