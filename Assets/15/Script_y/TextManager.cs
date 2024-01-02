@@ -5,15 +5,41 @@ using TMPro;
 
 public class TextManager : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI TextCanvas;
+    [SerializeField] private GameObject TextCanvas;
+    [SerializeField] private TextMeshProUGUI Texts;
 
+    [SerializeField] private GameObject EImage;
     [SerializeField] private TextSO textso;
    
     int num=0;
 
     private void Start()
     {
-        StartTalking(textso.text);
+        EImage.SetActive(false);
+        TextCanvas.SetActive(false);
+    }
+
+    private void Update()
+    {
+        if (EImage.activeSelf && Input.GetKeyDown(KeyCode.E))
+        {
+            TextCanvas.SetActive(true);
+            StartTalking(textso.text);
+            Debug.Log("Ω√¿€");
+        }
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        EImage.SetActive(true);
+        
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        EImage.SetActive(false);
+        TextCanvas.SetActive(false);
     }
 
     public void StartTalking(string[] talk)
@@ -24,7 +50,7 @@ public class TextManager : MonoBehaviour
 
     private void NextTalk()
     {
-        TextCanvas.text = null;
+        Texts.text = null;
 
         num++;
         if(num==textso.text.Length)
@@ -39,15 +65,16 @@ public class TextManager : MonoBehaviour
     private void EndTalking()
     {
         num = 0;
+        TextCanvas.SetActive(false);
     }
 
     IEnumerator TextRotine(string Story)
     {
-        TextCanvas.text = null;
+        Texts.text = null;
 
         for(int i=0; i<Story.Length;i++)
         {
-            TextCanvas.text = TextCanvas.text + Story[i];
+            Texts.text = Texts.text + Story[i];
             yield return new WaitForSeconds(0.05f);
         }
 
