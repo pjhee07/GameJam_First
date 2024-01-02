@@ -7,15 +7,18 @@ public class Leber : MonoBehaviour
     [SerializeField] private GameObject EImage;
     private bool DoorFlage = false;
     Door door;
-
+    Animator animator;
     private void Start()
     {
+        animator = GetComponent<Animator>();
         door = GetComponentInChildren<Door>();
+        
     }
     private void Update()
     {
         if(DoorFlage==true&&Input.GetKeyDown(KeyCode.E))
         {
+            animator.SetTrigger("On");
             door.enabled = true;
         }
     }
