@@ -19,7 +19,7 @@ public class Enemy : MonoBehaviour
     public int atkDmg;
     public int atkSpeed;
 
-    public PlayerCtrl playerCtrl;
+    PlayerCtrl playerCtrl;
     Image currentHpbar;
 
     public Action onDeadChanged;
@@ -28,6 +28,7 @@ public class Enemy : MonoBehaviour
     private void Awake()
     {
         mainCam = Camera.main;
+        playerCtrl = GameObject.Find("Player").GetComponent<PlayerCtrl>();
         
     }
 
@@ -67,6 +68,7 @@ public class Enemy : MonoBehaviour
     {
         if (col.gameObject.CompareTag("HAMMER"))
         {
+            Debug.Log(col.gameObject.tag);
             if (playerCtrl.attacked)
             {
                 currentHp -= playerCtrl.atkDmg;

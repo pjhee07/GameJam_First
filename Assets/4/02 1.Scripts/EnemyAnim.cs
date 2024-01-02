@@ -32,5 +32,6 @@ public class EnemyAnim : MonoBehaviour
     public void DeadAniEvent()
     {
         Destroy(gameObject);
+        Destroy(transform.parent.gameObject);
     }
 }
