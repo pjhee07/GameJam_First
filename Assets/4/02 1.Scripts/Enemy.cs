@@ -1,0 +1,64 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class Enemy : MonoBehaviour
+{
+    public GameObject prfHpBar;
+    public GameObject canvas;
+
+    RectTransform hpBar;
+
+    public float height = 1.7f;
+    Camera mainCam;
+
+    public string enemyName;
+    public int maxHp;
+    public int currentHp;
+    public int atkDmg;
+    public int atkSpeed;
+
+    PlayerCtrl playerCtrl;
+    Image currentHpbar;
+
+
+    private void Awake()
+    {
+        mainCam = Camera.main;
+        playerCtrl = transform.Find("Player").gameObject.GetComponent<PlayerCtrl>();
+    }
+
+    void Start()
+    {
+        
+        hpBar = Instantiate(prfHpBar, canvas.transform).GetComponent<RectTransform>(); //UI는 캔버스 안에 있어야함.
+                                                                                       // UI는 transform이 아닌 RectRansform을 사용.
+        if (name.Equals("Ladybird"))
+        {
+            SetEnemyStatus("Ladybird", 1, 1, 1);
+        }
+
+        currentHpbar = hpBar.transform.GetChild(0).GetComponent<Image>();
+
+    }
+
+    void Update()
+    {
+        Vector3 _hpBarPos =
+            mainCam.WorldToScreenPoint(new Vector3(transform.position.x, transform.position.y + height, 0)); //월드 좌표를 스크린 좌표 즉, UI좌표로 바꿔줌.
+        hpBar.position = _hpBarPos; //스크린 좌표로 바꾼 값으로 체력바를 이동.
+        currentHpbar.fillAmount = (float)currentHp / (float)maxHp;
+        //currentHpbar부분은 hpBar의 fillAmount를 현재 남은 피의 양에 따라 달라지게 설정함.
+    }
+
+    void SetEnemyStatus(string _enemyName, int _maxHp, int _atkDmg, int _atkSpeed)
+    {
+        enemyName = _enemyName; //적마다 다른 스텟을 가질 수 있게
+        maxHp = _maxHp;
+        currentHp = _maxHp;
+        atkDmg = _atkDmg;
+        atkSpeed = _atkSpeed;
+    }
+
+}
