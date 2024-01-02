@@ -91,6 +91,8 @@ public class PlayerCtrl : MonoBehaviour
     {
         if (coll.collider.CompareTag("MAP"))
             isJump = false;
+        onJumpChanged?.Invoke(isJump);
+
     }
 
 

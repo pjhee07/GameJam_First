@@ -13,13 +13,13 @@ public class EnemyHp : MonoBehaviour
 
     void Start()
     {
-        hpBar = Instantiate(prfHpBar, canvas.transform).GetComponent<RectTransform>(); //?
+        hpBar = Instantiate(prfHpBar, canvas.transform).GetComponent<RectTransform>(); //체력바를 생성하되 canvas의 자식으로 생성하고, 체력바의 위치 변경을 쉽게 하기 위해 hpBar에 저장한다.
     }
 
     void Update()
     {
-        Vector2 _hpBarPos =
-            Camera.main.ScreenToWorldPoint(new Vector2(transform.position.x, transform.position.y + height));
+        Vector3 _hpBarPos =
+            Camera.main.WorldToScreenPoint(new Vector3(transform.position.x, transform.position.y + height, 0)); //worldToScreenPoint
         hpBar.position = _hpBarPos;
     }
 }
