@@ -9,8 +9,9 @@ public class Item : MonoBehaviour
 
     private void Update()
     {
-        if (EImage.activeSelf && Input.GetKeyDown(KeyCode.F))
+        if (EImage.activeSelf && Input.GetKeyDown(KeyCode.E))
         {
+            GameManager.Instance.ItemCountSet();
             Destroy(gameObject);
         }
 

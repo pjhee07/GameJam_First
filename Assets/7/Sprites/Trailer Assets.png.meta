@@ -157,7 +157,7 @@ TextureImporter:
         width: 27
         height: 36
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -165,6 +165,27 @@ TextureImporter:
       bones: []
       spriteID: 344f3227d8c93b34fbffd629d4b1ad99
       internalID: 996220404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trailer Assets_1
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 431
+        width: 27
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 1, w: 1}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01c66ca4e2bb10546baf82f0f70879c6
+      internalID: -1176462737
       vertices: []
       indices: 
       edges: []
@@ -181,6 +202,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Trailer Assets_0: 996220404
+      Trailer Assets_1: -1176462737
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
