@@ -4,15 +4,31 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private GameObject EImage;
+
+
+    private void Update()
     {
-        
+        if (EImage.activeSelf && Input.GetKeyDown(KeyCode.F))
+        {
+            Destroy(gameObject);
+        }
+
     }
 
-    // Update is called once per frame
-    void Update()
+
+
+
+
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        EImage.SetActive(true);
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        EImage.SetActive(false);
     }
 }

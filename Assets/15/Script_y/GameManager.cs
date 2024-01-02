@@ -5,4 +5,7 @@ using UnityEngine;
 public class GameManager : Singleton<GameManager>
 {
     public bool Movement = false;
+    public int ItemCount = 0;
+
+
 }
