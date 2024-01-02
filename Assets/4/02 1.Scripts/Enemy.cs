@@ -18,6 +18,7 @@ public class Enemy : MonoBehaviour
     public int currentHp;
     public int atkDmg;
     public int atkSpeed;
+    public int atkDistance;
 
     PlayerCtrl playerCtrl;
     Image currentHpbar;
@@ -37,10 +38,7 @@ public class Enemy : MonoBehaviour
         
         hpBar = Instantiate(prfHpBar, canvas.transform).GetComponent<RectTransform>(); //UI는 캔버스 안에 있어야함.
                                                                                        // UI는 transform이 아닌 RectRansform을 사용.
-        if (name.Equals("Ladybird"))
-        {
-            SetEnemyStatus("Ladybird", 1, 1, 1);
-        }
+        GetEnemyStatus();
 
         currentHpbar = hpBar.transform.GetChild(0).GetComponent<Image>();
 
@@ -55,13 +53,21 @@ public class Enemy : MonoBehaviour
         //currentHpbar부분은 hpBar의 fillAmount를 현재 남은 피의 양에 따라 달라지게 설정함.
     }
 
-    void SetEnemyStatus(string _enemyName, int _maxHp, int _atkDmg, int _atkSpeed)
+    void SetEnemyStatus(string _enemyName, int _maxHp, int _atkDmg, int _atkDistance)
     {
         enemyName = _enemyName; //적마다 다른 스텟을 가질 수 있게
         maxHp = _maxHp;
         currentHp = _maxHp;
         atkDmg = _atkDmg;
-        atkSpeed = _atkSpeed;
+        atkSpeed = _atkDistance;
+    }
+
+    void GetEnemyStatus()
+    {
+        if (name.Equals("Ladybird"))
+        {
+            SetEnemyStatus("Ladybird", 1, 1, 3);
+        }
     }
 
     private void OnTriggerStay2D(Collider2D col) //공격받음

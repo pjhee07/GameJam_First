@@ -7,18 +7,23 @@ public class EnemyMove : MonoBehaviour
     Rigidbody2D rigid;
     public int nextMove; //행동지표를 결정할 변수
     SpriteRenderer spriteRenderer;
-
+    Vector2 frontVec;
+    Enemy enemy;
+    PlayerHp playerHp;
 
     void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
         Invoke("Think", 3);
         spriteRenderer = GetComponent<SpriteRenderer>();
+        enemy = GetComponent<Enemy>();
+        playerHp = GameObject.FindWithTag("Player").GetComponent<PlayerHp>();
     }
 
     private void Update()
     {
         Facing();
+        Attack();
     }
     void FixedUpdate()
     {
@@ -27,7 +32,7 @@ public class EnemyMove : MonoBehaviour
 
         //플랫폼 체크
         //몬스터는 앞을 체크해야
-        Vector2 frontVec = new Vector2(rigid.position.x + nextMove*0.2f, rigid.position.y);
+        frontVec = new Vector2(rigid.position.x + nextMove*0.2f, rigid.position.y);
         Debug.DrawRay(frontVec, Vector3.down, new Color(0, 1, 0)); //시작점,방향,색깔
 
         RaycastHit2D rayHit = Physics2D.Raycast(frontVec, Vector3.down, 1, LayerMask.GetMask("TILEMAP")); //시작,방향,거리,레이어마스크
@@ -65,6 +70,19 @@ public class EnemyMove : MonoBehaviour
 
     void Attack()
     {
-        //RaycastHit2D DectectPlayer = Physics2D.Raycast(transform.position.x + nextMove, new Vector2(nextMove, 0));
+        RaycastHit2D DetectPlayer = Physics2D.Raycast(frontVec, new Vector2(nextMove, 0), enemy.atkDistance, LayerMask.GetMask("PLAYER"));
+        if(DetectPlayer.collider != null)
+        {
+            //공격 애니메이션 action 
+            //테이크데이미지 enemy.공격력-=
+            TakgeDamage(enemy.atkDmg, playerHp.currentHp);
+        }
     }
+
+    void TakgeDamage(int damage, int targetHp)
+    {
+        targetHp -= damage;
+    }
+
+
 }
