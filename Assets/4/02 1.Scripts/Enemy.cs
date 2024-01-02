@@ -17,7 +17,7 @@ public class Enemy : MonoBehaviour
     public int maxHp;
     public int currentHp;
     public int atkDmg;
-    public int atkSpeed;
+    public int atkSpeed; //공격속도(쿨타임)
     public int atkDistance;
 
     PlayerCtrl playerCtrl;
@@ -53,20 +53,21 @@ public class Enemy : MonoBehaviour
         //currentHpbar부분은 hpBar의 fillAmount를 현재 남은 피의 양에 따라 달라지게 설정함.
     }
 
-    void SetEnemyStatus(string _enemyName, int _maxHp, int _atkDmg, int _atkDistance)
+    void SetEnemyStatus(string _enemyName, int _maxHp, int _atkDmg, int _atkDistance, int _atkSpeed)
     {
         enemyName = _enemyName; //적마다 다른 스텟을 가질 수 있게
         maxHp = _maxHp;
         currentHp = _maxHp;
         atkDmg = _atkDmg;
-        atkSpeed = _atkDistance;
+        atkDistance = _atkDistance;
+        atkSpeed = _atkSpeed;
     }
 
     void GetEnemyStatus()
     {
         if (name.Equals("Ladybird"))
         {
-            SetEnemyStatus("Ladybird", 1, 1, 3);
+            SetEnemyStatus("Ladybird", 1, 1, 3,2);
         }
     }
 
