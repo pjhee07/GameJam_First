@@ -61,7 +61,10 @@ public class EnemyMove : MonoBehaviour
             spriteRenderer.flipX = true;
         //0일때는 그대로
 
-            
-            
+    }
+
+    void Attack()
+    {
+        //RaycastHit2D DectectPlayer = Physics2D.Raycast(transform.position.x + nextMove, new Vector2(nextMove, 0));
     }
 }
