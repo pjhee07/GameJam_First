@@ -1414,6 +1414,7 @@ GameObject:
   - component: {fileID: 1135532283}
   - component: {fileID: 1135532285}
   - component: {fileID: 1135532286}
+  - component: {fileID: 1135532287}
   m_Layer: 0
   m_Name: Ladybird
   m_TagString: Untagged
@@ -1464,7 +1465,7 @@ SpriteRenderer:
   m_SortingOrder: 5
   m_Sprite: {fileID: -912769250, guid: 955617270cd95cd4bbf6bc84ef44006a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -1603,6 +1604,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc500a6afc52afc41b1a499e2e403eb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1135532287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135532279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37e3ef5c3f6aac74d97b57576a367327, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextMove: 0
 --- !u!1 &1466764620
 GameObject:
   m_ObjectHideFlags: 0

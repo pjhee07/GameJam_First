@@ -68,11 +68,11 @@ public class Enemy : MonoBehaviour
     {
         if (col.gameObject.CompareTag("HAMMER"))
         {
-            Debug.Log(col.gameObject.tag);
+            //Debug.Log(col.gameObject.tag);
             if (playerCtrl.attacked)
             {
                 currentHp -= playerCtrl.atkDmg;
-                Debug.Log(currentHp);
+                //Debug.Log(currentHp);
                 if (currentHp <= 0) //Àû »ç¸Á
                 {
                     //»ç¸Á ¾Ö´Ï¸ÞÀÌ¼Ç
