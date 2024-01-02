@@ -33,4 +33,9 @@ public class PlayerHp : MonoBehaviour
         currentHpBar.fillAmount = (float)currentHp / (float)maxHp;
     }
 
+    public void TakeDamage(int damage)
+    {
+        currentHp -= damage;
+    }
+
 }
