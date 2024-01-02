@@ -7,6 +7,7 @@ TagManager:
   - MAP
   - PLAYER
   - HAMMER
+  - ENEMY
   layers:
   - Default
   - TransparentFX
@@ -14,7 +15,7 @@ TagManager:
   - TILEMAP
   - Water
   - UI
-  - 
+  - PLAYER
   - 
   - 
   - 

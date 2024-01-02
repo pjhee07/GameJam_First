@@ -893,7 +893,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &841767689
 Transform:
   m_ObjectHideFlags: 0
@@ -1417,7 +1417,7 @@ GameObject:
   - component: {fileID: 1135532287}
   m_Layer: 0
   m_Name: Ladybird
-  m_TagString: Untagged
+  m_TagString: ENEMY
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1559,12 +1559,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prfHpBar: {fileID: 5450285648010446613, guid: f88be39d037f5ab48ac2c09962d8ac20, type: 3}
   canvas: {fileID: 535554486}
-  height: 1.5
+  height: 0.7
   enemyName: Ladybird
   maxHp: 1
   currentHp: 1
   atkDmg: 1
   atkSpeed: 1
+  atkDistance: 0
 --- !u!50 &1135532285
 Rigidbody2D:
   serializedVersion: 4
@@ -1616,7 +1617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37e3ef5c3f6aac74d97b57576a367327, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextMove: 0
+  nextMove: 3
 --- !u!1 &1466764620
 GameObject:
   m_ObjectHideFlags: 0
@@ -2091,7 +2092,7 @@ GameObject:
   - component: {fileID: 1796979801}
   - component: {fileID: 1796979800}
   - component: {fileID: 1796979799}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: PLAYER
   m_Icon: {fileID: 0}
