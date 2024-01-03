@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
+    [SerializeField] private string ReSceneName;
+
     public void Startgame()
     {
         StartCoroutine(GameManager.Instance.FadeOut());
@@ -15,5 +17,11 @@ public class UIManager : MonoBehaviour
     {
         Application.Quit();
         Debug.Log("Bye!");
+    }
+
+
+    public void ReturnBtn()
+    {
+        GameManager.Instance.SceneMovement(ReSceneName);
     }
 }
