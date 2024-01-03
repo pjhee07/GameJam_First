@@ -181,7 +181,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 726471874, guid: de9374faffbdf3145ae77ded5c97ca12, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -202,7 +202,7 @@ Transform:
   m_GameObject: {fileID: 29546999}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.6, y: -3.29, z: 0}
+  m_LocalPosition: {x: 2.6, y: -2.91, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1496,7 +1496,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 335550533, guid: de9374faffbdf3145ae77ded5c97ca12, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2385,7 +2385,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1494481942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3033,10 +3033,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: asfdsf
+  m_text: "\uC2DC\uC791\uD558\uAE30\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9484733d3afd3334baf2e73109144564, type: 2}
-  m_sharedMaterial: {fileID: -1874807564082635732, guid: 9484733d3afd3334baf2e73109144564, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4b462673e991bb14f89c53042aa980d3, type: 2}
+  m_sharedMaterial: {fileID: -6025705425510169820, guid: 4b462673e991bb14f89c53042aa980d3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
