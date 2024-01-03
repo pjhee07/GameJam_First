@@ -6,6 +6,7 @@ public class ButnPush : MonoBehaviour
 {
     Animator anim;
     BoxCollider2D box;
+    [SerializeField] private GameObject brigde;
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -19,8 +20,12 @@ public class ButnPush : MonoBehaviour
         if(collision.CompareTag("Object"))
         {
             anim.SetTrigger("Push");
-            box.enabled = false;
             GameManager.Instance.PusCountSet();
+            box.enabled = false;
+           if(GameManager.Instance.PushFlage==true)
+            {
+                brigde.SetActive(true);
+            }
         }
     }
 }

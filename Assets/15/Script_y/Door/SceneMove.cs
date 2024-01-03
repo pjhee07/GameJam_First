@@ -11,21 +11,15 @@ public class SceneMove : MonoBehaviour
     {
         if (EImage.activeSelf && Input.GetKeyDown(KeyCode.E))
         {
-            StartCoroutine(GameManager.Instance.FadeOut());
-            StartCoroutine(DelayRotine());
-           
-           
+
+            GameManager.Instance.SceneMovement(SceneName);
+
         }
 
     }
 
 
 
-    IEnumerator DelayRotine()
-    {
-        yield return new WaitForSeconds(5f);
-        GameManager.Instance.SceneMovement(SceneName);
-    }
 
 
 
