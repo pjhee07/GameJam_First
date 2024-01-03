@@ -153,9 +153,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Movement: 0
+  PushFlage: 0
   PushCount: 0
   FadeImage: {fileID: 0}
-  brigde: {fileID: 0}
   PushUpBtnCount: 0
 --- !u!4 &339296210
 Transform:
@@ -256,8 +256,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -789,7 +789,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 1265859772, guid: 6e4e512a77cd29947abe09ba2cf9e2ef, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1

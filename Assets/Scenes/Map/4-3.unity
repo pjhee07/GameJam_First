@@ -700,10 +700,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4083167207973187895, guid: 14e983eb7d748a14c8bbba0889f72c6c, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5314623984066132261, guid: 14e983eb7d748a14c8bbba0889f72c6c, type: 3}
       propertyPath: m_Name
       value: lamp
@@ -2426,6 +2422,10 @@ PrefabInstance:
     - target: {fileID: 1588386038195677020, guid: 14e983eb7d748a14c8bbba0889f72c6c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4083167207973187895, guid: 14e983eb7d748a14c8bbba0889f72c6c, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5314623984066132261, guid: 14e983eb7d748a14c8bbba0889f72c6c, type: 3}
       propertyPath: m_Name

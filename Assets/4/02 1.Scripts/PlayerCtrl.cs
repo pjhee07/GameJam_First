@@ -67,6 +67,7 @@ public class PlayerCtrl : MonoBehaviour
         Attack();
         Dash();
         Talk();
+        Jump();
         currentTime += Time.deltaTime;
         //Falldown();
 
@@ -75,7 +76,6 @@ public class PlayerCtrl : MonoBehaviour
     {
         Run();
         movementJude();
-        Jump();
     }
 
     void Run()
@@ -180,10 +180,10 @@ public class PlayerCtrl : MonoBehaviour
         }
     }
 
-    public void KnockBack()
+    /*public void KnockBack()
     {
         rigid.AddForce(-transform.right * pushForce, ForceMode2D.Impulse);
-    }
+    }*/
 
   /*  void Falldown()
     {
