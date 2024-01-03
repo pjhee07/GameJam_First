@@ -3192,6 +3192,10 @@ PrefabInstance:
       propertyPath: currentHpBar
       value: 
       objectReference: {fileID: 1471459507}
+    - target: {fileID: 2277311456598809957, guid: 5d66217ec6015c1449c14f0296c3cea1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4859831192344378729, guid: 5d66217ec6015c1449c14f0296c3cea1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.59
