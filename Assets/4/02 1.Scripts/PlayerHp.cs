@@ -28,13 +28,14 @@ public class PlayerHp : MonoBehaviour
         enemyMove.onHpBarValueChanged -= HpRenewal;
     }
     //데미지 받을 때 currentBar업데이트
-    void HpRenewal()
+    public void HpRenewal()
     {
         currentHpBar.fillAmount = (float)currentHp / (float)maxHp;
     }
 
     public void TakeDamage(int damage)
     {
+        
         currentHp -= damage;
     }
 

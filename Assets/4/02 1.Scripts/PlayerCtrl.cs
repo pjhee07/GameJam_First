@@ -13,12 +13,16 @@ public class PlayerCtrl : MonoBehaviour
     [SerializeField] float dashCoolTime = 3f;
     public int atkDmg;
 
-    public bool attacked = false; //여러번 공격 방지용
+    public bool attacked = false; //여러번 공격감지 방지용
+    float currentTime;
+    float attackCoolTime = 2f;
 
     float hor;
     float defaultSpeed = 3f;
     float dashSpeed = 7f;
-
+    float Dir;
+    float pushForce = 4f;
+    
 
 
     Rigidbody2D rigid;
@@ -31,6 +35,8 @@ public class PlayerCtrl : MonoBehaviour
     SpriteRenderer spriteRenderer;
     TrailRenderer trailRenderer;
 
+    PlayerHp playerHp;
+
 
 
     private void Awake()
@@ -39,6 +45,7 @@ public class PlayerCtrl : MonoBehaviour
         mainCam = Camera.main;
         spriteRenderer = GetComponent<SpriteRenderer>();
         trailRenderer = GetComponentInChildren<TrailRenderer>();
+        playerHp = GetComponent<PlayerHp>();
     }
 
 
@@ -60,6 +67,9 @@ public class PlayerCtrl : MonoBehaviour
         Attack();
         Dash();
         Talk();
+        currentTime += Time.deltaTime;
+        Falldown();
+
     }
     private void FixedUpdate()
     {
@@ -96,12 +106,13 @@ public class PlayerCtrl : MonoBehaviour
     void Facing()
     {
         Vector2 mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
-        float Dir = transform.position.x - mousePos.x;
+        Dir = transform.position.x - mousePos.x;
 
         if (Dir > 0)
-            spriteRenderer.flipX = true;
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+        //spriteRenderer.flipX = true;
         else
-            spriteRenderer.flipX = false;
+            transform.rotation = Quaternion.Euler(0, 0, 0);
 
     }
 
@@ -136,7 +147,14 @@ public class PlayerCtrl : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            onAttackChanged?.Invoke();   
+            if (currentTime < attackCoolTime)
+                return;
+            else
+            {
+                currentTime = 0;
+                onAttackChanged?.Invoke();
+
+            }
         }
     }
 
@@ -160,5 +178,26 @@ public class PlayerCtrl : MonoBehaviour
         }
     }
 
+    public void KnockBack()
+    {
+        rigid.AddForce(-transform.right * pushForce, ForceMode2D.Impulse);
+    }
 
+    void Falldown()
+    {
+
+
+        RaycastHit2D rayHit = Physics2D.Raycast(transform.position, Vector3.down, 5, LayerMask.GetMask("TILEMAP")); 
+
+        if (rayHit.collider == null)
+        {
+            playerHp.TakeDamage(1);
+            playerHp.HpRenewal();
+            //스폰포인트로 리스폰
+        }
+
+
+
+
+    }
 }
