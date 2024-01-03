@@ -2013,7 +2013,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Movement: 0
   PushCount: 0
+  FadeImage: {fileID: 0}
   brigde: {fileID: 0}
+  PushUpBtnCount: 0
 --- !u!4 &1272139729
 Transform:
   m_ObjectHideFlags: 0
@@ -2456,7 +2458,7 @@ GameObject:
   - component: {fileID: 1700819933}
   - component: {fileID: 1700819932}
   - component: {fileID: 1700819931}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: 4-4roof
   m_TagString: Untagged
   m_Icon: {fileID: 0}
