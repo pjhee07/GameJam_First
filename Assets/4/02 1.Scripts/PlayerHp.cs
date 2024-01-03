@@ -78,6 +78,14 @@ public class PlayerHp : MonoBehaviour
         Instantiate(ReTryPanel, Canvas.GetComponent<RectTransform>()) ;
     }
 
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.CompareTag("DEADZONE"))
+        {
+            Die();
+        }
+    }
+
 
 
 }

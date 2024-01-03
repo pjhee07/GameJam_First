@@ -1,13 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
-public class CameraFollow : Singleton<CameraFollow>
+public class CameraFollow  : MonoBehaviour
 {
+    GameObject Player;
+    CinemachineStateDrivenCamera drivenCamera;
     
-    protected override void Awake()
+    void Start()
     {
-        base.Awake();
+        Player = GameObject.FindWithTag("Player");
     }
-
+    void Update()
+    {
+        if (Player = null)
+        {
+            drivenCamera.Follow = null;
+        }
+    }
 }
+

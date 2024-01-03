@@ -202,14 +202,7 @@ public class PlayerCtrl : MonoBehaviour
     }*/
 
 
-   void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.CompareTag("Deadzone"))
-        {
-            
-            //스폰포인트로 리스폰
-        }
-    }
 
+ 
 
 }

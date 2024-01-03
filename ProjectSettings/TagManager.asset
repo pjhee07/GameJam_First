@@ -9,6 +9,7 @@ TagManager:
   - HAMMER
   - ENEMY
   - Object
+  - DEADZONE
   layers:
   - Default
   - TransparentFX
