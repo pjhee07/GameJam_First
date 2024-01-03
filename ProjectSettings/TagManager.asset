@@ -8,6 +8,7 @@ TagManager:
   - PLAYER
   - HAMMER
   - ENEMY
+  - Object
   layers:
   - Default
   - TransparentFX

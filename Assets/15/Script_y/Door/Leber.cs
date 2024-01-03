@@ -5,7 +5,7 @@ using UnityEngine;
 public class Leber : MonoBehaviour
 {
     [SerializeField] private GameObject EImage;
-    private bool DoorFlage = false;
+   
     Door door;
     Animator animator;
     private void Start()
@@ -16,10 +16,11 @@ public class Leber : MonoBehaviour
     }
     private void Update()
     {
-        if(DoorFlage==true&&Input.GetKeyDown(KeyCode.E))
+        if(EImage.activeSelf&&Input.GetKeyDown(KeyCode.E))
         {
             animator.SetTrigger("On");
             door.enabled = true;
+           
         }
     }
 
@@ -28,7 +29,7 @@ public class Leber : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
-            DoorFlage = true;
+            
             EImage.SetActive(true);
         }
     }

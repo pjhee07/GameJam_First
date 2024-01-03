@@ -2,13 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using System;
 
 public class GameManager : Singleton<GameManager>
 {
     public bool Movement = false;
     public static int ItemCount = 0;
     public static bool Flage;
+    public int PushCount = 0;
 
+    [SerializeField] private Image FadeImage;
+    [SerializeField] private GameObject brigde;
+    [SerializeField] int PushUpBtnCount;
+    
     public void ItemCountSet()
     {
         ItemCount++;
@@ -23,5 +30,34 @@ public class GameManager : Singleton<GameManager>
     public void SceneMovement(string name)
     {
         SceneManager.LoadScene(name);
+    }
+
+    public void PusCountSet()
+    {
+        PushCount++;
+        Debug.Log(PushCount);
+        if(PushCount>=PushUpBtnCount)
+        {
+            brigde.SetActive(true);
+        }
+    }
+
+
+    public  IEnumerator FadeOut()
+    {
+        FadeImage.enabled = true;
+        float current = 0;
+        while(current<1)
+        {
+            current += 0.2f;
+            FadeImage.color = new Color(0, 0, 0, current);
+            yield return new WaitForSeconds(0.01f);
+        }
+    }
+
+   public  IEnumerator ActionDelay(Action eventAction, float time)
+    {
+        yield return new WaitForSeconds(time);
+        eventAction();
     }
 }
