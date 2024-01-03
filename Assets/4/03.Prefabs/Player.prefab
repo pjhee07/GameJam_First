@@ -362,6 +362,8 @@ MonoBehaviour:
   currentHp: 5
   whiteFlashMat: {fileID: 2100000, guid: 3867eeb97840dbc4aa68bbff3e9744fa, type: 2}
   flashTime: 0.5
+  ReTryPanel: {fileID: 2096402146415189067, guid: 01e93c2436df7684aab224817a44ad0b, type: 3}
+  Canvas: {fileID: 0}
   currentHpBar: {fileID: 0}
 --- !u!50 &7979480500284763899
 Rigidbody2D:
