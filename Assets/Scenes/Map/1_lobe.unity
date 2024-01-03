@@ -248,6 +248,7 @@ MonoBehaviour:
   Texts: {fileID: 1215629921}
   EImage: {fileID: 2104063804}
   textso: {fileID: 11400000, guid: 76e823a9355e8484fbcf340c5adf8e7c, type: 2}
+  NextTextTime: 1
 --- !u!61 &37072161
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -566,7 +567,7 @@ Transform:
   m_GameObject: {fileID: 135758245}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 39.49, y: -3, z: 0}
+  m_LocalPosition: {x: 18.14, y: -3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2510,6 +2511,7 @@ MonoBehaviour:
   Texts: {fileID: 1215629921}
   EImage: {fileID: 675280964}
   textso: {fileID: 11400000, guid: e0c91b907e978df45986ff33f3b278c2, type: 2}
+  NextTextTime: 2
 --- !u!61 &1788626903
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2680,6 +2682,7 @@ MonoBehaviour:
   Texts: {fileID: 1215629921}
   EImage: {fileID: 1623063888}
   textso: {fileID: 11400000, guid: 213268c550f691c489836cccb36cccc9, type: 2}
+  NextTextTime: 1
 --- !u!61 &1931692880
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2756,6 +2759,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Movement: 0
   PushCount: 0
+  FadeImage: {fileID: 0}
   brigde: {fileID: 0}
   PushUpBtnCount: 0
 --- !u!4 &2094790838

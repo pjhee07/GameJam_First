@@ -14,6 +14,13 @@ public class TextManager : MonoBehaviour
    
     int num=0;
 
+
+    BoxCollider2D box;
+
+    private void Awake()
+    {
+        box = GetComponent<BoxCollider2D>();
+    }
     private void Start()
     {
         EImage.SetActive(false);
@@ -24,6 +31,7 @@ public class TextManager : MonoBehaviour
     {
         if (EImage.activeSelf && Input.GetKeyDown(KeyCode.E))
         {
+            box.enabled = false;
             TextCanvas.SetActive(true);
             StartTalking(textso.text);
             Debug.Log("Ω√¿€");
@@ -71,6 +79,7 @@ public class TextManager : MonoBehaviour
     {
         num = 0;
         TextCanvas.SetActive(false);
+        box.enabled = true;
     }
 
     IEnumerator TextRotine(string Story)
