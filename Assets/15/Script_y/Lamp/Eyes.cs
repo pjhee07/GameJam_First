@@ -8,19 +8,19 @@ public class Eyes : MonoBehaviour
 {
 
     GameObject Player;
-    PlayerCtrl playerCtrl;
+    PlayerHp playerHp;
 
     private void Awake()
     {
         Player = GameObject.FindWithTag("PLAYER");
-        playerCtrl = Player.GetComponent<PlayerCtrl>();
+        playerHp = Player.GetComponent<PlayerHp>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("PLAYER") && GameManager.Instance.Movement == true)
         {
-            Debug.Log("ddddddddddd");
+            playerHp.Die();
         }
     }
 
@@ -28,7 +28,7 @@ public class Eyes : MonoBehaviour
     {
         if (collision.CompareTag("PLAYER") && GameManager.Instance.Movement == true)
         {
-            Debug.Log("asfsadfdasf");
+            playerHp.Die();
         }
     }
 

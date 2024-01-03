@@ -74,6 +74,7 @@ public class PlayerCtrl : MonoBehaviour
     private void FixedUpdate()
     {
         Run();
+        movementJude();
         Jump();
     }
 
