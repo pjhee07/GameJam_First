@@ -8,6 +8,7 @@ public class UIManager : MonoBehaviour
 {
     public void Startgame()
     {
+        StartCoroutine(GameManager.Instance.FadeOut());
         SceneManager.LoadScene("1_lobe");
     }
     public void QuitGame()
