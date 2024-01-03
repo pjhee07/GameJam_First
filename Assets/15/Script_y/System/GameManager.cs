@@ -55,9 +55,5 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
-   public  IEnumerator ActionDelay(Action eventAction, float time)
-    {
-        yield return new WaitForSeconds(time);
-        eventAction();
-    }
+   
 }

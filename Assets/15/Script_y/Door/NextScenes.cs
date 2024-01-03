@@ -7,6 +7,12 @@ public class NextScenes : MonoBehaviour
     [SerializeField] private string SceneName;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        GameManager.Instance.SceneMovement(SceneName);
+
+        if(collision.CompareTag("PLAYER"))
+        {
+            GameManager.Instance.SceneMovement(SceneName);
+        }
+
+       
     }
 }
