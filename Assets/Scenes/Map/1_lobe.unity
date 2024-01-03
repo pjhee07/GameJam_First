@@ -2266,7 +2266,7 @@ MonoBehaviour:
   Texts: {fileID: 1215629921}
   EImage: {fileID: 675280964}
   textso: {fileID: 11400000, guid: e0c91b907e978df45986ff33f3b278c2, type: 2}
-  NextTextTime: 2
+  NextTextTime: 1
 --- !u!61 &1788626903
 BoxCollider2D:
   m_ObjectHideFlags: 0
