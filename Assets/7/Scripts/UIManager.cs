@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private string ReSceneName;
+    [SerializeField] GameObject RetryPanel;
 
     public void Startgame()
     {
@@ -22,10 +23,12 @@ public class UIManager : MonoBehaviour
     public void ReturnBtn()
     {
         GameManager.Instance.SceneMovement(ReSceneName);
+        RetryPanel.SetActive(false);
     }
 
     public void MainBtn()
     {
         GameManager.Instance.SceneMovement("Start");
+        RetryPanel.SetActive(false);
     }
 }

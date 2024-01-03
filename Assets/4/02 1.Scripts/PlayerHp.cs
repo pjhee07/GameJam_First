@@ -75,7 +75,7 @@ public class PlayerHp : MonoBehaviour
     public void Die()
     {
         Destroy(gameObject);
-        Instantiate(ReTryPanel, Canvas.GetComponent<RectTransform>()) ;
+        ReTryPanel.SetActive(true);
     }
 
     void OnTriggerEnter2D(Collider2D col)
