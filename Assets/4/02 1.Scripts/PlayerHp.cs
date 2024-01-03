@@ -16,6 +16,9 @@ public class PlayerHp : MonoBehaviour
     SpriteRenderer spriteRenderer;
     Material defaultMat;
 
+    [SerializeField] GameObject ReTryPanel;
+    [SerializeField] GameObject Canvas;
+
 
 
     [SerializeField] Image currentHpBar;
@@ -62,8 +65,17 @@ public class PlayerHp : MonoBehaviour
         {
         currentHp -= damage;
         ChangeMaterials();
-
         }
+        else
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        Destroy(gameObject);
+        Instantiate(ReTryPanel, Canvas.GetComponent<RectTransform>()) ;
     }
 
 
