@@ -4073,8 +4073,8 @@ MonoBehaviour:
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 1.14
-  m_PointLightOuterRadius: 1.9
+  m_PointLightInnerRadius: 1.59
+  m_PointLightOuterRadius: 2.47
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -4220,6 +4220,22 @@ PrefabInstance:
     - target: {fileID: 3644763867200840050, guid: 1fd02173c5218b34d81c15ade30cec07, type: 3}
       propertyPath: m_Name
       value: Main Camera_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5581816312945541155, guid: 1fd02173c5218b34d81c15ade30cec07, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].x
+      value: -9.010507
+      objectReference: {fileID: 0}
+    - target: {fileID: 5581816312945541155, guid: 1fd02173c5218b34d81c15ade30cec07, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].y
+      value: 16.69813
+      objectReference: {fileID: 0}
+    - target: {fileID: 5581816312945541155, guid: 1fd02173c5218b34d81c15ade30cec07, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[4].x
+      value: -9.020929
+      objectReference: {fileID: 0}
+    - target: {fileID: 5581816312945541155, guid: 1fd02173c5218b34d81c15ade30cec07, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[4].y
+      value: -4.127199
       objectReference: {fileID: 0}
     - target: {fileID: 5717499068943330696, guid: 1fd02173c5218b34d81c15ade30cec07, type: 3}
       propertyPath: m_ChildCameras.Array.size
