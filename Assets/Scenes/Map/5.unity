@@ -559,11 +559,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6748402379194227931, guid: 69adfea11ce560e48aa63a2b576f1da2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.57
+      value: -6.62
       objectReference: {fileID: 0}
     - target: {fileID: 6748402379194227931, guid: 69adfea11ce560e48aa63a2b576f1da2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.48
+      value: 1.76
       objectReference: {fileID: 0}
     - target: {fileID: 6748402379194227931, guid: 69adfea11ce560e48aa63a2b576f1da2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -826,7 +826,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6748402379194227931, guid: 69adfea11ce560e48aa63a2b576f1da2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.5
+      value: 7.86
       objectReference: {fileID: 0}
     - target: {fileID: 6748402379194227931, guid: 69adfea11ce560e48aa63a2b576f1da2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -883,7 +883,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6748402379194227931, guid: 69adfea11ce560e48aa63a2b576f1da2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.5
+      value: -3.22
       objectReference: {fileID: 0}
     - target: {fileID: 6748402379194227931, guid: 69adfea11ce560e48aa63a2b576f1da2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1001,7 +1001,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6748402379194227931, guid: 69adfea11ce560e48aa63a2b576f1da2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.57
+      value: 5.85
       objectReference: {fileID: 0}
     - target: {fileID: 6748402379194227931, guid: 69adfea11ce560e48aa63a2b576f1da2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1058,7 +1058,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6748402379194227931, guid: 69adfea11ce560e48aa63a2b576f1da2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 15.61
+      value: 15.98
       objectReference: {fileID: 0}
     - target: {fileID: 6748402379194227931, guid: 69adfea11ce560e48aa63a2b576f1da2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1115,7 +1115,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6748402379194227931, guid: 69adfea11ce560e48aa63a2b576f1da2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.68
+      value: 5.76
       objectReference: {fileID: 0}
     - target: {fileID: 6748402379194227931, guid: 69adfea11ce560e48aa63a2b576f1da2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1409,7 +1409,7 @@ GameObject:
   - component: {fileID: 2042250811}
   - component: {fileID: 2042250810}
   - component: {fileID: 2042250809}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tilemap
   m_TagString: MAP
   m_Icon: {fileID: 0}
@@ -3033,6 +3033,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Movement: 0
   PushCount: 0
+  FadeImage: {fileID: 0}
   brigde: {fileID: 772482095}
   PushUpBtnCount: 2
 --- !u!4 &2128642445

@@ -420,6 +420,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Movement: 0
+  PushCount: 0
+  FadeImage: {fileID: 0}
+  brigde: {fileID: 0}
+  PushUpBtnCount: 0
 --- !u!4 &576789583
 Transform:
   m_ObjectHideFlags: 0
@@ -516,7 +520,7 @@ GameObject:
   - component: {fileID: 720177256}
   - component: {fileID: 720177255}
   - component: {fileID: 720177254}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: 4-1roof
   m_TagString: MAP
   m_Icon: {fileID: 0}
@@ -1949,6 +1953,7 @@ MonoBehaviour:
   Texts: {fileID: 968298986}
   EImage: {fileID: 1957102499}
   textso: {fileID: 11400000, guid: 1d2fefb6937495b4d8d6a3821660e763, type: 2}
+  NextTextTime: 0
 --- !u!114 &1391664437
 MonoBehaviour:
   m_ObjectHideFlags: 0

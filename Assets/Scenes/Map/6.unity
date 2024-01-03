@@ -555,7 +555,7 @@ GameObject:
   - component: {fileID: 1108806836}
   - component: {fileID: 1108806835}
   - component: {fileID: 1108806834}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1524,7 +1524,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Movement: 0
   PushCount: 0
+  FadeImage: {fileID: 0}
   brigde: {fileID: 0}
+  PushUpBtnCount: 0
 --- !u!4 &2123396633
 Transform:
   m_ObjectHideFlags: 0

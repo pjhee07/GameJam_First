@@ -1087,6 +1087,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Movement: 0
   PushCount: 0
+  FadeImage: {fileID: 0}
   brigde: {fileID: 504395321077645271}
   PushUpBtnCount: 1
 --- !u!4 &1259325696
@@ -1218,7 +1219,7 @@ GameObject:
   - component: {fileID: 1585278630}
   - component: {fileID: 1585278629}
   - component: {fileID: 1585278628}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: 4-2roof
   m_TagString: MAP
   m_Icon: {fileID: 0}
@@ -1958,7 +1959,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6748402379194227931, guid: 69adfea11ce560e48aa63a2b576f1da2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.6
+      value: -1.23
       objectReference: {fileID: 0}
     - target: {fileID: 6748402379194227931, guid: 69adfea11ce560e48aa63a2b576f1da2, type: 3}
       propertyPath: m_LocalPosition.z
