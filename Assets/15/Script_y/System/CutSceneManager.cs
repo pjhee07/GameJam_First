@@ -12,22 +12,18 @@ public class CutSceneManager : MonoBehaviour
     [SerializeField] private TextSO textso;
     [SerializeField] private float NextTextTime;
 
-    [SerializeField] private Sprite[] sprite;
+    
 
     int num = 0;
 
-    SpriteRenderer spriteRenderer;
-
-
-    private void Awake()
+    private void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        StartTalking(textso.text);
     }
 
-   
-    
 
-   
+
+
 
     public void StartTalking(string[] talk)
     {
