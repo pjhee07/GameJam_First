@@ -36,6 +36,7 @@ public class PlayerCtrl : MonoBehaviour
     TrailRenderer trailRenderer;
 
     PlayerHp playerHp;
+    GameObject HammerCol;
 
 
 
@@ -46,6 +47,7 @@ public class PlayerCtrl : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         trailRenderer = GetComponentInChildren<TrailRenderer>();
         playerHp = GetComponent<PlayerHp>();
+        HammerCol = transform.GetChild(1).gameObject;
     }
 
 
@@ -110,11 +112,21 @@ public class PlayerCtrl : MonoBehaviour
         Dir = transform.position.x - mousePos.x;
 
         if (Dir > 0)
+        {
             //transform.rotation = Quaternion.Euler(0, 180, 0); 카메라 z축 회전...
             spriteRenderer.flipX = true;
+            HammerCol.transform.rotation = Quaternion.Euler(0, 180, 0);
+
+
+        }
+
         else
+        {
             //transform.rotation = Quaternion.Euler(0, 0, 0);
             spriteRenderer.flipX = false;
+        HammerCol.transform.rotation = Quaternion.Euler(0, 0, 0);
+
+        }
 
     }
 
