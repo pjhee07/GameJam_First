@@ -7,7 +7,7 @@ using UnityEngine;
 public class Eyes : MonoBehaviour
 {
 
-    [SerializeField] private GameObject eye;
+    
 
    
 

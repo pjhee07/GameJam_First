@@ -10,7 +10,7 @@ public class Eyeblink : MonoBehaviour
     public Light2D Light2D;
     [SerializeField] private GameObject movement;
     float currcolor;
-    bool flag;
+    
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
