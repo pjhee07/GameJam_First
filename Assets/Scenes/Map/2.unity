@@ -473,9 +473,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Movement: 0
+  PushFlage: 0
   PushCount: 0
   FadeImage: {fileID: 0}
-  brigde: {fileID: 0}
   PushUpBtnCount: 0
 --- !u!1 &609998571
 GameObject:
@@ -3196,11 +3196,11 @@ PrefabInstance:
       objectReference: {fileID: 341927411}
     - target: {fileID: 4859831192344378729, guid: 5d66217ec6015c1449c14f0296c3cea1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 28
+      value: 42.16
       objectReference: {fileID: 0}
     - target: {fileID: 4859831192344378729, guid: 5d66217ec6015c1449c14f0296c3cea1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.19
+      value: -2.93
       objectReference: {fileID: 0}
     - target: {fileID: 4859831192344378729, guid: 5d66217ec6015c1449c14f0296c3cea1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -18887,11 +18887,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1765948930686498275, guid: bc223d9c40dbef04b8d2ddba6bfd8db7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 28
+      value: 41.976154
       objectReference: {fileID: 0}
     - target: {fileID: 1765948930686498275, guid: bc223d9c40dbef04b8d2ddba6bfd8db7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.19
+      value: 1.32358
       objectReference: {fileID: 0}
     - target: {fileID: 1765948930686498275, guid: bc223d9c40dbef04b8d2ddba6bfd8db7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -18935,11 +18935,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5647919152037018521, guid: bc223d9c40dbef04b8d2ddba6bfd8db7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21.964022
+      value: 22.147867
       objectReference: {fileID: 0}
     - target: {fileID: 5647919152037018521, guid: bc223d9c40dbef04b8d2ddba6bfd8db7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.69232
+      value: 0.43873978
       objectReference: {fileID: 0}
     - target: {fileID: 8162719651252217220, guid: bc223d9c40dbef04b8d2ddba6bfd8db7, type: 3}
       propertyPath: m_BoundingShape2D
@@ -19253,7 +19253,7 @@ Transform:
   m_GameObject: {fileID: 2568317922117573556}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.1663, y: -14.7942, z: 0}
+  m_LocalPosition: {x: 7.06, y: -14.45, z: 0}
   m_LocalScale: {x: 0.9895414, y: 1.4521081, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
