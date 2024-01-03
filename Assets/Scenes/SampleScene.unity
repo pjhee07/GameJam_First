@@ -2688,6 +2688,10 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 535554486}
+    - target: {fileID: 6959651863128663598, guid: 3aeb994818e53ad4395eb23915229c5f, type: 3}
+      propertyPath: atkDistance
+      value: 0.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
