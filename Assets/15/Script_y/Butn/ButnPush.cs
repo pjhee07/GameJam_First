@@ -18,8 +18,8 @@ public class ButnPush : MonoBehaviour
     {
         if(collision.CompareTag("Object"))
         {
-            box.enabled = false;
             anim.SetTrigger("Push");
+            box.enabled = false;
             GameManager.Instance.PusCountSet();
         }
     }

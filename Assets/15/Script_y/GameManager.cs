@@ -11,6 +11,7 @@ public class GameManager : Singleton<GameManager>
     public int PushCount = 0;
 
     [SerializeField] private GameObject brigde;
+    [SerializeField] int PushUpBtnCount;
     public void ItemCountSet()
     {
         ItemCount++;
@@ -31,7 +32,7 @@ public class GameManager : Singleton<GameManager>
     {
         PushCount++;
         Debug.Log(PushCount);
-        if(PushCount>=2)
+        if(PushCount>=PushUpBtnCount)
         {
             brigde.SetActive(true);
         }
