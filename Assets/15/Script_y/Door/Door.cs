@@ -22,6 +22,6 @@ public class Door : MonoBehaviour
             spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, currcolor);
             yield return new WaitForSeconds(0.01f);
         }
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }
