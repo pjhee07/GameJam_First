@@ -25,7 +25,11 @@ public class Item : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        EImage.SetActive(true);
+        if(collision.CompareTag("PLAYER"))
+        {
+            EImage.SetActive(true);
+        }
+        
     }
 
     private void OnTriggerExit2D(Collider2D collision)
