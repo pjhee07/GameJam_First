@@ -58,9 +58,12 @@ public class PlayerHp : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        
+        if (currentHp > 0)
+        {
         currentHp -= damage;
         ChangeMaterials();
+
+        }
     }
 
 
