@@ -187,7 +187,7 @@ public class PlayerCtrl : MonoBehaviour
     {
 
 
-        RaycastHit2D rayHit = Physics2D.Raycast(transform.position, Vector3.down, 5, LayerMask.GetMask("TILEMAP")); 
+        RaycastHit2D rayHit = Physics2D.Raycast(transform.position, Vector3.down, 30, LayerMask.GetMask("TILEMAP")); 
 
         if (rayHit.collider == null)
         {
