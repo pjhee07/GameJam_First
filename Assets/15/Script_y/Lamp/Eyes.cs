@@ -13,7 +13,7 @@ public class Eyes : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && GameManager.Instance.Movement == true)
+        if (collision.CompareTag("PLAYER") && GameManager.Instance.Movement == true)
         {
             Debug.Log("ddddddddddd");
         }
@@ -21,7 +21,7 @@ public class Eyes : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && GameManager.Instance.Movement == true)
+        if (collision.CompareTag("PLAYER") && GameManager.Instance.Movement == true)
         {
             Debug.Log("asfsadfdasf");
         }
