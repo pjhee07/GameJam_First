@@ -131,7 +131,7 @@ TextureImporter:
         width: 79
         height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -139,6 +139,27 @@ TextureImporter:
       bones: []
       spriteID: b37ee019ffec9c14796c740fee3a9f71
       internalID: 335550533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monster8Pack_1
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 192
+        width: 53
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19293b63ed70a534aa70dd8fbe26ba13
+      internalID: 726471874
       vertices: []
       indices: 
       edges: []
@@ -155,6 +176,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Monster8Pack_0: 335550533
+      Monster8Pack_1: 726471874
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

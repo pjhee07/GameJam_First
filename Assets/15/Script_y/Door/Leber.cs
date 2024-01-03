@@ -5,7 +5,6 @@ using UnityEngine;
 public class Leber : MonoBehaviour
 {
     [SerializeField] private GameObject EImage;
-    public GameObject dor2;
    
     Door door;
     Animator animator;
