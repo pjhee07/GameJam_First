@@ -294,6 +294,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: buttn
       objectReference: {fileID: 0}
+    - target: {fileID: 3242050510739951829, guid: 138ed3791ae70184081af8aa05aa2223, type: 3}
+      propertyPath: brigde
+      value: 
+      objectReference: {fileID: 504395321077645271}
     - target: {fileID: 4955736955214230569, guid: 138ed3791ae70184081af8aa05aa2223, type: 3}
       propertyPath: m_Size.x
       value: 0.5869465

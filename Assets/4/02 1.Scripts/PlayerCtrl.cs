@@ -15,7 +15,7 @@ public class PlayerCtrl : MonoBehaviour
 
     public bool attacked = false; //여러번 공격감지 방지용
     float currentTime;
-    float attackCoolTime = 2f;
+    float attackCoolTime = 1f;
 
     float hor;
     float defaultSpeed = 3f;
