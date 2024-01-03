@@ -10,6 +10,7 @@ public class TextManager : MonoBehaviour
 
     [SerializeField] private GameObject EImage;
     [SerializeField] private TextSO textso;
+    [SerializeField] private float NextTextTime;
    
     int num=0;
 
@@ -82,7 +83,7 @@ public class TextManager : MonoBehaviour
             yield return new WaitForSeconds(0.05f);
         }
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(NextTextTime);
         NextTalk();
     }
 }
