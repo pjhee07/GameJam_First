@@ -1397,7 +1397,7 @@ GameObject:
   - component: {fileID: 1364149712}
   - component: {fileID: 1364149711}
   - component: {fileID: 1364149710}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: 1Roof
   m_TagString: MAP
   m_Icon: {fileID: 0}
@@ -2755,6 +2755,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Movement: 0
+  PushCount: 0
+  brigde: {fileID: 0}
+  PushUpBtnCount: 0
 --- !u!4 &2094790838
 Transform:
   m_ObjectHideFlags: 0
