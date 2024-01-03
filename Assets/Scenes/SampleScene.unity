@@ -2443,6 +2443,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHp: 5
   currentHp: 5
+  whiteFlashMat: {fileID: 2100000, guid: 3867eeb97840dbc4aa68bbff3e9744fa, type: 2}
+  flashTime: 0.5
   currentHpBar: {fileID: 2423372418577151547}
 --- !u!1 &2069062639
 GameObject:
