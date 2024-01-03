@@ -40,7 +40,7 @@ public class CutSceneManager : MonoBehaviour
         Texts.text = null;
 
         num++;
-        spriteRenderer.sprite = sprite[num];
+        
         if (num == textso.text.Length)
         {
             EndTalking();

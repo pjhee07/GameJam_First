@@ -12,4 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a742a4c63fbca5a4cad4ee68c998aa02, type: 3}
   m_Name: StartText
   m_EditorClassIdentifier: 
-  text: []
+  text:
+  - "\uC778\uD615\uC744 \uB108\uBB34 \uC88B\uC544\uD558\uB294 \uC544\uC774. \uB51C\uB9AC"
+  - "\uD558\uB8E8\uB9CC\uC774\uB77C\uB3C4 \uC778\uD615\uC774 \uB418\uC5B4 \uC778\uD615\uB4E4\uACFC
+    \uB180\uACE0 \uC2F6\uC5C8\uB2E4."
+  - "\uADF8\uB7EC\uB358 \uC5B4\uB290 \uB0A0.  \uD55C \uC694\uC815\uC774 \uB098\uD0C0\uB098
+    \uB51C\uB9AC\uC758 \uC18C\uC6D0\uC744 \uB4E4\uC5B4\uC8FC\uC5C8\uB2E4!"
+  - "\uB51C\uB9AC\uB294 \uBAB8\uC774 "

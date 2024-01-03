@@ -403,11 +403,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8eab666f1a69f649be215a3cfab31dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextCanvas: {fileID: 0}
-  Texts: {fileID: 0}
+  Texts: {fileID: 509338341}
   textso: {fileID: 0}
-  NextTextTime: 0
-  sprite: []
+  NextTextTime: 1
+  sprite:
+  - {fileID: 21300000, guid: bf96dec8fe812c34591c556d63b27478, type: 3}
+  - {fileID: 21300000, guid: ad0a10eaa06c0c6418fe2653746e86fc, type: 3}
+  - {fileID: 21300000, guid: ff60a155423c9414dbf05ad239724b78, type: 3}
 --- !u!1 &669304173
 GameObject:
   m_ObjectHideFlags: 0
