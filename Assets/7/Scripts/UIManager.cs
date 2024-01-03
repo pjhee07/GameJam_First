@@ -10,8 +10,7 @@ public class UIManager : MonoBehaviour
 
     public void Startgame()
     {
-        StartCoroutine(GameManager.Instance.FadeOut());
-        SceneManager.LoadScene("1_lobe");
+        GameManager.Instance.SceneMovement(ReSceneName);
     }
     public void QuitGame()
     {

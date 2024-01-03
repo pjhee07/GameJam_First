@@ -24,7 +24,7 @@ public class SpriteChange : MonoBehaviour
         spriteRenderer.sprite = sprite[1];
         yield return new WaitForSeconds(4.5f);
         spriteRenderer.sprite = sprite[2];
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
         GameManager.Instance.SceneMovement(NextScene);
         Debug.Log("Á¾·á");
 

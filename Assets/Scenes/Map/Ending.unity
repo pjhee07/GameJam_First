@@ -153,9 +153,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Movement: 0
+  PushFlage: 0
   PushCount: 0
   FadeImage: {fileID: 0}
-  brigde: {fileID: 0}
   PushUpBtnCount: 0
 --- !u!4 &90781093
 Transform:
@@ -313,7 +313,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 229931714fad97e4e8bc45b199566b70, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c9618188708695f4c9bb6679b52eae92, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
