@@ -8,7 +8,9 @@ public class GameManager : Singleton<GameManager>
     public bool Movement = false;
     public static int ItemCount = 0;
     public static bool Flage;
+    public int PushCount = 0;
 
+    [SerializeField] private GameObject brigde;
     public void ItemCountSet()
     {
         ItemCount++;
@@ -23,5 +25,15 @@ public class GameManager : Singleton<GameManager>
     public void SceneMovement(string name)
     {
         SceneManager.LoadScene(name);
+    }
+
+    public void PusCountSet()
+    {
+        PushCount++;
+        Debug.Log(PushCount);
+        if(PushCount>=2)
+        {
+            brigde.SetActive(true);
+        }
     }
 }
