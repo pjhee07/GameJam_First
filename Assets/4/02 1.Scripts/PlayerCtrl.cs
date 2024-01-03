@@ -201,6 +201,15 @@ public class PlayerCtrl : MonoBehaviour
 
     }*/
 
+    void movementJude()
+    {
+        if (rigid.velocity.x == 0)
+            GameManager.Instance.Movement = false;
+        else
+            GameManager.Instance.Movement = true;
+
+    }
+
 
 
  

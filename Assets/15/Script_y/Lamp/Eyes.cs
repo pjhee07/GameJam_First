@@ -7,9 +7,14 @@ using UnityEngine;
 public class Eyes : MonoBehaviour
 {
 
-    
+    GameObject Player;
+    PlayerCtrl playerCtrl;
 
-   
+    private void Awake()
+    {
+        Player = GameObject.FindWithTag("PLAYER");
+        playerCtrl = Player.GetComponent<PlayerCtrl>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -25,6 +30,11 @@ public class Eyes : MonoBehaviour
         {
             Debug.Log("asfsadfdasf");
         }
+    }
+
+    void Judement() 
+    {
+        //if(PlayerCtrl.)
     }
 
 
