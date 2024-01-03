@@ -68,7 +68,7 @@ public class PlayerCtrl : MonoBehaviour
         Dash();
         Talk();
         currentTime += Time.deltaTime;
-        Falldown();
+        //Falldown();
 
     }
     private void FixedUpdate()
@@ -184,21 +184,32 @@ public class PlayerCtrl : MonoBehaviour
         rigid.AddForce(-transform.right * pushForce, ForceMode2D.Impulse);
     }
 
-    void Falldown()
+  /*  void Falldown()
     {
 
 
-        RaycastHit2D rayHit = Physics2D.Raycast(transform.position, Vector3.down, 30, LayerMask.GetMask("TILEMAP")); 
+        //RaycastHit2D rayHit = Physics2D.Raycast(transform.position, Vector3.down, 30, LayerMask.GetMask("TILEMAP")); 
 
         if (rayHit.collider == null && !isJump)
         {
             playerHp.TakeDamage(1);
             playerHp.HpRenewal();
             //스폰포인트로 리스폰
+        } 
+
+
+
+    }*/
+
+
+   void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.CompareTag("Deadzone"))
+        {
+            
+            //스폰포인트로 리스폰
         }
-
-
-
-
     }
+
+
 }

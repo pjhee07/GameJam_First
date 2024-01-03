@@ -333,7 +333,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 135806700412562193, guid: 4708af8010b08a84ab7df246da1ca9db, type: 3}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: ReturnBtn
         m_Mode: 1
@@ -600,9 +600,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 135806700412562193, guid: 4708af8010b08a84ab7df246da1ca9db, type: 3}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: ReturnBtn
+        m_MethodName: MainBtn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

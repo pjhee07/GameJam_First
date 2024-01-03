@@ -24,4 +24,9 @@ public class UIManager : MonoBehaviour
     {
         GameManager.Instance.SceneMovement(ReSceneName);
     }
+
+    public void MainBtn()
+    {
+        GameManager.Instance.SceneMovement("Start");
+    }
 }
