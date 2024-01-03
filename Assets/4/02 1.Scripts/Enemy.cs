@@ -24,7 +24,7 @@ public class Enemy : MonoBehaviour
     Image currentHpbar;
 
     public Action onDeadChanged;
-
+    GameObject EnemyHpbar;
 
     private void Awake()
     {
@@ -41,16 +41,20 @@ public class Enemy : MonoBehaviour
         GetEnemyStatus();
 
         currentHpbar = hpBar.transform.GetChild(0).GetComponent<Image>();
-
+        EnemyHpbar = GameObject.Find("bghp_bar(Clone)");
     }
 
     void Update()
     {
         Vector3 _hpBarPos =
             mainCam.WorldToScreenPoint(new Vector3(transform.position.x, transform.position.y + height, 0)); //월드 좌표를 스크린 좌표 즉, UI좌표로 바꿔줌.
+        if(EnemyHpbar != null)
+        {
         hpBar.position = _hpBarPos; //스크린 좌표로 바꾼 값으로 체력바를 이동.
         currentHpbar.fillAmount = (float)currentHp / (float)maxHp;
         //currentHpbar부분은 hpBar의 fillAmount를 현재 남은 피의 양에 따라 달라지게 설정함.
+
+        }
     }
 
     void SetEnemyStatus(string _enemyName, int _maxHp, int _atkDmg, int _atkDistance, int _atkSpeed)
@@ -67,7 +71,7 @@ public class Enemy : MonoBehaviour
     {
         if (name.Equals("Ladybird"))
         {
-            SetEnemyStatus("Ladybird", 1, 1, 3,2);
+            SetEnemyStatus("Ladybird", 1, 1, 1,2);
         }
     }
 
