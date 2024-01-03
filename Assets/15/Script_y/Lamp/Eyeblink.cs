@@ -27,7 +27,7 @@ public class Eyeblink : MonoBehaviour
         {
 
             OpenState();
-            yield return new WaitForSeconds(15f);
+            yield return new WaitForSeconds(2f);
         }
 
     }

@@ -20,6 +20,7 @@ public class Eyes : MonoBehaviour
     {
         if (collision.CompareTag("PLAYER") && GameManager.Instance.Movement == true)
         {
+            StartCoroutine(WaitRoutine());
             playerHp.Die();
         }
     }
@@ -28,13 +29,13 @@ public class Eyes : MonoBehaviour
     {
         if (collision.CompareTag("PLAYER") && GameManager.Instance.Movement == true)
         {
-            playerHp.Die();
+            Debug.Log("asfsadfdasf");
         }
     }
 
-    void Judement() 
+   IEnumerator WaitRoutine()
     {
-        //if(PlayerCtrl.)
+        yield return new WaitForSeconds(1f);
     }
 
 
