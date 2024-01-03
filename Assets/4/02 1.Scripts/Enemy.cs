@@ -8,7 +8,8 @@ public class Enemy : MonoBehaviour
     public GameObject prfHpBar;
     public GameObject canvas;
 
-    RectTransform hpBar;
+    
+    Transform hpBar;
 
     public float height = 1.7f;
     Camera mainCam;
