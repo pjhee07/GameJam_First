@@ -109,10 +109,11 @@ public class PlayerCtrl : MonoBehaviour
         Dir = transform.position.x - mousePos.x;
 
         if (Dir > 0)
-            transform.rotation = Quaternion.Euler(0, 180, 0);
-        //spriteRenderer.flipX = true;
+            //transform.rotation = Quaternion.Euler(0, 180, 0); 카메라 z축 회전...
+            spriteRenderer.flipX = true;
         else
-            transform.rotation = Quaternion.Euler(0, 0, 0);
+            //transform.rotation = Quaternion.Euler(0, 0, 0);
+            spriteRenderer.flipX = false;
 
     }
 
