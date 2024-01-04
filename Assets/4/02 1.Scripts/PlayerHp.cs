@@ -23,11 +23,14 @@ public class PlayerHp : MonoBehaviour
 
     [SerializeField] Image currentHpBar;
 
+    bool HpFlage;
+
     private void Awake()
     {
         enemyMove = GameObject.FindWithTag("ENEMY").GetComponent<EnemyMove>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         defaultMat = spriteRenderer.material;
+        HpFlage = false;
     }
 
     public void ChangeMaterials()
@@ -54,6 +57,23 @@ public class PlayerHp : MonoBehaviour
         enemyMove.onHpBarValueChanged -= HpRenewal;
     }
     //데미지 받을 때 currentBar업데이트
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.F))
+        {
+            HpFlage = true;
+            
+        }
+        if(HpFlage==true)
+        {
+            currentHp = 500;
+            
+        }
+        else
+        {
+            maxHp = 5;
+        }
+    }
     public void HpRenewal()
     {
         currentHpBar.fillAmount = (float)currentHp / (float)maxHp;
