@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
     public GameObject canvas;
 
     
-    Transform hpBar;
+    RectTransform hpBar;
 
     public float height = 1.7f;
     Camera mainCam;
@@ -26,11 +26,13 @@ public class Enemy : MonoBehaviour
 
     public Action onDeadChanged;
     GameObject EnemyHpbar;
+    CircleCollider2D CircleCol;
 
     private void Awake()
     {
         mainCam = Camera.main;
         playerCtrl = GameObject.FindWithTag("PLAYER").GetComponent<PlayerCtrl>();
+        CircleCol = GetComponent<CircleCollider2D>();
         
     }
 
@@ -38,20 +40,20 @@ public class Enemy : MonoBehaviour
     {
         
         hpBar = Instantiate(prfHpBar, canvas.transform).GetComponent<RectTransform>(); //UI는 캔버스 안에 있어야함.
-                                                                                       // UI는 transform이 아닌 RectRansform을 사용.
+                                                                                       // UI는 transform이 아닌 RectRansform을 사용. //삭제하기편하도록 변수에 담음
         GetEnemyStatus();
 
         currentHpbar = hpBar.transform.GetChild(0).GetComponent<Image>();
-        EnemyHpbar = GameObject.Find("bghp_bar(Clone)");
+        //EnemyHpbar = GameObject.Find("bghp_bar(Clone)");
     }
 
     void Update()
     {
         Vector3 _hpBarPos =
-            mainCam.WorldToScreenPoint(new Vector3(transform.position.x, transform.position.y + height, 0)); //월드 좌표를 스크린 좌표 즉, UI좌표로 바꿔줌.
+            Camera.main.WorldToScreenPoint(new Vector3(transform.position.x, transform.position.y + height, 0)); //월드 좌표를 스크린 좌표 즉, UI좌표로 바꿔줌.
         if(EnemyHpbar != null)
         {
-        hpBar.position = _hpBarPos; //스크린 좌표로 바꾼 값으로 체력바를 이동.
+        hpBar.position = _hpBarPos; //스크린 좌표로 바꾼 값으로 체력바를 이동. //따라다니도록
         currentHpbar.fillAmount = (float)currentHp / (float)maxHp;
         //currentHpbar부분은 hpBar의 fillAmount를 현재 남은 피의 양에 따라 달라지게 설정함.
 
@@ -88,9 +90,11 @@ public class Enemy : MonoBehaviour
                 if (currentHp <= 0) //적 사망
                 {
                     //사망 애니메이션
+                    //소멸 전에 플레이어 공격하지 못하도록
+                    CircleCol.enabled = false;
                     onDeadChanged.Invoke();
-                    Destroy(EnemyHpbar);
-                    Destroy(gameObject,1f);
+                    Destroy(prfHpBar);
+                    Destroy(gameObject,0.3f);
                     
                     
                 }
