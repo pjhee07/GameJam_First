@@ -468,7 +468,7 @@ GameObject:
   - component: {fileID: 401778030}
   - component: {fileID: 401778029}
   m_Layer: 0
-  m_Name: confident
+  m_Name: Camera Confiner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1469,7 +1469,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2720724487121832236, guid: 3ed8a048afa98ec418c437e92f7cb431, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 49.89
+      value: 46.96
       objectReference: {fileID: 0}
     - target: {fileID: 2720724487121832236, guid: 3ed8a048afa98ec418c437e92f7cb431, type: 3}
       propertyPath: m_LocalPosition.y

@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 121321686}
   - component: {fileID: 121321685}
   m_Layer: 0
-  m_Name: Cofiner
+  m_Name: CameraCofiner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -184,19 +184,20 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 27.976355, y: 0.26297402}
-      - {x: 27.814526, y: 1.6444025}
-      - {x: 27.89811, y: 3.2737525}
-      - {x: 27.84458, y: 4.9377213}
-      - {x: 18.22322, y: 4.785494}
-      - {x: 17.955544, y: 4.885151}
-      - {x: -0.17346293, y: 4.988743}
+    - - {x: 23.14011, y: 5.16279}
+      - {x: 23.141138, y: 5.160261}
+      - {x: 23.135466, y: 5.1511145}
+      - {x: 22.549063, y: 5.14351}
+      - {x: 23.135702, y: 5.155153}
+      - {x: 22.55733, y: 5.2481294}
+      - {x: 23.16346, y: 5.15721}
+      - {x: 23.132954, y: 5.14942}
       - {x: -8.930078, y: 4.823177}
       - {x: -8.909898, y: -4.776682}
       - {x: -7.4375095, y: -4.994319}
-      - {x: 4.019942, y: -4.9842396}
-      - {x: 19.88188, y: -4.9721837}
-      - {x: 27.834202, y: -4.563453}
+      - {x: 22.370644, y: -4.5200243}
+      - {x: 22.535673, y: 5.269856}
+      - {x: 22.032106, y: -4.5208945}
   m_UseDelaunayMesh: 0
 --- !u!4 &121321686
 Transform:
@@ -2186,7 +2187,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2720724487121832236, guid: 3ed8a048afa98ec418c437e92f7cb431, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21.72
+      value: 20.5
       objectReference: {fileID: 0}
     - target: {fileID: 2720724487121832236, guid: 3ed8a048afa98ec418c437e92f7cb431, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2695,11 +2696,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1765948930686498275, guid: bc223d9c40dbef04b8d2ddba6bfd8db7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.7058196
+      value: -0.70603085
       objectReference: {fileID: 0}
     - target: {fileID: 1765948930686498275, guid: bc223d9c40dbef04b8d2ddba6bfd8db7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.36838007
+      value: -0.26535988
       objectReference: {fileID: 0}
     - target: {fileID: 1765948930686498275, guid: bc223d9c40dbef04b8d2ddba6bfd8db7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2747,11 +2748,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5647919152037018521, guid: bc223d9c40dbef04b8d2ddba6bfd8db7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.639841
+      value: 15.640053
       objectReference: {fileID: 0}
     - target: {fileID: 5647919152037018521, guid: bc223d9c40dbef04b8d2ddba6bfd8db7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.0607
+      value: 1.9576797
       objectReference: {fileID: 0}
     - target: {fileID: 8162719651252217220, guid: bc223d9c40dbef04b8d2ddba6bfd8db7, type: 3}
       propertyPath: m_BoundingShape2D
