@@ -38,10 +38,10 @@ public class QuestComplete : MonoBehaviour
             if (GameManager.Flage == true)
             {
                 Laber.SetActive(true);
-                box.enabled = false;
                 TextCanvas.SetActive(true);
                 StartTalking(textso.text);
-                gameObject.SetActive(false);
+                box.enabled = false;
+              
             }
         }
 
@@ -74,7 +74,7 @@ public class QuestComplete : MonoBehaviour
     {
         num = 0;
         TextCanvas.SetActive(false);
-        box.enabled = true;
+       
     }
 
     IEnumerator TextRotine(string Story)
