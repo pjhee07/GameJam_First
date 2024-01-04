@@ -83,11 +83,19 @@ public class PlayerCtrl : MonoBehaviour
 
     void Run()
     {
+        if (GameManager.Instance.textflage == false)
+        {
+
         hor = Input.GetAxisRaw("Horizontal");
         rigid.velocity = new Vector2(hor * moveSpeed, rigid.velocity.y);
         //SoundManager.Instance.PlaySound(SoundManager.Sound.Walk);
         onRunChanged?.Invoke(hor*moveSpeed);
-        
+        }
+        else
+        {
+            return;
+
+        }
     }
 
     void Dash()

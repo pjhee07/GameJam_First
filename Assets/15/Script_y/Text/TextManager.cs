@@ -11,6 +11,7 @@ public class TextManager : MonoBehaviour
     [SerializeField] private GameObject EImage;
     [SerializeField] private TextSO textso;
     [SerializeField] private float NextTextTime;
+    
    
     int num=0;
 

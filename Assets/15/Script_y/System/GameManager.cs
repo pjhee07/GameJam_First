@@ -14,6 +14,7 @@ public class GameManager : Singleton<GameManager>
     public int PushCount = 0;
     public bool textflage = false;
 
+
     [SerializeField] private Image FadeImage;
     
     [SerializeField] private int PushUpBtnCount;
