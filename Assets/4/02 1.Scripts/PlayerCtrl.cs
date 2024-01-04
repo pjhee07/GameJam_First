@@ -10,7 +10,7 @@ public class PlayerCtrl : MonoBehaviour
     [SerializeField] float moveSpeed;
     [SerializeField] bool isJump;
     [SerializeField] bool isDash;
-    [SerializeField] float dashCoolTime = 3f;
+    [SerializeField] float dashCoolTime = 1f;
     public int atkDmg;
 
     public bool attacked = false; //여러번 공격감지 방지용
