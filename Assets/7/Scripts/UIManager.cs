@@ -22,8 +22,8 @@ public class UIManager : MonoBehaviour
 
     public void ReturnBtn()
     {
+        //RetryPanel.SetActive(false);
         GameManager.Instance.SceneMovement(ReSceneName);
-        RetryPanel.SetActive(false);
     }
 
     public void MainBtn()
