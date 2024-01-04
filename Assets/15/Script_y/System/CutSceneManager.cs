@@ -21,10 +21,6 @@ public class CutSceneManager : MonoBehaviour
         StartTalking(textso.text);
     }
 
-
-
-
-
     public void StartTalking(string[] talk)
     {
         //textso.text = talk;
@@ -36,6 +32,7 @@ public class CutSceneManager : MonoBehaviour
         Texts.text = null;
 
         num++;
+        Debug.Log(num);
         
         if (num == textso.text.Length)
         {
@@ -48,9 +45,7 @@ public class CutSceneManager : MonoBehaviour
 
     private void EndTalking()
     {
-        num = 0;
-       
-        
+        num = 0;  
     }
 
     IEnumerator TextRotine(string Story)

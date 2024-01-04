@@ -12,7 +12,11 @@ public class SpriteChange : MonoBehaviour
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+    private void Start()
+    {
         StartCoroutine(ChangeSpriteRotine());
+        
     }
 
     IEnumerator ChangeSpriteRotine()
