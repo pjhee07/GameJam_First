@@ -25,7 +25,7 @@ public class ButnPush : MonoBehaviour
            if(GameManager.Instance.PushFlage==true)
             {
                 brigde.SetActive(true);
-                SoundManager.Instance.PlaySound(SoundManager.Sound.Brigde);
+                //SoundManager.Instance.PlaySound(SoundManager.Sound.Brigde);
             }
         }
     }
