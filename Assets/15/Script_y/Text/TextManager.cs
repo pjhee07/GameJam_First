@@ -21,6 +21,7 @@ public class TextManager : MonoBehaviour
     private void Awake()
     {
         box = GetComponent<BoxCollider2D>();
+        
     }
     private void Start()
     {
@@ -30,9 +31,10 @@ public class TextManager : MonoBehaviour
     private void Update()
     {
        
-        if (EImage.activeSelf && Input.GetKeyDown(KeyCode.E))
+
+        if (EImage.activeSelf == true && Input.GetKeyDown(KeyCode.E))
         {
-            box.enabled = false;
+
             GameManager.Instance.textflage = true;
             TextCanvas.SetActive(true);
             StartTalking(textso.text);
@@ -63,6 +65,7 @@ public class TextManager : MonoBehaviour
     {
         //textso.text = talk;
         StartCoroutine(TextRotine(talk[num]));
+        
     }
 
     private void NextTalk()
@@ -83,7 +86,7 @@ public class TextManager : MonoBehaviour
     {
         num = 0;
         TextCanvas.SetActive(false);
-        box.enabled = true;
+        box.enabled = false;
         GameManager.Instance.textflage = false;
     }
 
