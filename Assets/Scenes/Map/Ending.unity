@@ -228,10 +228,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Movement: 0
-  PushFlage: 0
-  PushCount: 0
+  textflage: 0
   FadeImage: {fileID: 0}
-  PushUpBtnCount: 0
 --- !u!4 &90781093
 Transform:
   m_ObjectHideFlags: 0
@@ -1324,7 +1322,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -702, y: -240}
+  m_AnchoredPosition: {x: -702, y: -198}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2028938580
@@ -1351,8 +1349,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9484733d3afd3334baf2e73109144564, type: 2}
-  m_sharedMaterial: {fileID: -1874807564082635732, guid: 9484733d3afd3334baf2e73109144564, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e97e5ba77a20d084eaeacddbd235f9a4, type: 2}
+  m_sharedMaterial: {fileID: 3595435085145356066, guid: e97e5ba77a20d084eaeacddbd235f9a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

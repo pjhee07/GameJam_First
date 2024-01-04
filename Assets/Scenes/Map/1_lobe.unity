@@ -339,8 +339,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 150}
-  m_SizeDelta: {x: 1499.3442, y: 417.1537}
+  m_AnchoredPosition: {x: -1.3134, y: 215.96}
+  m_SizeDelta: {x: 1496.7173, y: 285.22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &71358587
 MonoBehaviour:
@@ -410,7 +410,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1765948930686498275, guid: bc223d9c40dbef04b8d2ddba6bfd8db7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.7736661
+      value: -1.7736669
       objectReference: {fileID: 0}
     - target: {fileID: 1765948930686498275, guid: bc223d9c40dbef04b8d2ddba6bfd8db7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -466,7 +466,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5647919152037018521, guid: bc223d9c40dbef04b8d2ddba6bfd8db7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.037687
+      value: 18.03769
       objectReference: {fileID: 0}
     - target: {fileID: 5647919152037018521, guid: bc223d9c40dbef04b8d2ddba6bfd8db7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -559,8 +559,8 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 50.28931, y: 2.7785957}
-      - {x: 50.330517, y: 2.641803}
+    - - {x: 49.43087, y: 2.8176157}
+      - {x: 47.950294, y: 2.7978833}
       - {x: 29.32602, y: 2.8771112}
       - {x: 29.510471, y: 2.8751874}
       - {x: 19.30539, y: 2.8757832}
@@ -571,7 +571,7 @@ PolygonCollider2D:
       - {x: -7.4375095, y: -4.994319}
       - {x: 4.019942, y: -4.9842396}
       - {x: 19.88188, y: -4.9721837}
-      - {x: 50.401962, y: -5.111108}
+      - {x: 48.97542, y: -4.7429686}
   m_UseDelaunayMesh: 0
 --- !u!4 &179996429
 Transform:
@@ -1182,7 +1182,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -81, y: 81}
   m_SizeDelta: {x: 1076.8611, y: 15.2946}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1215629921
@@ -1209,8 +1209,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9484733d3afd3334baf2e73109144564, type: 2}
-  m_sharedMaterial: {fileID: -1874807564082635732, guid: 9484733d3afd3334baf2e73109144564, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e97e5ba77a20d084eaeacddbd235f9a4, type: 2}
+  m_sharedMaterial: {fileID: 3595435085145356066, guid: e97e5ba77a20d084eaeacddbd235f9a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1270,7 +1270,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -67.267456, y: -215.81384, z: -72.44177, w: 43.16272}
+  m_margin: {x: -67.267456, y: -215.81384, z: -248.43457, w: 43.16278}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3466,11 +3466,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Movement: 0
-  PushFlage: 0
-  PushCount: 0
   textflage: 0
   FadeImage: {fileID: 0}
-  PushUpBtnCount: 0
 --- !u!4 &2094790838
 Transform:
   m_ObjectHideFlags: 0
@@ -3580,7 +3577,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2720724487121832236, guid: 3ed8a048afa98ec418c437e92f7cb431, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 47.41
+      value: 50.3
       objectReference: {fileID: 0}
     - target: {fileID: 2720724487121832236, guid: 3ed8a048afa98ec418c437e92f7cb431, type: 3}
       propertyPath: m_LocalPosition.y
