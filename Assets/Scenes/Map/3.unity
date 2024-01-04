@@ -574,11 +574,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7414863409369732191, guid: 01e93c2436df7684aab224817a44ad0b, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 809.6204
+      value: 993.1418
       objectReference: {fileID: 0}
     - target: {fileID: 7414863409369732191, guid: 01e93c2436df7684aab224817a44ad0b, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 974.9023
+      value: 957.0599
       objectReference: {fileID: 0}
     - target: {fileID: 7414863409369732191, guid: 01e93c2436df7684aab224817a44ad0b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -610,11 +610,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7414863409369732191, guid: 01e93c2436df7684aab224817a44ad0b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 30
+      value: -61.7607
       objectReference: {fileID: 0}
     - target: {fileID: 7414863409369732191, guid: 01e93c2436df7684aab224817a44ad0b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.0000038147
+      value: 8.9212
       objectReference: {fileID: 0}
     - target: {fileID: 7414863409369732191, guid: 01e93c2436df7684aab224817a44ad0b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1635,10 +1635,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9484733d3afd3334baf2e73109144564, type: 2}
-  m_sharedMaterial: {fileID: -1874807564082635732, guid: 9484733d3afd3334baf2e73109144564, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e97e5ba77a20d084eaeacddbd235f9a4, type: 2}
+  m_sharedMaterial: {fileID: 3595435085145356066, guid: e97e5ba77a20d084eaeacddbd235f9a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

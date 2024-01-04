@@ -51,13 +51,13 @@ public class Ending : MonoBehaviour
     IEnumerator ChangeSpriteRotine()
     {
         SoundManager.Instance.PlaySound(SoundManager.Sound.Breaking);
-        yield return new WaitForSeconds(3.5f);
+        yield return new WaitForSeconds(3.4f);
         spriteRenderer.sprite = sprite[0];
-        yield return new WaitForSeconds(4.4f);
+        yield return new WaitForSeconds(5f);
         spriteRenderer.sprite = sprite[1];
-        yield return new WaitForSeconds(5.5f);
+        yield return new WaitForSeconds(5f);
         spriteRenderer.sprite = sprite[2];
-        yield return new WaitForSeconds(3f);
+       // yield return new WaitForSeconds(3f);
         
         Debug.Log("Á¾·á");
     }
@@ -70,7 +70,7 @@ public class Ending : MonoBehaviour
         SoundManager.Instance.PlaySound(SoundManager.Sound.Knock);
         FadeImage.color = new Color(0, 0, 0, 1);
 
-        yield return new WaitForSeconds(3.5f);
+        yield return new WaitForSeconds(2.5f);
         GameManager.Instance.SceneMovement(NextScene);
     }
 }
