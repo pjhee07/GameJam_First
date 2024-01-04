@@ -17,7 +17,6 @@ public class SpriteChange : MonoBehaviour
 
     IEnumerator ChangeSpriteRotine()
     {
-
         yield return new WaitForSeconds(4f);
         spriteRenderer.sprite = sprite[0];
         yield return new WaitForSeconds(3f);
@@ -26,8 +25,6 @@ public class SpriteChange : MonoBehaviour
         spriteRenderer.sprite = sprite[2];
         yield return new WaitForSeconds(3f);
         GameManager.Instance.SceneMovement(NextScene);
-        Debug.Log("종료");
-
-        
+        Debug.Log("종료");        
     }
 }
