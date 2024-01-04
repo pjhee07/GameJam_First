@@ -252,7 +252,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2720724487121832236, guid: 3ed8a048afa98ec418c437e92f7cb431, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 43.2
+      value: 45.2
       objectReference: {fileID: 0}
     - target: {fileID: 2720724487121832236, guid: 3ed8a048afa98ec418c437e92f7cb431, type: 3}
       propertyPath: m_LocalPosition.y
@@ -579,11 +579,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Movement: 0
-  PushFlage: 0
-  PushCount: 0
   textflage: 0
   FadeImage: {fileID: 0}
-  PushUpBtnCount: 0
 --- !u!4 &560178918 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7448383657844415134, guid: f3a4c872efb426c439f99c3917585242, type: 3}
@@ -3598,7 +3595,7 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 53.426403, y: 18.902899}
+    - - {x: 52.407322, y: 19.038776}
       - {x: 23.93905, y: 19.396122}
       - {x: -1.8879194, y: 19.317383}
       - {x: -2.4160671, y: 4.693111}
@@ -3611,7 +3608,7 @@ PolygonCollider2D:
       - {x: -2.2845707, y: -3.7983139}
       - {x: -2.31468, y: -3.7682555}
       - {x: 2.433837, y: -3.686674}
-      - {x: 53.832973, y: -3.5662274}
+      - {x: 52.610073, y: -3.6341662}
   m_UseDelaunayMesh: 0
 --- !u!4 &1966773369
 Transform:
