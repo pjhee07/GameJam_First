@@ -25,7 +25,7 @@ public class Enemy : MonoBehaviour
     Image currentHpbar;
 
     public Action onDeadChanged;
-    GameObject EnemyHpbar;
+
     CircleCollider2D CircleCol;
 
     private void Awake()
@@ -39,25 +39,25 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         
-        hpBar = Instantiate(prfHpBar, canvas.transform).GetComponent<RectTransform>(); //UI는 캔버스 안에 있어야함.
+        //hpBar = Instantiate(prfHpBar, canvas.transform).GetComponent<RectTransform>(); //UI는 캔버스 안에 있어야함.
                                                                                        // UI는 transform이 아닌 RectRansform을 사용. //삭제하기편하도록 변수에 담음
         GetEnemyStatus();
 
-        currentHpbar = hpBar.transform.GetChild(0).GetComponent<Image>();
-        //EnemyHpbar = GameObject.Find("bghp_bar(Clone)");
+        //currentHpbar = prfHpBar.transform.GetChild(0).GetComponent<Image>();
+
     }
 
     void Update()
     {
         Vector3 _hpBarPos =
             Camera.main.WorldToScreenPoint(new Vector3(transform.position.x, transform.position.y + height, 0)); //월드 좌표를 스크린 좌표 즉, UI좌표로 바꿔줌.
-        if(EnemyHpbar != null)
-        {
-        hpBar.position = _hpBarPos; //스크린 좌표로 바꾼 값으로 체력바를 이동. //따라다니도록
-        currentHpbar.fillAmount = (float)currentHp / (float)maxHp;
+        //if(prfHpBar != null)
+        //{
+        //hpBar.position = _hpBarPos; //스크린 좌표로 바꾼 값으로 체력바를 이동. //따라다니도록
+        //currentHpbar.fillAmount = (float)currentHp / (float)maxHp;
         //currentHpbar부분은 hpBar의 fillAmount를 현재 남은 피의 양에 따라 달라지게 설정함.
 
-        }
+        //}
     }
 
     void SetEnemyStatus(string _enemyName, int _maxHp, int _atkDmg, float _atkDistance, int _atkSpeed)
@@ -93,7 +93,7 @@ public class Enemy : MonoBehaviour
                     //소멸 전에 플레이어 공격하지 못하도록
                     CircleCol.enabled = false;
                     onDeadChanged.Invoke();
-                    Destroy(prfHpBar);
+                    //Destroy(prfHpBar);
                     Destroy(gameObject,0.3f);
                     
                     
