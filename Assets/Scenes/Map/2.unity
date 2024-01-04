@@ -3439,8 +3439,8 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 61.972225, y: 19.941324}
-      - {x: 23.699848, y: 20.026535}
+    - - {x: 61.0154, y: 18.9845}
+      - {x: 23.93905, y: 19.396122}
       - {x: -1.8879194, y: 19.317383}
       - {x: -2.4160671, y: 4.693111}
       - {x: -1.6459141, y: 3.2676952}
@@ -3452,7 +3452,7 @@ PolygonCollider2D:
       - {x: -2.2845707, y: -3.7983139}
       - {x: -2.31468, y: -3.7682555}
       - {x: 2.433837, y: -3.686674}
-      - {x: 62.014385, y: -3.9088335}
+      - {x: 61.177166, y: -3.7294292}
   m_UseDelaunayMesh: 0
 --- !u!4 &1966773369
 Transform:
@@ -18955,7 +18955,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8660377, g: 1, b: 0.96375495, a: 1}
   m_Origin: {x: -13, y: -5, z: 0}
   m_Size: {x: 66, y: 23, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
