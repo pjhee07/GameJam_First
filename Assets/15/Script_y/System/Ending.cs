@@ -53,7 +53,7 @@ public class Ending : MonoBehaviour
         SoundManager.Instance.PlaySound(SoundManager.Sound.Breaking);
         yield return new WaitForSeconds(3.5f);
         spriteRenderer.sprite = sprite[0];
-        yield return new WaitForSeconds(3.5f);
+        yield return new WaitForSeconds(4.4f);
         spriteRenderer.sprite = sprite[1];
         yield return new WaitForSeconds(5.5f);
         spriteRenderer.sprite = sprite[2];
@@ -65,12 +65,12 @@ public class Ending : MonoBehaviour
     IEnumerator BlackOut()
     {
 
-        yield return new WaitForSeconds(15f);
+        yield return new WaitForSeconds(17f);
         BGM.Stop();
         SoundManager.Instance.PlaySound(SoundManager.Sound.Knock);
         FadeImage.color = new Color(0, 0, 0, 1);
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
         GameManager.Instance.SceneMovement(NextScene);
     }
 }
