@@ -29,6 +29,6 @@ public class UIManager : MonoBehaviour
     public void MainBtn()
     {
         GameManager.Instance.SceneMovement("Start");
-        RetryPanel.SetActive(false);
+       // RetryPanel.SetActive(false);
     }
 }
