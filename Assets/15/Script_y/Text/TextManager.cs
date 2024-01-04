@@ -26,18 +26,20 @@ public class TextManager : MonoBehaviour
         EImage.SetActive(false);
         TextCanvas.SetActive(false);
     }
-
     private void Update()
     {
+       
         if (EImage.activeSelf && Input.GetKeyDown(KeyCode.E))
         {
             box.enabled = false;
+            GameManager.Instance.textflage = true;
             TextCanvas.SetActive(true);
             StartTalking(textso.text);
             Debug.Log("Ω√¿€");
         }
-
     }
+
+   
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -51,8 +53,9 @@ public class TextManager : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        EImage.SetActive(false);
         TextCanvas.SetActive(false);
+        EImage.SetActive(false);
+        EndTalking();
     }
 
     public void StartTalking(string[] talk)
@@ -80,6 +83,7 @@ public class TextManager : MonoBehaviour
         num = 0;
         TextCanvas.SetActive(false);
         box.enabled = true;
+        GameManager.Instance.textflage = false;
     }
 
     IEnumerator TextRotine(string Story)

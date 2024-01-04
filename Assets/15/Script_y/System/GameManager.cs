@@ -12,6 +12,7 @@ public class GameManager : Singleton<GameManager>
     public static int ItemCount = 0;
     public static bool Flage;
     public int PushCount = 0;
+    public bool textflage = false;
 
     [SerializeField] private Image FadeImage;
     
@@ -29,8 +30,9 @@ public class GameManager : Singleton<GameManager>
     }
 
     public void SceneMovement(string name)
-    {
+    {        
         SceneManager.LoadScene(name);
+        Debug.Log(name);
     }
 
     public void PusCountSet()

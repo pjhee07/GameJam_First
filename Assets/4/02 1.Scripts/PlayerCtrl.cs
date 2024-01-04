@@ -171,7 +171,7 @@ public class PlayerCtrl : MonoBehaviour
             {
                 currentTime = 0;
                 onAttackChanged?.Invoke();
-                SoundManager.Instance.PlaySound(SoundManager.Sound.Attack);
+                //SoundManager.Instance.PlaySound(SoundManager.Sound.Attack);
 
             }
         }
