@@ -23,6 +23,6 @@ public class Door : MonoBehaviour
             yield return new WaitForSeconds(0.01f);
         }
         gameObject.SetActive(false);
-        SoundManager.Instance.PlaySound(SoundManager.Sound.Door);
+       SoundManager.Instance.PlaySound(SoundManager.Sound.Door);
     }
 }

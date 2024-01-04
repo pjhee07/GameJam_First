@@ -8,17 +8,19 @@ using System;
 public class GameManager : Singleton<GameManager>
 {
     public bool Movement = false;
-    public bool PushFlage = false;
+    
     public static int ItemCount = 0;
     public static bool Flage;
-    public int PushCount = 0;
+    
     public bool textflage = false;
 
 
     [SerializeField] private Image FadeImage;
     
-    [SerializeField] private int PushUpBtnCount;
     
+
+   
+
     public void ItemCountSet()
     {
         ItemCount++;
@@ -36,15 +38,7 @@ public class GameManager : Singleton<GameManager>
         Debug.Log(name);
     }
 
-    public void PusCountSet()
-    {
-        PushCount++;
-        Debug.Log(PushCount);
-        if (PushCount >= PushUpBtnCount)
-        {
-            PushFlage = true;
-        }
-    }
+    
 
 
     public  IEnumerator FadeOut()

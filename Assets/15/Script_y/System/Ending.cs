@@ -70,7 +70,7 @@ public class Ending : MonoBehaviour
         SoundManager.Instance.PlaySound(SoundManager.Sound.Knock);
         FadeImage.color = new Color(0, 0, 0, 1);
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(3.5f);
         GameManager.Instance.SceneMovement(NextScene);
     }
 }

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8852734338547355574}
   - component: {fileID: 4955736955214230569}
   - component: {fileID: 3242050510739951829}
+  - component: {fileID: 906745349622076360}
   m_Layer: 0
   m_Name: buttn
   m_TagString: Untagged
@@ -165,3 +166,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7861039735c953e4baa8ea635754d46f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brigde: {fileID: 0}
+--- !u!114 &906745349622076360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640798110260155200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 089baa11be31a814b8cb570a1531f165, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PushFlage: 0
+  PushUpBtnCount: 0
+  PushCount: 0
