@@ -74,8 +74,8 @@ public class PlayerHp : MonoBehaviour
 
     public void Die()
     {
-        Destroy(gameObject);
         ReTryPanel.SetActive(true);
+        Destroy(gameObject);
     }
 
     void OnTriggerEnter2D(Collider2D col)
