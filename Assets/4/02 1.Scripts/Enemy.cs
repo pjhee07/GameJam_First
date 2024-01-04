@@ -89,6 +89,7 @@ public class Enemy : MonoBehaviour
                 {
                     //사망 애니메이션
                     onDeadChanged.Invoke();
+                    Destroy(EnemyHpbar);
                     Destroy(gameObject,1f);
                     
                     
