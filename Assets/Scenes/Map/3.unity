@@ -806,7 +806,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1458613744}
-  - {fileID: 1548746713}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &432765415
@@ -4105,8 +4104,11 @@ PolygonCollider2D:
     - - {x: 36.64167, y: 16.801498}
       - {x: 30.016487, y: 17.503075}
       - {x: 0.21150112, y: 17.708586}
-      - {x: -9.905414, y: 17.434544}
-      - {x: -9.812087, y: -4.9500027}
+      - {x: -8.862991, y: 18.192669}
+      - {x: -8.957532, y: 15.86971}
+      - {x: -8.957005, y: 7.2452397}
+      - {x: -9.060128, y: -4.0525045}
+      - {x: -9.089723, y: -4.840738}
       - {x: -1.9991684, y: -4.97307}
       - {x: 38.234985, y: -5.8850427}
       - {x: 37.822742, y: 15.184592}
@@ -4124,7 +4126,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 320613088}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1554750632
 GameObject:
@@ -5304,6 +5306,7 @@ SceneRoots:
   - {fileID: 289250749}
   - {fileID: 432765415}
   - {fileID: 308241128}
+  - {fileID: 1548746713}
   - {fileID: 320613088}
   - {fileID: 1465332720}
   - {fileID: 8128526001963206818}

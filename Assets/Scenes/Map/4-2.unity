@@ -1202,11 +1202,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2354048379979653750, guid: 1fd02173c5218b34d81c15ade30cec07, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.4
+      value: 0.8181596
       objectReference: {fileID: 0}
     - target: {fileID: 2354048379979653750, guid: 1fd02173c5218b34d81c15ade30cec07, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.91
+      value: 1.5169499
       objectReference: {fileID: 0}
     - target: {fileID: 2354048379979653750, guid: 1fd02173c5218b34d81c15ade30cec07, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1240,6 +1240,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2668192828277089551, guid: 1fd02173c5218b34d81c15ade30cec07, type: 3}
+      propertyPath: m_BoundingShape2D
+      value: 
+      objectReference: {fileID: 1859806046}
     - target: {fileID: 3644763867200840050, guid: 1fd02173c5218b34d81c15ade30cec07, type: 3}
       propertyPath: m_Name
       value: Main Camera_1
@@ -1314,18 +1318,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7778798971305949864, guid: 1fd02173c5218b34d81c15ade30cec07, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21.964022
+      value: 14.745862
       objectReference: {fileID: 0}
     - target: {fileID: 7778798971305949864, guid: 1fd02173c5218b34d81c15ade30cec07, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.69232
+      value: 0.2653699
       objectReference: {fileID: 0}
     - target: {fileID: 9181775791040637190, guid: 1fd02173c5218b34d81c15ade30cec07, type: 3}
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 2082704083}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 6187779343283676436, guid: 1fd02173c5218b34d81c15ade30cec07, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1fd02173c5218b34d81c15ade30cec07, type: 3}
@@ -2187,20 +2192,24 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 38.316074, y: 19.48893}
-      - {x: 23.93905, y: 19.396122}
-      - {x: -1.8879194, y: 19.317383}
-      - {x: -2.4160671, y: 4.693111}
-      - {x: -2.5527182, y: 3.2402163}
-      - {x: -2.3982363, y: 3.2480965}
-      - {x: -2.4649687, y: 0.772002}
-      - {x: -2.4975672, y: -1.1128973}
-      - {x: -2.5072594, y: -3.0189767}
-      - {x: -2.5116587, y: -3.6467853}
-      - {x: -2.2845707, y: -3.7983139}
-      - {x: -2.31468, y: -3.7682555}
+    - - {x: 37.514717, y: -2.324418}
+      - {x: 37.374023, y: 5.4478197}
+      - {x: 37.425835, y: 7.302785}
+      - {x: 36.912178, y: 13.048551}
+      - {x: 35.185307, y: 11.214754}
+      - {x: 22.93273, y: 11.010133}
+      - {x: -1.1984444, y: 10.8953}
+      - {x: -1.2087803, y: 6.1955113}
+      - {x: -1.3454332, y: 4.5548167}
+      - {x: -1.4403105, y: 3.8043118}
+      - {x: -1.5379438, y: 0.9574069}
+      - {x: -1.4628763, y: -0.6552459}
+      - {x: -1.5123644, y: -2.8597934}
+      - {x: -1.5941916, y: -3.7707672}
+      - {x: -1.1935291, y: -3.699128}
+      - {x: -0.18560505, y: -3.7682555}
       - {x: 2.433837, y: -3.686674}
-      - {x: 38.459026, y: -3.8814697}
+      - {x: 37.64789, y: -3.4759016}
   m_UseDelaunayMesh: 0
 --- !u!4 &1859806047
 Transform:
