@@ -6,15 +6,19 @@ using Cinemachine;
 public class CameraFollow  : MonoBehaviour
 {
     GameObject Player;
-    CinemachineStateDrivenCamera drivenCamera;
-    
+    CinemachineVirtualCamera drivenCamera;
+    private void Awake()
+    {
+        drivenCamera = GetComponent<CinemachineVirtualCamera>();
+    }
+
     void Start()
     {
-        Player = GameObject.FindWithTag("Player");
+        Player = GameObject.FindWithTag("PLAYER");
     }
     void Update()
     {
-        if (Player = null)
+        if (Player == null)
         {
             drivenCamera.Follow = null;
         }

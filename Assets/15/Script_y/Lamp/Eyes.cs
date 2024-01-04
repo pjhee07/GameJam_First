@@ -13,7 +13,7 @@ public class Eyes : MonoBehaviour
     private void Awake()
     {
         Player = GameObject.FindWithTag("PLAYER");
-        playerHp = Player.GetComponent<PlayerHp>();
+        playerHp = Player?.GetComponent<PlayerHp>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
