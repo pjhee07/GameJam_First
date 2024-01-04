@@ -17,11 +17,11 @@ public class CameraFollow  : MonoBehaviour
         Player = GameObject.FindWithTag("PLAYER");
     }
     void Update()
-    {
-        if (Player == null)
+    {        if (Player == null)
         {
-            drivenCamera.Follow = null;
+            drivenCamera.enabled = false;
         }
+
     }
 }
 
