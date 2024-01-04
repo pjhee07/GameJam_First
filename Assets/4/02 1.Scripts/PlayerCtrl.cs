@@ -94,7 +94,6 @@ public class PlayerCtrl : MonoBehaviour
         else
         {
             return;
-
         }
     }
 
@@ -147,13 +146,22 @@ public class PlayerCtrl : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            
-            if (!isJump)
+
+            if(GameManager.Instance.textflage == false)
             {
-                isJump = true;
-                rigid.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+                if (!isJump)
+                {
+                    isJump = true;
+                    rigid.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+                }
+                onJumpChanged?.Invoke(isJump);
             }
-            onJumpChanged?.Invoke(isJump);
+            else
+            {
+                return;
+            }
+        
+            
 
 
         }
