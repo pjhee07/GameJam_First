@@ -17,7 +17,8 @@ public class SoundManager : Singleton<SoundManager>
        Dash,
        Knock,
        Beep,
-       Glass
+       Glass,
+       Die
     }
 
     AudioSource audioSource;

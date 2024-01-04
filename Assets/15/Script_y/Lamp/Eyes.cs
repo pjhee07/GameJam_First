@@ -21,7 +21,7 @@ public class Eyes : MonoBehaviour
         if (collision.CompareTag("PLAYER") && GameManager.Instance.Movement == true)
         {
             StartCoroutine(WaitRoutine());
-            playerHp.TakeDamage(8);
+            playerHp.TakeDamage(5);
         }
     }
 

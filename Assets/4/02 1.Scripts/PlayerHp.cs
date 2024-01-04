@@ -73,6 +73,11 @@ public class PlayerHp : MonoBehaviour
         {
             maxHp = 5;
         }
+
+        if(currentHp<=0)
+        {
+            Die();
+        }
     }
     public void HpRenewal()
     {
@@ -96,7 +101,9 @@ public class PlayerHp : MonoBehaviour
 
     public void Die()
     {
+        
         ReTryPanel.SetActive(true);
+        SoundManager.Instance.PlaySound(SoundManager.Sound.Die);
         Destroy(gameObject);
     }
 
