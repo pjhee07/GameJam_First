@@ -13,6 +13,7 @@ public class Brigde : MonoBehaviour
 
     public void PusCountSet()
     {
+        SoundManager.Instance.PlaySound(SoundManager.Sound.Beep);
         PushCount++;
         Debug.Log("puset" + PushUpBtnCount);
         Debug.Log(PushCount);

@@ -15,7 +15,9 @@ public class SoundManager : Singleton<SoundManager>
        Brigde,
        Breaking,
        Dash,
-       Knock
+       Knock,
+       Beep,
+       Glass
     }
 
     AudioSource audioSource;
