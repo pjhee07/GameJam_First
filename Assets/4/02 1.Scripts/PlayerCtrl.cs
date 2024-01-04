@@ -48,6 +48,7 @@ public class PlayerCtrl : MonoBehaviour
         trailRenderer = GetComponentInChildren<TrailRenderer>();
         playerHp = GetComponent<PlayerHp>();
         HammerCol = transform.GetChild(1).gameObject;
+
     }
 
 
@@ -84,7 +85,9 @@ public class PlayerCtrl : MonoBehaviour
     {
         hor = Input.GetAxisRaw("Horizontal");
         rigid.velocity = new Vector2(hor * moveSpeed, rigid.velocity.y);
+        SoundManager.Instance.PlaySound(SoundManager.Sound.Walk);
         onRunChanged?.Invoke(hor*moveSpeed);
+        
     }
 
     void Dash()
@@ -167,6 +170,7 @@ public class PlayerCtrl : MonoBehaviour
             {
                 currentTime = 0;
                 onAttackChanged?.Invoke();
+                SoundManager.Instance.PlaySound(SoundManager.Sound.Attack);
 
             }
         }

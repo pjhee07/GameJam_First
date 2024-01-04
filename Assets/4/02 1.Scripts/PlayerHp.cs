@@ -63,8 +63,9 @@ public class PlayerHp : MonoBehaviour
     {
         if (currentHp > 0)
         {
-        currentHp -= damage;
-        ChangeMaterials();
+            currentHp -= damage;
+            SoundManager.Instance.PlaySound(SoundManager.Sound.Hit);
+            ChangeMaterials();
         }
         else
         {

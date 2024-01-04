@@ -20,7 +20,8 @@ public class Leber : MonoBehaviour
         {
             animator.SetTrigger("On");
             door.enabled = true;
-           
+            SoundManager.Instance.PlaySound(SoundManager.Sound.Leber);
+
         }
     }
 
