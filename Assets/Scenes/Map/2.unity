@@ -252,7 +252,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2720724487121832236, guid: 3ed8a048afa98ec418c437e92f7cb431, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 46.61
+      value: 43.2
       objectReference: {fileID: 0}
     - target: {fileID: 2720724487121832236, guid: 3ed8a048afa98ec418c437e92f7cb431, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3700,7 +3700,7 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 61.0154, y: 18.9845}
+    - - {x: 53.426403, y: 18.902899}
       - {x: 23.93905, y: 19.396122}
       - {x: -1.8879194, y: 19.317383}
       - {x: -2.4160671, y: 4.693111}
@@ -3713,7 +3713,7 @@ PolygonCollider2D:
       - {x: -2.2845707, y: -3.7983139}
       - {x: -2.31468, y: -3.7682555}
       - {x: 2.433837, y: -3.686674}
-      - {x: 61.177166, y: -3.7294292}
+      - {x: 53.832973, y: -3.5662274}
   m_UseDelaunayMesh: 0
 --- !u!4 &1966773369
 Transform:
@@ -19928,8 +19928,8 @@ SceneRoots:
   m_Roots:
   - {fileID: 155230450}
   - {fileID: 595854935115866306}
-  - {fileID: 548257227}
   - {fileID: 102026053}
+  - {fileID: 548257227}
   - {fileID: 997174380}
   - {fileID: 1484684282}
   - {fileID: 637549191}

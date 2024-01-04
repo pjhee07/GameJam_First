@@ -3836,7 +3836,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2720724487121832236, guid: 3ed8a048afa98ec418c437e92f7cb431, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 37.46
+      value: 36.57
       objectReference: {fileID: 0}
     - target: {fileID: 2720724487121832236, guid: 3ed8a048afa98ec418c437e92f7cb431, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4948,6 +4948,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57d1164eb6eb06b49a2ec164bb30091d, type: 3}
+--- !u!114 &3668156636212599952 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7835629765201766425, guid: 57d1164eb6eb06b49a2ec164bb30091d, type: 3}
+  m_PrefabInstance: {fileID: 3668156636212599951}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd6692c2fcfabad45afe561b9c36dc46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8128526001963206818
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5110,6 +5121,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: EasyBtn
       objectReference: {fileID: 0}
+    - target: {fileID: 8813382894177248774, guid: 7c57e0a761f1341499ff4d9f496fe75e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3668156636212599952}
+    - target: {fileID: 8813382894177248774, guid: 7c57e0a761f1341499ff4d9f496fe75e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EasyBtn
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5122,6 +5141,7 @@ SceneRoots:
   - {fileID: 502448698}
   - {fileID: 175551329}
   - {fileID: 914535650}
+  - {fileID: 1523201390}
   - {fileID: 1899707609}
   - {fileID: 148099044}
   - {fileID: 832164455}
@@ -5137,5 +5157,4 @@ SceneRoots:
   - {fileID: 1465332720}
   - {fileID: 8128526001963206818}
   - {fileID: 3668156636212599951}
-  - {fileID: 1523201390}
   - {fileID: 1648239172}
