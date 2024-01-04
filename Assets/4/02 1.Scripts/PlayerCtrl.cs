@@ -100,6 +100,7 @@ public class PlayerCtrl : MonoBehaviour
     IEnumerator DashRoutine()
     {
         isDash = true;
+        SoundManager.Instance.PlaySound(SoundManager.Sound.Dash);
         moveSpeed = dashSpeed;
         trailRenderer.emitting = true;
         yield return new WaitForSeconds(0.5f);
