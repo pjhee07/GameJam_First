@@ -408,6 +408,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NextSceneDoor
       objectReference: {fileID: 0}
+    - target: {fileID: 4337022023673953470, guid: 250c32a9d08bde24ba6ceec9ebdaf809, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 456072530, guid: 9dfe4c414a5445d49a0a69803ce4395c, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1628,7 +1632,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3425106518446745456, guid: 7c57e0a761f1341499ff4d9f496fe75e, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 294.3387
+      value: 312.0991
       objectReference: {fileID: 0}
     - target: {fileID: 3425106518446745456, guid: 7c57e0a761f1341499ff4d9f496fe75e, type: 3}
       propertyPath: m_SizeDelta.y

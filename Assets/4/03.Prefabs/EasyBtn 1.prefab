@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uB09C\uC774\uB3C4 \uC26C\uC6C0"
+  m_text: "\uBD88 \uCF1C\uAE30(\uCE58\uD2B8)"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9484733d3afd3334baf2e73109144564, type: 2}
   m_sharedMaterial: {fileID: -1874807564082635732, guid: 9484733d3afd3334baf2e73109144564, type: 2}
@@ -171,7 +171,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -28, y: -20}
-  m_SizeDelta: {x: 324.5747, y: 121.9055}
+  m_SizeDelta: {x: 354.1139, y: 117.8774}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &4125240722698396950
 CanvasRenderer:

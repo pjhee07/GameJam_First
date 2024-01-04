@@ -39,7 +39,9 @@ public class QuestComplete : MonoBehaviour
             {
                 Laber.SetActive(true);
                 box.enabled = false;
+                TextCanvas.SetActive(true);
                 StartTalking(textso.text);
+                gameObject.SetActive(false);
             }
         }
 
