@@ -34,6 +34,7 @@ public class TextManager : MonoBehaviour
 
         if (EImage.activeSelf == true && Input.GetKeyDown(KeyCode.E))
         {
+            box.enabled = false;
 
             GameManager.Instance.textflage = true;
             TextCanvas.SetActive(true);
@@ -56,9 +57,9 @@ public class TextManager : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        TextCanvas.SetActive(false);
+       
         EImage.SetActive(false);
-        EndTalking();
+      
     }
 
     public void StartTalking(string[] talk)
@@ -86,7 +87,7 @@ public class TextManager : MonoBehaviour
     {
         num = 0;
         TextCanvas.SetActive(false);
-        box.enabled = false;
+        box.enabled = true;
         GameManager.Instance.textflage = false;
     }
 
