@@ -85,7 +85,7 @@ public class PlayerCtrl : MonoBehaviour
     {
         hor = Input.GetAxisRaw("Horizontal");
         rigid.velocity = new Vector2(hor * moveSpeed, rigid.velocity.y);
-        SoundManager.Instance.PlaySound(SoundManager.Sound.Walk);
+        //SoundManager.Instance.PlaySound(SoundManager.Sound.Walk);
         onRunChanged?.Invoke(hor*moveSpeed);
         
     }
