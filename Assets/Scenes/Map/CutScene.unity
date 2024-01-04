@@ -153,11 +153,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Movement: 0
-  PushFlage: 0
-  PushCount: 0
   textflage: 0
   FadeImage: {fileID: 0}
-  PushUpBtnCount: 0
 --- !u!4 &339296210
 Transform:
   m_ObjectHideFlags: 0
@@ -232,8 +229,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9484733d3afd3334baf2e73109144564, type: 2}
-  m_sharedMaterial: {fileID: -1874807564082635732, guid: 9484733d3afd3334baf2e73109144564, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e97e5ba77a20d084eaeacddbd235f9a4, type: 2}
+  m_sharedMaterial: {fileID: 3595435085145356066, guid: e97e5ba77a20d084eaeacddbd235f9a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
