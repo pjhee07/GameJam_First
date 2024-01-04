@@ -14,7 +14,8 @@ public class SoundManager : Singleton<SoundManager>
        Leber,
        Brigde,
        Breaking,
-       Dash
+       Dash,
+       Knock
     }
 
     AudioSource audioSource;

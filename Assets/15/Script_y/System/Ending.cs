@@ -14,6 +14,7 @@ public class Ending : MonoBehaviour
     [SerializeField] private Sprite[] sprite;
     SpriteRenderer spriteRenderer;
     [SerializeField] private string NextScene;
+    [SerializeField] private AudioSource BGM;
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -49,7 +50,8 @@ public class Ending : MonoBehaviour
 
     IEnumerator ChangeSpriteRotine()
     {
-        yield return new WaitForSeconds(4f);
+        SoundManager.Instance.PlaySound(SoundManager.Sound.Breaking);
+        yield return new WaitForSeconds(3.5f);
         spriteRenderer.sprite = sprite[0];
         yield return new WaitForSeconds(3.5f);
         spriteRenderer.sprite = sprite[1];
@@ -63,8 +65,11 @@ public class Ending : MonoBehaviour
     IEnumerator BlackOut()
     {
 
-        yield return new WaitForSeconds(18f);
+        yield return new WaitForSeconds(15f);
+        BGM.Stop();
+        SoundManager.Instance.PlaySound(SoundManager.Sound.Knock);
         FadeImage.color = new Color(0, 0, 0, 1);
+
         yield return new WaitForSeconds(2f);
         GameManager.Instance.SceneMovement(NextScene);
     }
