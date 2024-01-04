@@ -466,7 +466,7 @@ MonoBehaviour:
   moveSpeed: 3
   isJump: 0
   isDash: 0
-  dashCoolTime: 3
+  dashCoolTime: 1
   atkDmg: 0
   attacked: 0
 --- !u!114 &1465341588352219240
