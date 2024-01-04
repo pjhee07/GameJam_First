@@ -12,7 +12,9 @@ public class SoundManager : Singleton<SoundManager>
        Hit,
        Door,
        Leber,
-       Brigde
+       Brigde,
+       Breaking,
+       Dash
     }
 
     AudioSource audioSource;
