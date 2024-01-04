@@ -28,8 +28,5 @@ public class SceneMove : MonoBehaviour
         EImage.SetActive(true);
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        EImage.SetActive(false);
-    }
+   
 }

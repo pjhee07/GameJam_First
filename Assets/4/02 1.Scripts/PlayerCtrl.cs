@@ -85,7 +85,7 @@ public class PlayerCtrl : MonoBehaviour
     {
         hor = Input.GetAxisRaw("Horizontal");
         rigid.velocity = new Vector2(hor * moveSpeed, rigid.velocity.y);
-        SoundManager.Instance.PlaySound(SoundManager.Sound.Walk);
+        //SoundManager.Instance.PlaySound(SoundManager.Sound.Walk);
         onRunChanged?.Invoke(hor*moveSpeed);
         
     }
@@ -100,6 +100,7 @@ public class PlayerCtrl : MonoBehaviour
     IEnumerator DashRoutine()
     {
         isDash = true;
+        SoundManager.Instance.PlaySound(SoundManager.Sound.Dash);
         moveSpeed = dashSpeed;
         trailRenderer.emitting = true;
         yield return new WaitForSeconds(0.5f);
