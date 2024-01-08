@@ -29,11 +29,22 @@ public class Eyes : MonoBehaviour
     {
         if (collision.CompareTag("PLAYER") && GameManager.Instance.Movement == true)
         {
-            Debug.Log("asfsadfdasf");
+            StartCoroutine(WaitRoutine());
+            playerHp.TakeDamage(5);
         }
     }
 
-   IEnumerator WaitRoutine()
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("PLAYER") && GameManager.Instance.Movement == true)
+        {
+            StartCoroutine(WaitRoutine());
+            playerHp.TakeDamage(5);
+        }
+        
+    }
+
+    IEnumerator WaitRoutine()
     {
         yield return new WaitForSeconds(1f);
     }
