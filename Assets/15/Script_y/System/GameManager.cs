@@ -15,7 +15,6 @@ public class GameManager : Singleton<GameManager>
 
     [SerializeField] private Image FadeImage;
 
-
     public void ItemCountSet()
     {
         ItemCount++;
@@ -31,9 +30,6 @@ public class GameManager : Singleton<GameManager>
     {        
         SceneManager.LoadScene(sceneName);
     }
-
-    
-
 
     public  IEnumerator FadeOut()
     {

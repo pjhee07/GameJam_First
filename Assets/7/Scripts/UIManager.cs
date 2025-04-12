@@ -15,7 +15,6 @@ public class UIManager : MonoBehaviour
 
     public void ChangeSceneBtn(string sceneName)
     {
-        //RetryPanel.SetActive(false);
         GameManager.Instance.ChangeScene(sceneName);
     }
 

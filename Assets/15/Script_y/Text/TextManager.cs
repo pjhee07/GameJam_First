@@ -5,103 +5,96 @@ using TMPro;
 
 public class TextManager : MonoBehaviour
 {
-    [SerializeField] private GameObject TextCanvas;
-    [SerializeField] private TextMeshProUGUI Texts;
+    [Header("대사 UI")]
+    [SerializeField] private GameObject _textArea;
+    [SerializeField] private TextMeshProUGUI _lineText;
+    [SerializeField] private GameObject _keyIcon;
 
-    [SerializeField] private GameObject EImage;
-    [SerializeField] private TextSO textso;
-    [SerializeField] private float NextTextTime;
-    
+    [Header("대사 데이터")]
+    [SerializeField] private TextSO _textSO;
+    [SerializeField] private float _nextlineTime;
    
-    int num=0;
+    private int _lineIndex = 0;
 
-
-    BoxCollider2D box;
+    private BoxCollider2D _boxCollider;
 
     private void Awake()
     {
-        box = GetComponent<BoxCollider2D>();
+        _boxCollider = GetComponent<BoxCollider2D>();
         
     }
     private void Start()
     {
-        EImage.SetActive(false);
-        TextCanvas.SetActive(false);
+        _keyIcon.SetActive(false);
+        _textArea.SetActive(false);
     }
     private void Update()
     {
-       
-
-        if (EImage.activeSelf == true && Input.GetKeyDown(KeyCode.E))
+        if (_keyIcon.activeSelf == true && Input.GetKeyDown(KeyCode.E))
         {
-            box.enabled = false;
+            _boxCollider.enabled = false;
 
-            GameManager.Instance.textflage = true;
-            TextCanvas.SetActive(true);
-            StartTalking(textso.text);
-            Debug.Log("시작");
+            GameManager.Instance.textflage = true; 
+            _textArea.SetActive(true);
+            StartTalking(_textSO.text);
         }
     }
-
-   
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("PLAYER"))
         {
-            EImage.SetActive(true);
+            _keyIcon.SetActive(true);
         }
-        
         
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-       
-        EImage.SetActive(false);
-      
+        if (collision.CompareTag("PLAYER"))
+        {
+            _keyIcon.SetActive(false);
+        }
     }
 
     public void StartTalking(string[] talk)
     {
-        //textso.text = talk;
-        StartCoroutine(TextRotine(talk[num]));
-        
+        StartCoroutine(TextRoutine(talk[_lineIndex]));
     }
 
     private void NextTalk()
     {
-        Texts.text = null;
+        _lineText.text = "";
 
-        num++;
-        if(num==textso.text.Length)
+        _lineIndex++;
+        if(_lineIndex >= _textSO.text.Length)
         {
             EndTalking();
             return;
         }
 
-        StartCoroutine(TextRotine(textso.text[num]));
+        StartCoroutine(TextRoutine(_textSO.text[_lineIndex]));
     }
 
     private void EndTalking()
     {
-        num = 0;
-        TextCanvas.SetActive(false);
-        box.enabled = true;
+        _lineIndex = 0;
+        _textArea.SetActive(false);
+        _boxCollider.enabled = true;
         GameManager.Instance.textflage = false;
     }
 
-    IEnumerator TextRotine(string Story)
+    IEnumerator TextRoutine(string line)
     {
-        Texts.text = null;
+        _lineText.text = "";
 
-        for(int i=0; i<Story.Length;i++)
+        for(int i=0; i<line.Length; i++)
         {
-            Texts.text = Texts.text + Story[i];
+            _lineText.text += line[i];
             yield return new WaitForSeconds(0.05f);
         }
 
-        yield return new WaitForSeconds(NextTextTime);
+        yield return new WaitForSeconds(_nextlineTime);
         NextTalk();
     }
 }

@@ -243,11 +243,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb2a8a93b99c88e45816a078db67322d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextCanvas: {fileID: 482248018}
-  Texts: {fileID: 1215629921}
-  EImage: {fileID: 2104063804}
-  textso: {fileID: 11400000, guid: 76e823a9355e8484fbcf340c5adf8e7c, type: 2}
-  NextTextTime: 1
+  _textArea: {fileID: 71358585}
+  _lineText: {fileID: 1215629921}
+  _keyIcon: {fileID: 2104063804}
+  _textSO: {fileID: 11400000, guid: 76e823a9355e8484fbcf340c5adf8e7c, type: 2}
+  _nextlineTime: 0.5
 --- !u!61 &37072161
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -316,7 +316,7 @@ GameObject:
   - component: {fileID: 71358588}
   - component: {fileID: 71358587}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: UI_TextArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -333,7 +333,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1215629920}
   m_Father: {fileID: 482248022}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -508,7 +509,7 @@ GameObject:
   - component: {fileID: 179996429}
   - component: {fileID: 179996430}
   m_Layer: 0
-  m_Name: Cofiner
+  m_Name: MapArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -910,7 +911,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 71358586}
-  - {fileID: 1215629920}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -929,7 +929,7 @@ GameObject:
   - component: {fileID: 675280965}
   - component: {fileID: 675280966}
   m_Layer: 0
-  m_Name: E_1
+  m_Name: EKeyIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1168,16 +1168,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1215629919}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 482248022}
+  m_Father: {fileID: 71358586}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -81, y: 81}
+  m_AnchoredPosition: {x: -79.686584, y: -134.96002}
   m_SizeDelta: {x: 1076.8611, y: 15.2946}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1215629921
@@ -1335,7 +1335,7 @@ GameObject:
   - component: {fileID: 1281922181}
   - component: {fileID: 1281922180}
   m_Layer: 0
-  m_Name: Music
+  m_Name: BgmSource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2720,7 +2720,7 @@ GameObject:
   - component: {fileID: 1537667078}
   - component: {fileID: 1537667077}
   m_Layer: 5
-  m_Name: Canvashp
+  m_Name: Canvas_Hp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2809,67 +2809,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1001 &1567263912
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4056178330922339305, guid: 3aeb994818e53ad4395eb23915229c5f, type: 3}
-      propertyPath: m_Name
-      value: Ladybird
-      objectReference: {fileID: 0}
-    - target: {fileID: 4147783482869768547, guid: 3aeb994818e53ad4395eb23915229c5f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 13.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4147783482869768547, guid: 3aeb994818e53ad4395eb23915229c5f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -19.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4147783482869768547, guid: 3aeb994818e53ad4395eb23915229c5f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4147783482869768547, guid: 3aeb994818e53ad4395eb23915229c5f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4147783482869768547, guid: 3aeb994818e53ad4395eb23915229c5f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4147783482869768547, guid: 3aeb994818e53ad4395eb23915229c5f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4147783482869768547, guid: 3aeb994818e53ad4395eb23915229c5f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4147783482869768547, guid: 3aeb994818e53ad4395eb23915229c5f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4147783482869768547, guid: 3aeb994818e53ad4395eb23915229c5f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4147783482869768547, guid: 3aeb994818e53ad4395eb23915229c5f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6959651863128663598, guid: 3aeb994818e53ad4395eb23915229c5f, type: 3}
-      propertyPath: canvas
-      value: 
-      objectReference: {fileID: 482248018}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 3aeb994818e53ad4395eb23915229c5f, type: 3}
 --- !u!1 &1623063888
 GameObject:
   m_ObjectHideFlags: 0
@@ -2881,12 +2820,12 @@ GameObject:
   - component: {fileID: 1623063889}
   - component: {fileID: 1623063890}
   m_Layer: 0
-  m_Name: E_2
+  m_Name: EKeyIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1623063889
 Transform:
   m_ObjectHideFlags: 0
@@ -2940,8 +2879,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -880973165
+  m_SortingLayer: 1
   m_SortingOrder: 1
   m_Sprite: {fileID: 456072530, guid: 9dfe4c414a5445d49a0a69803ce4395c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3125,11 +3064,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb2a8a93b99c88e45816a078db67322d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextCanvas: {fileID: 482248018}
-  Texts: {fileID: 1215629921}
-  EImage: {fileID: 675280964}
-  textso: {fileID: 11400000, guid: e0c91b907e978df45986ff33f3b278c2, type: 2}
-  NextTextTime: 1
+  _textArea: {fileID: 71358585}
+  _lineText: {fileID: 1215629921}
+  _keyIcon: {fileID: 675280964}
+  _textSO: {fileID: 11400000, guid: e0c91b907e978df45986ff33f3b278c2, type: 2}
+  _nextlineTime: 0.5
 --- !u!61 &1788626903
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3296,11 +3235,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb2a8a93b99c88e45816a078db67322d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextCanvas: {fileID: 482248018}
-  Texts: {fileID: 1215629921}
-  EImage: {fileID: 1623063888}
-  textso: {fileID: 11400000, guid: 213268c550f691c489836cccb36cccc9, type: 2}
-  NextTextTime: 1
+  _textArea: {fileID: 71358585}
+  _lineText: {fileID: 1215629921}
+  _keyIcon: {fileID: 1623063888}
+  _textSO: {fileID: 11400000, guid: 213268c550f691c489836cccb36cccc9, type: 2}
+  _nextlineTime: 0.5
 --- !u!61 &1931692880
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3357,7 +3296,7 @@ GameObject:
   - component: {fileID: 2013223180}
   - component: {fileID: 2013223179}
   m_Layer: 0
-  m_Name: Back
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3488,7 +3427,7 @@ GameObject:
   - component: {fileID: 2104063805}
   - component: {fileID: 2104063806}
   m_Layer: 0
-  m_Name: E
+  m_Name: EKeyIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3627,16 +3566,15 @@ SceneRoots:
   - {fileID: 37072159}
   - {fileID: 1788626900}
   - {fileID: 1931692877}
+  - {fileID: 1537667080}
   - {fileID: 482248022}
   - {fileID: 1062668317}
   - {fileID: 324415277}
   - {fileID: 1024657639815798024}
   - {fileID: 2094790838}
-  - {fileID: 1567263912}
-  - {fileID: 1537667080}
   - {fileID: 108799521}
   - {fileID: 179996429}
-  - {fileID: 1235846953}
   - {fileID: 1281922181}
   - {fileID: 2013223180}
+  - {fileID: 1235846953}
   - {fileID: 404648752}
