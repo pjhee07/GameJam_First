@@ -1,119 +1,96 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering.Universal;
+using UnityEngine.Rendering.Universal; // Light2D
 
 public class Eyeblink : MonoBehaviour
 {
+    [Header("References")]
+    [SerializeField] private Light2D _light2D;
+    [SerializeField] private GameObject _movement;
 
-    SpriteRenderer spriteRenderer;
-    public Light2D Light2D;
-    [SerializeField] private GameObject movement;
-    float currcolor;
-    
+    private SpriteRenderer _spriteRenderer;
+
+    [Header("Timings")]
+    [SerializeField] private float _blinkInterval = 15f;
+    [SerializeField] private float _fadeDuration = 1f;
+    [SerializeField] private float _stateDelay = 7f;
+
     private void Awake()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
     }
-    void Start()
+
+    private void Start()
     {
-
-        StartCoroutine(routine());
+        StartCoroutine(BlinkLoop());
     }
 
-    IEnumerator routine()
+    private IEnumerator BlinkLoop()
     {
         while (true)
         {
-
-            OpenState();
-            yield return new WaitForSeconds(15f);
+            yield return StartCoroutine(WaitAndOpenEyes());
+            yield return new WaitForSeconds(_blinkInterval);
+            yield return StartCoroutine(WaitAndCloseEyes());
         }
-
     }
 
-
-
-    private void CloseState()
+    private IEnumerator WaitAndOpenEyes()
     {
-        StartCoroutine(waitingtime());
-        
-      
-       
-    }
-    private void OpenState()
-    {
-        StartCoroutine(waitingtime2());
-       
-       
+        yield return new WaitForSeconds(_stateDelay);
+
+        _movement.SetActive(true);
+        StartCoroutine(FadeAlpha(_spriteRenderer, 0f, 1f));
+        StartCoroutine(FadeAlpha(_light2D, 0f, 1f));
     }
 
-  
-    IEnumerator waitingtime()
+    private IEnumerator WaitAndCloseEyes()
     {
-        yield return new WaitForSeconds(7f);
-        StartCoroutine(ColorFadeDown());
-        StartCoroutine(LightFadeDown());
+        yield return new WaitForSeconds(_stateDelay);
 
+        StartCoroutine(FadeAlpha(_spriteRenderer, 1f, 0f));
+        StartCoroutine(FadeAlpha(_light2D, 1f, 0f));
+
+        _movement.SetActive(false);
     }
 
-    IEnumerator waitingtime2()
+    private IEnumerator FadeAlpha(SpriteRenderer renderer, float from, float to)
     {
-        yield return new WaitForSeconds(7f);
-        movement.SetActive(true);
-        StartCoroutine(ColorFadeOn());
-        StartCoroutine(lightfadeon());
-
-    }
-
-    IEnumerator ColorFadeDown()
-    {
-
-        currcolor = 1;
-        while (currcolor > 0)
+        float t = 0f;
+        while (t < _fadeDuration)
         {
-            currcolor -= 0.02f;
-            spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, currcolor);
-            yield return new WaitForSeconds(0.01f);
-        }
-        movement.SetActive(false);
+            float alpha = Mathf.Lerp(from, to, t / _fadeDuration);
+            Color color = renderer.color;
+            color.a = alpha;
+            renderer.color = color;
 
+            t += Time.deltaTime;
+            yield return null;
+        }
+
+        // Ensure exact target alpha
+        Color finalColor = renderer.color;
+        finalColor.a = to;
+        renderer.color = finalColor;
     }
 
-    IEnumerator LightFadeDown()
+    private IEnumerator FadeAlpha(Light2D light, float from, float to)
     {
-        currcolor = 1;
-        while (currcolor > 0)
+        float t = 0f;
+        while (t < _fadeDuration)
         {
-            currcolor -= 0.02f;
-            Light2D.color = new Color(Light2D.color.r, Light2D.color.g, Light2D.color.b, currcolor);
-            yield return new WaitForSeconds(0.01f);
-        }
-    }
+            float alpha = Mathf.Lerp(from, to, t / _fadeDuration);
+            Color color = light.color;
+            color.a = alpha;
+            light.color = color;
 
-    IEnumerator ColorFadeOn()
-    {
-        currcolor = 0;
-        while (currcolor < 1)
-        {
-            currcolor += 0.02f;
-            spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, currcolor);
-            yield return new WaitForSeconds(0.01f);
+            t += Time.deltaTime;
+            yield return null;
         }
 
-    }
-
-    IEnumerator lightfadeon()
-    {
-        currcolor = 0;
-        while (currcolor < 1)
-        {
-            currcolor += 0.02f;
-            Light2D.color = new Color(Light2D.color.r, Light2D.color.g, Light2D.color.b, currcolor);
-            yield return new WaitForSeconds(0.01f);
-        }
-
-
-        CloseState();
+        // Ensure exact target alpha
+        Color finalColor = light.color;
+        finalColor.a = to;
+        light.color = finalColor;
     }
 }

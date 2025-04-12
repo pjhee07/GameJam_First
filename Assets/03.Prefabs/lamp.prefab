@@ -266,8 +266,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cb73db176821c543a5961d3926db067, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Light2D: {fileID: 2016147579204347174}
-  movement: {fileID: 6721110216767625432}
+  _light2D: {fileID: 2016147579204347174}
+  _movement: {fileID: 6018545829342046195}
 --- !u!1 &6721110216767625432
 GameObject:
   m_ObjectHideFlags: 0
