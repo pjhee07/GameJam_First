@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _nextMove: 0
-  _attackDist: 0.5
+  _attackDist: 1
 --- !u!95 &3153175022426374032
 Animator:
   serializedVersion: 5

@@ -1,114 +1,50 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerHp : MonoBehaviour
+public class PlayerHealth : MonoBehaviour
 {
-    public int maxHp;
-    public int currentHp;
-    EnemyMove enemyMove;
+    [SerializeField] private float _currentHp = 3f;
+    [SerializeField] private float _maxHp = 3f;
+    [SerializeField] private Image[] _hpImages;
 
-    [Header("Flash")]
-    [SerializeField] Material whiteFlashMat;
-    [SerializeField] float flashTime = 0.5f;
+    private PlayerController _playerController;
 
-    SpriteRenderer spriteRenderer;
-    Material defaultMat;
-
-    [SerializeField] GameObject ReTryPanel;
-    [SerializeField] GameObject Canvas;
-
-
-
-    [SerializeField] Image currentHpBar;
-
-    bool HpFlage;
+    public bool IsDebugInvincible { get; set; } = false;
 
     private void Awake()
     {
-        enemyMove = GameObject.FindWithTag("ENEMY").GetComponent<EnemyMove>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        defaultMat = spriteRenderer.material;
-        HpFlage = false;
+        _playerController = GetComponent<PlayerController>();
     }
 
-    public void ChangeMaterials()
-    {
-        spriteRenderer.material = whiteFlashMat;
-        StartCoroutine(FlashRoutine());
-    }
-
-    IEnumerator FlashRoutine()
-    {
-        yield return new WaitForSeconds(flashTime);
-        spriteRenderer.material = defaultMat;
-    }
-    private void Start()
-    {
-        maxHp = 5;
-        currentHp = maxHp;
-        HpRenewal();
-    }
-    //데미지 받을 때 currentBar업데이트
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.F))
+        if (IsDebugInvincible && Input.GetKeyDown(KeyCode.H))
         {
-            HpFlage = true;
-            
-        }
-        if(HpFlage==true)
-        {
-            currentHp = 500;
-            
-        }
-        else
-        {
-            maxHp = 5;
-        }
-
-        if(currentHp<=0)
-        {
-            Die();
+            TakeDamage(1);
         }
     }
-    public void HpRenewal()
+
+    public void TakeDamage(float damage)
     {
-        currentHpBar.fillAmount = (float)currentHp / (float)maxHp;
-    }
+        if (IsDebugInvincible || _currentHp <= 0f) return;
 
-    public void TakeDamage(int damage)
-    {
-        if (currentHp > 0)
+        _playerController.SetAttacked(true);
+        _currentHp -= damage;
+        _currentHp = Mathf.Max(_currentHp, 0f);
+
+        UpdateHpUI();
+
+        if (_currentHp <= 0f)
         {
-            currentHp -= damage;
-           // SoundManager.Instance.PlaySound(SoundManager.Sound.Hit);
-            ChangeMaterials();
-            HpRenewal();
-        }
-        else
-        {
-            Die();
+            // TODO: Handle player death
         }
     }
 
-    public void Die()
+    private void UpdateHpUI()
     {
-        
-        ReTryPanel.SetActive(true);
-        SoundManager.Instance.PlaySound(SoundManager.Sound.Die);
-        Destroy(gameObject);
-    }
-
-    void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.CompareTag("DEADZONE"))
+        for (int i = 0; i < _hpImages.Length; i++)
         {
-            Die();
+            _hpImages[i].enabled = i < _currentHp;
         }
     }
-
-
-
 }

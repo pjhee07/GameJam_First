@@ -218,13 +218,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7892744459292716012, guid: 01e93c2436df7684aab224817a44ad0b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitGame
+      objectReference: {fileID: 0}
     - target: {fileID: 8471444597956272968, guid: 01e93c2436df7684aab224817a44ad0b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 609998572}
     - target: {fileID: 8471444597956272968, guid: 01e93c2436df7684aab224817a44ad0b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ReturnBtn
+      value: RetryBtn
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -364,7 +368,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3048071756039202127, guid: 3aeb994818e53ad4395eb23915229c5f, type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4056178330922339305, guid: 3aeb994818e53ad4395eb23915229c5f, type: 3}
       propertyPath: m_Name
@@ -410,6 +414,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6741209015424383564, guid: 3aeb994818e53ad4395eb23915229c5f, type: 3}
+      propertyPath: _attackDist
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6959651863128663598, guid: 3aeb994818e53ad4395eb23915229c5f, type: 3}
       propertyPath: canvas
       value: 
@@ -434,7 +442,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3048071756039202127, guid: 3aeb994818e53ad4395eb23915229c5f, type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4056178330922339305, guid: 3aeb994818e53ad4395eb23915229c5f, type: 3}
       propertyPath: m_Name
@@ -490,7 +498,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6741209015424383564, guid: 3aeb994818e53ad4395eb23915229c5f, type: 3}
       propertyPath: _attackDist
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6959651863128663598, guid: 3aeb994818e53ad4395eb23915229c5f, type: 3}
       propertyPath: canvas
@@ -2703,7 +2711,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3048071756039202127, guid: 3aeb994818e53ad4395eb23915229c5f, type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4056178330922339305, guid: 3aeb994818e53ad4395eb23915229c5f, type: 3}
       propertyPath: m_Name
@@ -2748,6 +2756,10 @@ PrefabInstance:
     - target: {fileID: 4147783482869768547, guid: 3aeb994818e53ad4395eb23915229c5f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6741209015424383564, guid: 3aeb994818e53ad4395eb23915229c5f, type: 3}
+      propertyPath: _attackDist
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6959651863128663598, guid: 3aeb994818e53ad4395eb23915229c5f, type: 3}
       propertyPath: canvas
@@ -2857,7 +2869,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3048071756039202127, guid: 3aeb994818e53ad4395eb23915229c5f, type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4056178330922339305, guid: 3aeb994818e53ad4395eb23915229c5f, type: 3}
       propertyPath: m_Name
@@ -2902,6 +2914,10 @@ PrefabInstance:
     - target: {fileID: 4147783482869768547, guid: 3aeb994818e53ad4395eb23915229c5f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6741209015424383564, guid: 3aeb994818e53ad4395eb23915229c5f, type: 3}
+      propertyPath: _attackDist
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6959651863128663598, guid: 3aeb994818e53ad4395eb23915229c5f, type: 3}
       propertyPath: canvas
@@ -19326,7 +19342,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1765948930686498275, guid: bc223d9c40dbef04b8d2ddba6bfd8db7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5936198
+      value: 1.5936201
       objectReference: {fileID: 0}
     - target: {fileID: 1765948930686498275, guid: bc223d9c40dbef04b8d2ddba6bfd8db7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -19366,7 +19382,7 @@ PrefabInstance:
       objectReference: {fileID: 1072782932}
     - target: {fileID: 4497504400137051648, guid: bc223d9c40dbef04b8d2ddba6bfd8db7, type: 3}
       propertyPath: m_ChildCameras.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5647919152037018521, guid: bc223d9c40dbef04b8d2ddba6bfd8db7, type: 3}
       propertyPath: m_LocalPosition.x

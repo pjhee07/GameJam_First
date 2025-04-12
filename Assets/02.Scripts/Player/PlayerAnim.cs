@@ -1,57 +1,51 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAnim : MonoBehaviour
+public class PlayerAnimator : MonoBehaviour
 {
-    Animator anim;
-    PlayerCtrl playerCtrl;
-    public float atkSpeed = 1;
+    private Animator _animator;
+    private SpriteRenderer _spriteRenderer;
 
     private void Awake()
     {
-        playerCtrl = GetComponent<PlayerCtrl>(); //¡÷¿«
-        
+        _animator = GetComponent<Animator>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    private void Start()
+    private void OnEnable()
     {
-        anim = GetComponent<Animator>();
-        playerCtrl.onRunChanged += onRun;
-        playerCtrl.onJumpChanged += onJump;
-        playerCtrl.onAttackChanged += onAttack;
-        SetAttackSpeed(1.5f);
+        PlayerController player = GetComponent<PlayerController>();
+        player.OnRunChanged += HandleRun;
+        player.OnJumpChanged += HandleJump;
+        player.OnAttackChanged += HandleAttack;
+        player.OnDashChanged += HandleDash;
     }
 
-    private void OnDestroy()
+    private void OnDisable()
     {
-        playerCtrl.onRunChanged -= onRun;
-        playerCtrl.onJumpChanged -= onJump;
+        PlayerController player = GetComponent<PlayerController>();
+        player.OnRunChanged -= HandleRun;
+        player.OnJumpChanged -= HandleJump;
+        player.OnAttackChanged -= HandleAttack;
+        player.OnDashChanged -= HandleDash;
     }
 
-    void onRun(float hor)
+    private void HandleRun(float runSpeed)
     {
-        //Mathf.Abs(hor);
-        anim.SetFloat("Hor", Mathf.Abs(hor));
+        _animator.SetFloat("Run", Mathf.Abs(runSpeed));
     }
 
-    void onJump(bool isJump)
+    private void HandleJump(bool isJumping)
     {
-        anim.SetBool("Jump", isJump);
+        _animator.SetBool("Jump", isJumping);
     }
 
-    void onAttack()
+    private void HandleAttack()
     {
-        anim.SetTrigger("Attack");
+        _animator.SetTrigger("Attack");
     }
 
-
-    void SetAttackSpeed(float speed)
+    private void HandleDash()
     {
-        anim.SetFloat("AtkSpeed", speed);
-        atkSpeed = speed;
-
+        _animator.SetTrigger("Dash");
     }
-
-
 }

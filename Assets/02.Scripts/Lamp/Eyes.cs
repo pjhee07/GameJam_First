@@ -8,12 +8,12 @@ public class Eyes : MonoBehaviour
 {
 
     GameObject Player;
-    PlayerHp playerHp;
+    PlayerHealth _playerHealth;
 
     private void Awake()
     {
         Player = GameObject.FindWithTag("PLAYER");
-        playerHp = Player?.GetComponent<PlayerHp>();
+        _playerHealth = Player?.GetComponent<PlayerHealth>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -21,7 +21,7 @@ public class Eyes : MonoBehaviour
         if (collision.CompareTag("PLAYER") && GameManager.Instance.Movement == true)
         {
             StartCoroutine(WaitRoutine());
-            playerHp.TakeDamage(5);
+            _playerHealth.TakeDamage(5);
         }
     }
 
@@ -30,7 +30,7 @@ public class Eyes : MonoBehaviour
         if (collision.CompareTag("PLAYER") && GameManager.Instance.Movement == true)
         {
             StartCoroutine(WaitRoutine());
-            playerHp.TakeDamage(5);
+            _playerHealth.TakeDamage(5);
         }
     }
 
@@ -39,7 +39,7 @@ public class Eyes : MonoBehaviour
         if (collision.CompareTag("PLAYER") && GameManager.Instance.Movement == true)
         {
             StartCoroutine(WaitRoutine());
-            playerHp.TakeDamage(5);
+            _playerHealth.TakeDamage(5);
         }
         
     }

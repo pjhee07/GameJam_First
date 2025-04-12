@@ -13,25 +13,25 @@ public class Enemy : MonoBehaviour
 
     public int CurrentHp { get; private set; }
 
-    private PlayerCtrl _playerCtrl;
+    private PlayerController _playerController;
     private CircleCollider2D _coll;
 
     public Action onDeadChanged;
 
     private void Awake()
     {
-        _playerCtrl = GameObject.FindWithTag("PLAYER").GetComponent<PlayerCtrl>();
+        _playerController = GameObject.FindWithTag("PLAYER").GetComponent<PlayerController>();
         _coll = GetComponent<CircleCollider2D>();
         CurrentHp = _enemyData.maxHp;
     }
-    private void OnCollisionEnter2D(Collision2D col)
+    private void OnTriggerEnter2D(Collider2D col)
     {
 
         if (col.gameObject.CompareTag("HAMMER"))
         {
-            if (_playerCtrl.attacked)
+            if (_playerController.IsAttacked)
             {
-                CurrentHp -= _playerCtrl.atkDmg;
+                CurrentHp -= _playerController.AttackDamage;
 
                 if (CurrentHp <= 0)
                 {
@@ -42,5 +42,8 @@ public class Enemy : MonoBehaviour
             }
         }
     }
+
+
+
   
 }
