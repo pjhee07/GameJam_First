@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.EventSystems;
 
 public class PlayerCtrl : MonoBehaviour
 {
@@ -21,11 +22,9 @@ public class PlayerCtrl : MonoBehaviour
     float defaultSpeed = 3f;
     float dashSpeed = 7f;
     float Dir;
-    float pushForce = 4f;
-    
 
 
-    Rigidbody2D rigid;
+    private Rigidbody2D rigid;
     public Action<float> onRunChanged;
     public Action<bool> onJumpChanged;
     public Action onAttackChanged;
@@ -62,7 +61,7 @@ public class PlayerCtrl : MonoBehaviour
         atkDmg = 1;
     }
 
-        
+
 
     private void Update()
     {
@@ -86,10 +85,10 @@ public class PlayerCtrl : MonoBehaviour
         if (GameManager.Instance.textflage == false)
         {
 
-        hor = Input.GetAxisRaw("Horizontal");
-        rigid.velocity = new Vector2(hor * moveSpeed, rigid.velocity.y);
-        //SoundManager.Instance.PlaySound(SoundManager.Sound.Walk);
-        onRunChanged?.Invoke(hor*moveSpeed);
+            hor = Input.GetAxisRaw("Horizontal");
+            rigid.velocity = new Vector2(hor * moveSpeed, rigid.velocity.y);
+            //SoundManager.Instance.PlaySound(SoundManager.Sound.Walk);
+            onRunChanged?.Invoke(hor * moveSpeed);
         }
         else
         {
@@ -101,7 +100,7 @@ public class PlayerCtrl : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftShift) && !isDash)
             StartCoroutine(DashRoutine()); //startCoroutine
-        
+
     }
 
     IEnumerator DashRoutine()
@@ -135,7 +134,7 @@ public class PlayerCtrl : MonoBehaviour
         {
             //transform.rotation = Quaternion.Euler(0, 0, 0);
             spriteRenderer.flipX = false;
-        HammerCol.transform.rotation = Quaternion.Euler(0, 0, 0);
+            HammerCol.transform.rotation = Quaternion.Euler(0, 0, 0);
 
         }
 
@@ -147,7 +146,7 @@ public class PlayerCtrl : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
 
-            if(GameManager.Instance.textflage == false)
+            if (GameManager.Instance.textflage == false)
             {
                 if (!isJump)
                 {
@@ -160,8 +159,8 @@ public class PlayerCtrl : MonoBehaviour
             {
                 return;
             }
-        
-            
+
+
 
 
         }
@@ -179,18 +178,35 @@ public class PlayerCtrl : MonoBehaviour
 
     void Attack()
     {
+        // PC: 마우스 클릭 시
         if (Input.GetMouseButtonDown(0))
         {
-            if (currentTime < attackCoolTime)
+            // 마우스가 UI 위에 있는 경우 공격하지 않음
+            if (EventSystem.current.IsPointerOverGameObject())
                 return;
-            else
-            {
-                currentTime = 0;
-                onAttackChanged?.Invoke();
-                SoundManager.Instance.PlaySound(SoundManager.Sound.Attack);
 
-            }
+            HandleAttack();
         }
+
+        // 모바일: 터치가 발생한 경우
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        {
+            // 터치가 UI 위에 있는 경우 공격하지 않음
+            if (EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId))
+                return;
+
+            HandleAttack();
+        }
+    }
+
+    void HandleAttack()
+    {
+        if (currentTime < attackCoolTime)
+            return;
+
+        currentTime = 0; // 초기화
+        onAttackChanged?.Invoke();
+        SoundManager.Instance.PlaySound(SoundManager.Sound.Attack);
     }
 
 
@@ -218,22 +234,22 @@ public class PlayerCtrl : MonoBehaviour
         rigid.AddForce(-transform.right * pushForce, ForceMode2D.Impulse);
     }*/
 
-  /*  void Falldown()
-    {
+    /*  void Falldown()
+      {
 
 
-        //RaycastHit2D rayHit = Physics2D.Raycast(transform.position, Vector3.down, 30, LayerMask.GetMask("TILEMAP")); 
+          //RaycastHit2D rayHit = Physics2D.Raycast(transform.position, Vector3.down, 30, LayerMask.GetMask("TILEMAP")); 
 
-        if (rayHit.collider == null && !isJump)
-        {
-            playerHp.TakeDamage(1);
-            playerHp.HpRenewal();
-            //스폰포인트로 리스폰
-        } 
+          if (rayHit.collider == null && !isJump)
+          {
+              playerHp.TakeDamage(1);
+              playerHp.HpRenewal();
+              //스폰포인트로 리스폰
+          } 
 
 
 
-    }*/
+      }*/
 
     void movementJude()
     {
@@ -246,6 +262,6 @@ public class PlayerCtrl : MonoBehaviour
 
 
 
- 
+
 
 }
