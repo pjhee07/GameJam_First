@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
+    private SpriteRenderer _spriteRenderer;
+    private float _timeColor;
 
-    SpriteRenderer spriteRenderer;
-    float timecolor;
     private void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        StartCoroutine(ColorDown());
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+        StartCoroutine(FadeOut());
     }
    
-    IEnumerator ColorDown()
+    IEnumerator FadeOut()
     {
-        float currcolor = 1;
-        while(currcolor>0)
+        float currentAlpha = 1;
+        while(currentAlpha >= 0)
         {
-            currcolor -= 0.02f ;
-            spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, currcolor);
+            currentAlpha -= 0.02f ;
+            _spriteRenderer.color = new Color(1, 1, 1, currentAlpha);
             yield return new WaitForSeconds(0.01f);
         }
         gameObject.SetActive(false);
