@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class EnemyAnim : MonoBehaviour
 {
-    Animator anim;
-    Enemy enemy;
-    EnemyMove enemyMove;
-    TrailRenderer trailRenderer;
+    private Animator anim;
+    private Enemy enemy;
+    private EnemyMove enemyMove;
+    private TrailRenderer trailRenderer;
+    public float animationSpeed;
+    public AnimationClip attackAnim;
 
     private void Awake()
     {

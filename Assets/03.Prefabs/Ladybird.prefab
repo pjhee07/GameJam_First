@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 3048071756039202127}
   - component: {fileID: 6959651863128663598}
   - component: {fileID: 3153175022426374032}
-  - component: {fileID: 5417917709056170541}
   - component: {fileID: 5761100658959653847}
   - component: {fileID: 6741209015424383564}
+  - component: {fileID: 5417917709056170541}
   m_Layer: 0
   m_Name: Ladybird
   m_TagString: ENEMY
@@ -168,6 +168,31 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5761100658959653847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4056178330922339305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc500a6afc52afc41b1a499e2e403eb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6741209015424383564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4056178330922339305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37e3ef5c3f6aac74d97b57576a367327, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextMove: 3
 --- !u!50 &5417917709056170541
 Rigidbody2D:
   serializedVersion: 4
@@ -195,31 +220,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &5761100658959653847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4056178330922339305}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc500a6afc52afc41b1a499e2e403eb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &6741209015424383564
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4056178330922339305}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37e3ef5c3f6aac74d97b57576a367327, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextMove: 3
 --- !u!1 &4788422961370369898
 GameObject:
   m_ObjectHideFlags: 0

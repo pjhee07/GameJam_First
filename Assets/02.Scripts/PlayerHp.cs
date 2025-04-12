@@ -49,12 +49,6 @@ public class PlayerHp : MonoBehaviour
         maxHp = 5;
         currentHp = maxHp;
         HpRenewal();
-        enemyMove.onHpBarValueChanged += HpRenewal;
-    }
-
-    private void OnDestroy()
-    {
-        enemyMove.onHpBarValueChanged -= HpRenewal;
     }
     //데미지 받을 때 currentBar업데이트
     private void Update()
