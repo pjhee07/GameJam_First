@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -153,10 +152,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Movement: 0
-  PushFlage: 0
-  PushCount: 0
+  textflage: 0
   FadeImage: {fileID: 888406083}
-  PushUpBtnCount: 0
 --- !u!4 &202983286
 Transform:
   m_ObjectHideFlags: 0
@@ -184,7 +181,7 @@ GameObject:
   - component: {fileID: 287801875}
   - component: {fileID: 287801874}
   m_Layer: 0
-  m_Name: P1
+  m_Name: Dilly
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -566,7 +563,7 @@ GameObject:
   - component: {fileID: 989921122}
   - component: {fileID: 989921121}
   m_Layer: 0
-  m_Name: Music
+  m_Name: Bgm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -803,7 +800,7 @@ GameObject:
   - component: {fileID: 1111005639}
   - component: {fileID: 1111005638}
   m_Layer: 5
-  m_Name: OutButton
+  m_Name: UI_ExitButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -935,7 +932,7 @@ GameObject:
   - component: {fileID: 1531136888}
   - component: {fileID: 1531136887}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: UI_Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1009,7 +1006,7 @@ GameObject:
   - component: {fileID: 1584196927}
   - component: {fileID: 1584196926}
   m_Layer: 0
-  m_Name: Back
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1095,7 +1092,7 @@ GameObject:
   - component: {fileID: 1607844285}
   - component: {fileID: 1607844284}
   m_Layer: 5
-  m_Name: StartButton
+  m_Name: UI_StartButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1167,14 +1164,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2125005409}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: Startgame
-        m_Mode: 1
+        m_MethodName: ChangeSceneBtn
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: 1_lobeStage
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1607844285
@@ -1346,12 +1343,12 @@ MonoBehaviour:
   m_RequiresColorTexture: 0
   m_Version: 2
   m_TaaSettings:
-    quality: 3
-    frameInfluence: 0.1
-    jitterScale: 1
-    mipBias: 0
-    varianceClampScale: 0.9
-    contrastAdaptiveSharpening: 0
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
 --- !u!1 &1840187448
 GameObject:
   m_ObjectHideFlags: 0
@@ -1498,7 +1495,7 @@ GameObject:
   - component: {fileID: 1941438196}
   - component: {fileID: 1941438195}
   m_Layer: 5
-  m_Name: Tile_text_2
+  m_Name: UI_TitleText2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1632,7 +1629,7 @@ GameObject:
   - component: {fileID: 1964301553}
   - component: {fileID: 1964301552}
   m_Layer: 5
-  m_Name: Tile_text_1
+  m_Name: UI_TitleText1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1783,7 +1780,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aedb3652573e6af4380b507acfe70f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ReSceneName: CutScene
   RetryPanel: {fileID: 0}
 --- !u!4 &2125005410
 Transform:
@@ -1807,8 +1803,8 @@ SceneRoots:
   - {fileID: 1759612548}
   - {fileID: 1054736689}
   - {fileID: 414646446}
-  - {fileID: 2125005410}
   - {fileID: 287801876}
+  - {fileID: 2125005410}
   - {fileID: 202983286}
   - {fileID: 989921122}
   - {fileID: 1584196927}

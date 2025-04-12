@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 1
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -77,6 +78,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -89,6 +91,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -1722,646 +1725,726 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 858053109
+    guid: -1382614007
     name: UI_Animation_Flat
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: UI_Animation_Flat_Frame_0
+    - name: Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 32
         y: 0
         width: 32
         height: 32
       spriteId: 08860de4eae12d04b85d417330ff11ad
-    - name: UI_Animation_Flat_Frame_1
+    - name: Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 33
         y: 1
         width: 30
         height: 30
       spriteId: d5950171934c29a4ba01bea40869a03b
-    - name: UI_Animation_Flat_Frame_2
+    - name: Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 34
         y: 2
         width: 28
         height: 28
       spriteId: 1c1d4e2b63fc90c4e82d770fec1c9b5f
-    - name: UI_Animation_Flat_Frame_3
+    - name: Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 33
         y: 1
         width: 30
         height: 30
       spriteId: 6e713550a700c1246912d6b1d5791a20
-    - name: UI_Animation_Flat_Frame_4
+    - name: Frame_4
       frameIndex: 4
+      additiveSortOrder: 0
       cellRect:
         x: 32
         y: 0
         width: 32
         height: 32
       spriteId: 082fe927f33ea474ba3642cd06e08076
-    - name: UI_Animation_Flat_Frame_5
+    - name: Frame_5
       frameIndex: 5
+      additiveSortOrder: 0
       cellRect:
         x: 33
         y: 1
         width: 30
         height: 30
       spriteId: 75d36573a689b0b41bcd524f20858642
-    - name: UI_Animation_Flat_Frame_6
+    - name: Frame_6
       frameIndex: 6
+      additiveSortOrder: 0
       cellRect:
         x: 34
         y: 2
         width: 28
         height: 28
       spriteId: 776058a8205917c42b70079d2cfa36e5
-    - name: UI_Animation_Flat_Frame_7
+    - name: Frame_7
       frameIndex: 7
+      additiveSortOrder: 0
       cellRect:
         x: 33
         y: 1
         width: 30
         height: 30
       spriteId: 72da82ab0713dd14ab3f531dcb0ee2f1
-    - name: UI_Animation_Flat_Frame_8
+    - name: Frame_8
       frameIndex: 8
+      additiveSortOrder: 0
       cellRect:
         x: 32
         y: 0
         width: 32
         height: 32
       spriteId: abc6ea378d1fc614aa3e902fae1c8ea7
-    - name: UI_Animation_Flat_Frame_9
+    - name: Frame_9
       frameIndex: 9
+      additiveSortOrder: 0
       cellRect:
         x: 32
         y: 0
         width: 32
         height: 29
       spriteId: e200884e54a672944b8b532065d49b63
-    - name: UI_Animation_Flat_Frame_10
+    - name: Frame_10
       frameIndex: 10
+      additiveSortOrder: 0
       cellRect:
         x: 32
         y: 0
         width: 32
         height: 28
       spriteId: 6401335f21a9a3940802b73fa851180d
-    - name: UI_Animation_Flat_Frame_11
+    - name: Frame_11
       frameIndex: 11
+      additiveSortOrder: 0
       cellRect:
         x: 32
         y: 0
         width: 32
         height: 31
       spriteId: c2aa9fff55985c648a61658388beafbc
-    - name: UI_Animation_Flat_Frame_12
+    - name: Frame_12
       frameIndex: 12
+      additiveSortOrder: 0
       cellRect:
         x: 32
         y: 0
         width: 32
         height: 32
       spriteId: 64b81deea38c770439ce77203e5a5f00
-    - name: UI_Animation_Flat_Frame_13
+    - name: Frame_13
       frameIndex: 13
+      additiveSortOrder: 0
       cellRect:
         x: 32
         y: 0
         width: 32
         height: 29
       spriteId: 59812b76a3516c849abc9f721feed8b0
-    - name: UI_Animation_Flat_Frame_14
+    - name: Frame_14
       frameIndex: 14
+      additiveSortOrder: 0
       cellRect:
         x: 32
         y: 0
         width: 32
         height: 26
       spriteId: 5de6e47b18677974cac142711653534a
-    - name: UI_Animation_Flat_Frame_15
+    - name: Frame_15
       frameIndex: 15
+      additiveSortOrder: 0
       cellRect:
         x: 32
         y: 0
         width: 32
         height: 28
       spriteId: 214ea3471b6b1e343982acde592dbc7a
-    - name: UI_Animation_Flat_Frame_16
+    - name: Frame_16
       frameIndex: 16
+      additiveSortOrder: 0
       cellRect:
         x: 32
         y: 0
         width: 32
         height: 28
       spriteId: fee2532c84d5195478c3e237903346ce
-    - name: UI_Animation_Flat_Frame_17
+    - name: Frame_17
       frameIndex: 17
+      additiveSortOrder: 0
       cellRect:
         x: 32
         y: 0
         width: 32
         height: 26
       spriteId: 1e7cdf1667514ff4083d08f7d7556f99
-    - name: UI_Animation_Flat_Frame_18
+    - name: Frame_18
       frameIndex: 18
+      additiveSortOrder: 0
       cellRect:
         x: 32
         y: 0
         width: 32
         height: 31
       spriteId: cf8e98dfe9c004a4b9b08a13dac62ca6
-    - name: UI_Animation_Flat_Frame_19
+    - name: Frame_19
       frameIndex: 19
+      additiveSortOrder: 0
       cellRect:
         x: 32
         y: 0
         width: 32
         height: 32
       spriteId: 9a870641457c9e94e98b49e2dc1f0708
-    - name: UI_Animation_Flat_Frame_20
+    - name: Frame_20
       frameIndex: 20
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 0
         width: 64
         height: 32
       spriteId: 8850ea2e9599434428e0ac6d11c58a42
-    - name: UI_Animation_Flat_Frame_21
+    - name: Frame_21
       frameIndex: 21
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 0
         width: 64
         height: 29
       spriteId: 96d2ee178bcdf9e45b4bb690c1b8a07d
-    - name: UI_Animation_Flat_Frame_22
+    - name: Frame_22
       frameIndex: 22
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 0
         width: 64
         height: 28
       spriteId: 7cefab4746e3c634a9c6c9c7fd59a282
-    - name: UI_Animation_Flat_Frame_23
+    - name: Frame_23
       frameIndex: 23
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 0
         width: 64
         height: 31
       spriteId: 0c371449757fdc94d8cb27e87107cd55
-    - name: UI_Animation_Flat_Frame_24
+    - name: Frame_24
       frameIndex: 24
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 0
         width: 64
         height: 32
       spriteId: 64523641e60ee7b47b1a3d3786a9be74
-    - name: UI_Animation_Flat_Frame_25
+    - name: Frame_25
       frameIndex: 25
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 0
         width: 64
         height: 29
       spriteId: 18def394164753f4c877eb73e4a02bf8
-    - name: UI_Animation_Flat_Frame_26
+    - name: Frame_26
       frameIndex: 26
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 0
         width: 64
         height: 26
       spriteId: 7a53ffca9d59d234fa7b6c71a1b794d7
-    - name: UI_Animation_Flat_Frame_27
+    - name: Frame_27
       frameIndex: 27
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 0
         width: 64
         height: 28
       spriteId: 1831716f2fe49cf4dbfd643f87de5feb
-    - name: UI_Animation_Flat_Frame_28
+    - name: Frame_28
       frameIndex: 28
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 0
         width: 64
         height: 28
       spriteId: 756413afe5b365c47838551f0110283f
-    - name: UI_Animation_Flat_Frame_29
+    - name: Frame_29
       frameIndex: 29
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 0
         width: 64
         height: 26
       spriteId: a1786a5a53c2a4546abffd658b9afd70
-    - name: UI_Animation_Flat_Frame_30
+    - name: Frame_30
       frameIndex: 30
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 0
         width: 64
         height: 31
       spriteId: e1e4b24c9a9a67d45b9ed07785329513
-    - name: UI_Animation_Flat_Frame_31
+    - name: Frame_31
       frameIndex: 31
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 0
         width: 64
         height: 32
       spriteId: 3def5c2f29599ee4e97aedb279034232
-    - name: UI_Animation_Flat_Frame_32
+    - name: Frame_32
       frameIndex: 32
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 32
       spriteId: ac59cef55d220cf4aa527021f332e067
-    - name: UI_Animation_Flat_Frame_33
+    - name: Frame_33
       frameIndex: 33
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 29
       spriteId: 31102e0aa84223144ac74a076230b70b
-    - name: UI_Animation_Flat_Frame_34
+    - name: Frame_34
       frameIndex: 34
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 28
       spriteId: b36dd4aac97efea4d91f5aa1ca312227
-    - name: UI_Animation_Flat_Frame_35
+    - name: Frame_35
       frameIndex: 35
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 31
       spriteId: 9ceb2b04f5a9a6743a1f38271f1158e1
-    - name: UI_Animation_Flat_Frame_36
+    - name: Frame_36
       frameIndex: 36
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 32
       spriteId: 960a19b17c3d1804f918b7098df2154e
-    - name: UI_Animation_Flat_Frame_37
+    - name: Frame_37
       frameIndex: 37
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 29
       spriteId: c8677391729c9c9439fbfd5f1ac9e539
-    - name: UI_Animation_Flat_Frame_38
+    - name: Frame_38
       frameIndex: 38
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 26
       spriteId: 72a59432f5e96304a98e098d2f9a0604
-    - name: UI_Animation_Flat_Frame_39
+    - name: Frame_39
       frameIndex: 39
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 28
       spriteId: 12b52414edef6cd4594f8a48e95db37e
-    - name: UI_Animation_Flat_Frame_40
+    - name: Frame_40
       frameIndex: 40
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 28
       spriteId: 05525c39c97a99441a72dd4edc95b990
-    - name: UI_Animation_Flat_Frame_41
+    - name: Frame_41
       frameIndex: 41
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 26
       spriteId: 6c4760d7bafe1f242b174b670fe44013
-    - name: UI_Animation_Flat_Frame_42
+    - name: Frame_42
       frameIndex: 42
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 31
       spriteId: 7ee385975a4f52743b1ed5ea5d3f7067
-    - name: UI_Animation_Flat_Frame_43
+    - name: Frame_43
       frameIndex: 43
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 32
       spriteId: 31e2d12ceb891ec499bced2e3d5a78ad
-    - name: UI_Animation_Flat_Frame_44
+    - name: Frame_44
       frameIndex: 44
+      additiveSortOrder: 0
       cellRect:
         x: 32
         y: 0
         width: 32
         height: 32
       spriteId: 25fffaab8b981d84f9972a36fc72ea09
-    - name: UI_Animation_Flat_Frame_45
+    - name: Frame_45
       frameIndex: 45
+      additiveSortOrder: 0
       cellRect:
         x: 32
         y: 0
         width: 32
         height: 29
       spriteId: ef65dae7046cd8d458cb99df1db0fa8c
-    - name: UI_Animation_Flat_Frame_46
+    - name: Frame_46
       frameIndex: 46
+      additiveSortOrder: 0
       cellRect:
         x: 32
         y: 0
         width: 32
         height: 28
       spriteId: 4052defd379d8d84ba9358ea4c85ab8b
-    - name: UI_Animation_Flat_Frame_47
+    - name: Frame_47
       frameIndex: 47
+      additiveSortOrder: 0
       cellRect:
         x: 32
         y: 0
         width: 32
         height: 31
       spriteId: ffbd66a861470224ba20bc07add6025b
-    - name: UI_Animation_Flat_Frame_48
+    - name: Frame_48
       frameIndex: 48
+      additiveSortOrder: 0
       cellRect:
         x: 32
         y: 0
         width: 32
         height: 32
       spriteId: f0f77ab72b591ac46b9e0ef8878f4a68
-    - name: UI_Animation_Flat_Frame_49
+    - name: Frame_49
       frameIndex: 49
+      additiveSortOrder: 0
       cellRect:
         x: 32
         y: 0
         width: 32
         height: 29
       spriteId: dede1798325a51a4ea383a45b3c3a21e
-    - name: UI_Animation_Flat_Frame_50
+    - name: Frame_50
       frameIndex: 50
+      additiveSortOrder: 0
       cellRect:
         x: 32
         y: 0
         width: 32
         height: 26
       spriteId: 2c8347bf1dc91354aa7e715a834dbcc0
-    - name: UI_Animation_Flat_Frame_51
+    - name: Frame_51
       frameIndex: 51
+      additiveSortOrder: 0
       cellRect:
         x: 32
         y: 0
         width: 32
         height: 28
       spriteId: 870b3037c8f151943be269d507e16f5a
-    - name: UI_Animation_Flat_Frame_52
+    - name: Frame_52
       frameIndex: 52
+      additiveSortOrder: 0
       cellRect:
         x: 32
         y: 0
         width: 32
         height: 28
       spriteId: 3ba304883c336db4da8ebdbd874a122c
-    - name: UI_Animation_Flat_Frame_53
+    - name: Frame_53
       frameIndex: 53
+      additiveSortOrder: 0
       cellRect:
         x: 32
         y: 0
         width: 32
         height: 26
       spriteId: 9e0ec5b13678b194c9b9f5fe617a6cb6
-    - name: UI_Animation_Flat_Frame_54
+    - name: Frame_54
       frameIndex: 54
+      additiveSortOrder: 0
       cellRect:
         x: 32
         y: 0
         width: 32
         height: 31
       spriteId: e64d55a831b427f4a99835966d424dee
-    - name: UI_Animation_Flat_Frame_55
+    - name: Frame_55
       frameIndex: 55
+      additiveSortOrder: 0
       cellRect:
         x: 32
         y: 0
         width: 32
         height: 32
       spriteId: 54b5a0e79ca7b544998721fb4f6c1ef8
-    - name: UI_Animation_Flat_Frame_56
+    - name: Frame_56
       frameIndex: 56
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 0
         width: 64
         height: 32
       spriteId: ef57691370eeadc4299a03cb366339ab
-    - name: UI_Animation_Flat_Frame_57
+    - name: Frame_57
       frameIndex: 57
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 0
         width: 64
         height: 29
       spriteId: b3935245da386434ab2e01ca93a680bb
-    - name: UI_Animation_Flat_Frame_58
+    - name: Frame_58
       frameIndex: 58
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 0
         width: 64
         height: 28
       spriteId: ed18f031dc368ee4aabea326703ce804
-    - name: UI_Animation_Flat_Frame_59
+    - name: Frame_59
       frameIndex: 59
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 0
         width: 64
         height: 31
       spriteId: 7d6ebf5cb30681e4784e3c29171d6054
-    - name: UI_Animation_Flat_Frame_60
+    - name: Frame_60
       frameIndex: 60
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 0
         width: 64
         height: 32
       spriteId: 52ce35dcad37ab34992cbd2ebcb41a8f
-    - name: UI_Animation_Flat_Frame_61
+    - name: Frame_61
       frameIndex: 61
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 0
         width: 64
         height: 29
       spriteId: 20df450e607fccb46a96f9ba9a3e66cc
-    - name: UI_Animation_Flat_Frame_62
+    - name: Frame_62
       frameIndex: 62
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 0
         width: 64
         height: 26
       spriteId: 75e49e91b207f4249b80b303078c8ba6
-    - name: UI_Animation_Flat_Frame_63
+    - name: Frame_63
       frameIndex: 63
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 0
         width: 64
         height: 28
       spriteId: b8d1facedf3f73648b3a1bf8d773f8c8
-    - name: UI_Animation_Flat_Frame_64
+    - name: Frame_64
       frameIndex: 64
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 0
         width: 64
         height: 28
       spriteId: 4f17bc54bcc60f64ab4f0606bc45d4d4
-    - name: UI_Animation_Flat_Frame_65
+    - name: Frame_65
       frameIndex: 65
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 0
         width: 64
         height: 26
       spriteId: cdcc7beb29a47f749ba3836bf49556e6
-    - name: UI_Animation_Flat_Frame_66
+    - name: Frame_66
       frameIndex: 66
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 0
         width: 64
         height: 31
       spriteId: 853621cc5012a6f4399615145ac8d822
-    - name: UI_Animation_Flat_Frame_67
+    - name: Frame_67
       frameIndex: 67
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 0
         width: 64
         height: 32
       spriteId: 0a97364b0f62bfe4b8e257893d81023b
-    - name: UI_Animation_Flat_Frame_68
+    - name: Frame_68
       frameIndex: 68
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 32
       spriteId: 321e96b6a5e25d44e84a2e227fc19919
-    - name: UI_Animation_Flat_Frame_69
+    - name: Frame_69
       frameIndex: 69
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 29
       spriteId: 831c0dccedeb9d847b5aac5278afe8ec
-    - name: UI_Animation_Flat_Frame_70
+    - name: Frame_70
       frameIndex: 70
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 28
       spriteId: 59f18891744521743be803a17445fce8
-    - name: UI_Animation_Flat_Frame_71
+    - name: Frame_71
       frameIndex: 71
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 31
       spriteId: b1e134083cda8fa49b470e53e5574e5f
-    - name: UI_Animation_Flat_Frame_72
+    - name: Frame_72
       frameIndex: 72
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 32
       spriteId: bdf1f7e1f431ae14abdfc0395dd91321
-    - name: UI_Animation_Flat_Frame_73
+    - name: Frame_73
       frameIndex: 73
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 29
       spriteId: 01309e14717747f4f8444d21de90ecc8
-    - name: UI_Animation_Flat_Frame_74
+    - name: Frame_74
       frameIndex: 74
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 26
       spriteId: 8a56b0d00a1ed52479bcab62f9639ba2
-    - name: UI_Animation_Flat_Frame_75
+    - name: Frame_75
       frameIndex: 75
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 28
       spriteId: bf71325314bce054ba51660c07a8c02f
-    - name: UI_Animation_Flat_Frame_76
+    - name: Frame_76
       frameIndex: 76
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 28
       spriteId: 70d7e7fdc1a95fc46ba1898537f29fc6
-    - name: UI_Animation_Flat_Frame_77
+    - name: Frame_77
       frameIndex: 77
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 26
       spriteId: 28630a38727c1c741bad2eac6373e77c
-    - name: UI_Animation_Flat_Frame_78
+    - name: Frame_78
       frameIndex: 78
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 31
       spriteId: a9f68a013c307534487c4ca92a194309
-    - name: UI_Animation_Flat_Frame_79
+    - name: Frame_79
       frameIndex: 79
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2371,6 +2454,8 @@ ScriptedImporter:
     linkedCells: []
     parentIndex: -1
   platformSettings: []
+  generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 96, y: 32}
+  previousTextureSize: {x: 512, y: 512}

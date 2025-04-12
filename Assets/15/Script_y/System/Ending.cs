@@ -71,6 +71,6 @@ public class Ending : MonoBehaviour
         FadeImage.color = new Color(0, 0, 0, 1);
 
         yield return new WaitForSeconds(2.5f);
-        GameManager.Instance.SceneMovement(NextScene);
+        GameManager.Instance.ChangeScene(NextScene);
     }
 }

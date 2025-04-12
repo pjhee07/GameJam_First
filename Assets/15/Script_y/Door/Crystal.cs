@@ -34,7 +34,7 @@ public class Crystal : MonoBehaviour
 
             yield return new WaitForSeconds(0.01f);
         }
-        GameManager.Instance.SceneMovement(SceneName);
+        GameManager.Instance.ChangeScene(SceneName);
     }
 
     

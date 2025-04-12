@@ -12,7 +12,7 @@ public class SceneMove : MonoBehaviour
         if (EImage.activeSelf && Input.GetKeyDown(KeyCode.E))
         {
 
-            GameManager.Instance.SceneMovement(SceneName);
+            GameManager.Instance.ChangeScene(SceneName);
 
         }
 

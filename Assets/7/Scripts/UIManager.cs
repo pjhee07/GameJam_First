@@ -6,29 +6,17 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField] private string ReSceneName;
-    [SerializeField] GameObject RetryPanel;
-
-    public void Startgame()
-    {
-        GameManager.Instance.SceneMovement(ReSceneName);
-    }
+    [SerializeField] private GameObject RetryPanel;
     public void QuitGame()
     {
         Application.Quit();
-        Debug.Log("Bye!");
     }
 
 
-    public void ReturnBtn()
+    public void ChangeSceneBtn(string sceneName)
     {
         //RetryPanel.SetActive(false);
-        GameManager.Instance.SceneMovement(ReSceneName);
+        GameManager.Instance.ChangeScene(sceneName);
     }
 
-    public void MainBtn()
-    {
-        GameManager.Instance.SceneMovement("Start");
-       // RetryPanel.SetActive(false);
-    }
 }

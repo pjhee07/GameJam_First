@@ -10,7 +10,7 @@ public class NextScenes : MonoBehaviour
 
         if(collision.CompareTag("PLAYER"))
         {
-            GameManager.Instance.SceneMovement(SceneName);
+            GameManager.Instance.ChangeScene(SceneName);
         }
 
        

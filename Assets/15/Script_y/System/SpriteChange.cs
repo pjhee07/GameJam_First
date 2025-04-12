@@ -44,6 +44,6 @@ public class SpriteChange : MonoBehaviour
             FadeImage.color = new Color(1, 1, 1, currentime);
             yield return new WaitForSeconds(0.01f);
         }
-        GameManager.Instance.SceneMovement(NextScene);
+        GameManager.Instance.ChangeScene(NextScene);
     }
 }

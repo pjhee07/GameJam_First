@@ -10,16 +10,11 @@ public class GameManager : Singleton<GameManager>
     public bool Movement = false;
     
     public static int ItemCount = 0;
-    public static bool Flage;
-    
+    public static bool Flage; 
     public bool textflage = false;
 
-
     [SerializeField] private Image FadeImage;
-    
-    
 
-   
 
     public void ItemCountSet()
     {
@@ -32,10 +27,9 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
-    public void SceneMovement(string name)
+    public void ChangeScene(string sceneName)
     {        
-        SceneManager.LoadScene(name);
-        Debug.Log(name);
+        SceneManager.LoadScene(sceneName);
     }
 
     
