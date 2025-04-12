@@ -7,5 +7,5 @@ public class EnemyData : ScriptableObject
     public int maxHp;
     public int atkDmg;
     public int atkSpeed;
-    public float atkDistance;
+    public float chaseDist;
 }

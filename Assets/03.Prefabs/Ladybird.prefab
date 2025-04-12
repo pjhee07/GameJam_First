@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 7389078286361248950}
   - component: {fileID: 3048071756039202127}
   - component: {fileID: 6959651863128663598}
-  - component: {fileID: 3153175022426374032}
   - component: {fileID: 5761100658959653847}
   - component: {fileID: 6741209015424383564}
+  - component: {fileID: 3153175022426374032}
   - component: {fileID: 5417917709056170541}
   m_Layer: 0
   m_Name: Ladybird
@@ -138,15 +138,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07af72873c8c9c94ebef2a5273405211, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prfHpBar: {fileID: 5450285648010446613, guid: f88be39d037f5ab48ac2c09962d8ac20, type: 3}
-  canvas: {fileID: 0}
-  height: 0.7
-  enemyName: Ladybird
-  maxHp: 1
-  currentHp: 1
-  atkDmg: 1
-  atkSpeed: 1
-  atkDistance: 2
+  _enemyData: {fileID: 11400000, guid: 078c0d90d308ec844bf98352b45bf06c, type: 2}
+--- !u!114 &5761100658959653847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4056178330922339305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc500a6afc52afc41b1a499e2e403eb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationSpeed: 0.5
+  attackAnim: {fileID: 7400000, guid: f0edafc03ec82434dbf72cb54454098d, type: 2}
+--- !u!114 &6741209015424383564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4056178330922339305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37e3ef5c3f6aac74d97b57576a367327, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nextMove: 0
+  _attackDist: 0.5
 --- !u!95 &3153175022426374032
 Animator:
   serializedVersion: 5
@@ -168,31 +188,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &5761100658959653847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4056178330922339305}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc500a6afc52afc41b1a499e2e403eb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &6741209015424383564
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4056178330922339305}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37e3ef5c3f6aac74d97b57576a367327, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextMove: 3
 --- !u!50 &5417917709056170541
 Rigidbody2D:
   serializedVersion: 4

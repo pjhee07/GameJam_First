@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//attackAnim?
 public class EnemyAnim : MonoBehaviour
 {
     private Animator anim;

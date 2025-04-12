@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
     public int MaxHp => _enemyData.maxHp;
     public int AtkDmg => _enemyData.atkDmg;
     public int AtkSpeed => _enemyData.atkSpeed;
-    public float AtkDistance => _enemyData.atkDistance;
+    public float ChaseDist => _enemyData.chaseDist;
 
     public int CurrentHp { get; private set; }
 
@@ -24,9 +24,9 @@ public class Enemy : MonoBehaviour
         _coll = GetComponent<CircleCollider2D>();
         CurrentHp = _enemyData.maxHp;
     }
-
-    private void OnTriggerEnter2D(Collider2D col)
+    private void OnCollisionEnter2D(Collision2D col)
     {
+
         if (col.gameObject.CompareTag("HAMMER"))
         {
             if (_playerCtrl.attacked)
@@ -42,4 +42,5 @@ public class Enemy : MonoBehaviour
             }
         }
     }
+  
 }

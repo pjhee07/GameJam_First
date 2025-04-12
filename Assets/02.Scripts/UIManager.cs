@@ -12,6 +12,10 @@ public class UIManager : MonoBehaviour
         Application.Quit();
     }
 
+    public void RestryBtn()
+    {
+        //SceneManager.LoadScene(this.)
+    }
 
     public void ChangeSceneBtn(string sceneName)
     {
