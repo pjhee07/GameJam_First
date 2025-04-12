@@ -4,14 +4,14 @@ using UnityEngine.Rendering.Universal; // Light2D
 
 public class Eyeblink : MonoBehaviour
 {
-    [Header("References")]
+    [Header("References")] // 참조
     [SerializeField] private Light2D _light2D;
     [SerializeField] private GameObject _movement;
 
     private SpriteRenderer _spriteRenderer;
 
     [Header("Timings")]
-    [SerializeField] private float _blinkInterval = 15f;
+    [SerializeField] private float _blinkInterval = 15f; // 간격
     [SerializeField] private float _fadeDuration = 1f;
     [SerializeField] private float _stateDelay = 7f;
 

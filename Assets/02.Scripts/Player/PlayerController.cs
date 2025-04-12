@@ -35,7 +35,14 @@ public class PlayerController : MonoBehaviour
     public Action<bool> OnJumpChanged;
     public Action OnAttackChanged;
     public Action OnDashChanged;
+    public bool IsMove { get; private set; } 
 
+    private void UpdateMovementState()
+    {
+        bool isMoving = _rigidbody.velocity.x != 0;
+        GameManager.Instance.Movement = isMoving;
+        IsMove = isMoving; 
+    }
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
@@ -154,10 +161,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void UpdateMovementState()
-    {
-        GameManager.Instance.Movement = _rigidbody.velocity.x != 0;
-    }
 
     public void SetAttacked(bool value)
     {

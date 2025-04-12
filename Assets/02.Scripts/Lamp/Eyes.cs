@@ -1,55 +1,51 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
-
 
 public class Eyes : MonoBehaviour
 {
+    private PlayerHealth _playerHealth;
 
-    GameObject Player;
-    PlayerHealth _playerHealth;
+    [SerializeField] private int _damage = 5;
+    [SerializeField] private float _damageCooldown = 1f;
+
+    private bool _canDamage = true;
 
     private void Awake()
     {
-        Player = GameObject.FindWithTag("PLAYER");
-        _playerHealth = Player?.GetComponent<PlayerHealth>();
+        GameObject player = GameObject.FindWithTag("PLAYER");
+        _playerHealth = player?.GetComponent<PlayerHealth>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("PLAYER") && GameManager.Instance.Movement == true)
-        {
-            StartCoroutine(WaitRoutine());
-            _playerHealth.TakeDamage(5);
-        }
+        TryDamagePlayer(collision);
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag("PLAYER") && GameManager.Instance.Movement == true)
-        {
-            StartCoroutine(WaitRoutine());
-            _playerHealth.TakeDamage(5);
-        }
+        TryDamagePlayer(collision);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("PLAYER") && GameManager.Instance.Movement == true)
-        {
-            StartCoroutine(WaitRoutine());
-            _playerHealth.TakeDamage(5);
-        }
-        
+        TryDamagePlayer(collision);
     }
 
-    IEnumerator WaitRoutine()
+    private void TryDamagePlayer(Collider2D collider)
     {
-        yield return new WaitForSeconds(1f);
+        if (!_canDamage) return;
+
+        if (collider.CompareTag("PLAYER") && GameManager.Instance.Movement)
+        {
+            _playerHealth?.TakeDamage(_damage);
+            StartCoroutine(DamageCooldown());
+        }
     }
 
-
-
-
+    private IEnumerator DamageCooldown()
+    {
+        _canDamage = false;
+        yield return new WaitForSeconds(_damageCooldown);
+        _canDamage = true;
+    }
 }
