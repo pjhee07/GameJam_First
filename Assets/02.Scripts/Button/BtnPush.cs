@@ -6,13 +6,13 @@ public class BtnPush : MonoBehaviour
 {
     Animator anim;
     BoxCollider2D box;
-    [SerializeField] private GameObject brigde;
-    Brigde brigde2;
+    [SerializeField] private GameObject bridge;
+    Bridge bridge2;
     private void Start()
     {
         anim = GetComponent<Animator>();
         box = GetComponent<BoxCollider2D>();
-        brigde2 = GetComponentInParent<Brigde>();
+        bridge2 = GetComponentInParent<Bridge>();
     }
 
 
@@ -22,12 +22,12 @@ public class BtnPush : MonoBehaviour
         if(collision.CompareTag("Object"))
         {
             anim.SetTrigger("Push");
-            brigde2.PusCountSet();
+            bridge2.PusCountSet();
             box.enabled = false;
-            if (brigde2.PushFlage == true)
+            if (bridge2.PushFlage == true)
             {
-                brigde.SetActive(true);
-                SoundManager.Instance.PlaySound(SoundManager.Sound.Brigde);
+                bridge.SetActive(true);
+                //SoundManager.Instance.PlaySound(SoundManager.Sound.Brigde);
             }
         }
     }

@@ -18,7 +18,7 @@ public class GameManager : Singleton<GameManager>
     public void ItemCountSet()
     {
         ItemCount++;
-        Debug.Log(ItemCount);
+        Debug.Log($"{ItemCount}번째 보석");
         if(ItemCount>=3)
         {
             Flage = true;

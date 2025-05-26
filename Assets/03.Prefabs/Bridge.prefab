@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8061499595979597459}
   - component: {fileID: 6072317952100849201}
   m_Layer: 3
-  m_Name: 60
+  m_Name: Bridge
   m_TagString: MAP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 1.0606632, y: 5.9946566}
+  m_Size: {x: 1.0156373, y: 10.873859}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -117,16 +117,16 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.004233837, y: -0.03844595}
+  m_Offset: {x: 0.004233837, y: -0.049593925}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1, y: 1}
-    newSize: {x: 1.0606632, y: 5.9946566}
+    newSize: {x: 1.0156373, y: 10.873859}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1439493, y: 6.074877}
+  m_Size: {x: 1.1439493, y: 11.003164}
   m_EdgeRadius: 0

@@ -139,11 +139,11 @@ public class PlayerController : MonoBehaviour
     {
         if (_currentTime < _attackCooldown) return;
 
-        bool isMouseDown = Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject();
-        bool isTouchDown = Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began &&
-                           !EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId);
+        bool isMouseDown = Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject(); // UI위에 있지 않을때
+        //bool isTouchDown = Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began &&
+        //                   !EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId);
 
-        if (isMouseDown || isTouchDown)
+        if (isMouseDown)
         {
             _currentTime = 0f;
             OnAttackChanged?.Invoke();
