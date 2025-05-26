@@ -16,7 +16,7 @@ public class Crystal : MonoBehaviour
     {
         if (EImage.activeSelf && Input.GetKeyDown(KeyCode.E))
         {
-            SoundManager.Instance.PlaySound(SoundManager.Sound.Glass);
+            SoundManager.Instance.PlaySFX(SoundManager.Sound.Glass);
             StartCoroutine(FadeWhite());
         }
 

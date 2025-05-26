@@ -49,6 +49,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void Die()
     {
+        SoundManager.Instance.PlaySFX(SoundManager.Sound.Die);
         UIManager.Instance.ShowRetryPanel();
         Destroy(gameObject);
     }

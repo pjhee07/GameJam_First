@@ -11,7 +11,7 @@ public class Bridge : MonoBehaviour
 
     public void PusCountSet()
     {
-        //SoundManager.Instance.PlaySound(SoundManager.Sound.Beep);
+        SoundManager.Instance.PlaySFX(SoundManager.Sound.Beep);
         PushCount++;
         Debug.Log("push" + PushUpBtnCount);
         Debug.Log(PushCount);

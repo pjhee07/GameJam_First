@@ -94,7 +94,7 @@ public class PlayerController : MonoBehaviour
     private IEnumerator DashRoutine()
     {
         _isDashing = true;
-        //SoundManager.Instance.PlaySound(SoundManager.Sound.Dash);
+        SoundManager.Instance.PlaySFX(SoundManager.Sound.Dash);
         _moveSpeed = _dashSpeed;
         _trailRenderer.emitting = true;
 

@@ -50,7 +50,7 @@ public class Ending : MonoBehaviour
 
     IEnumerator ChangeSpriteRotine()
     {
-        SoundManager.Instance.PlaySound(SoundManager.Sound.Breaking);
+        SoundManager.Instance.PlaySFX(SoundManager.Sound.Breaking);
         yield return new WaitForSeconds(3.4f);
         spriteRenderer.sprite = sprite[0];
         yield return new WaitForSeconds(5f);
@@ -67,7 +67,7 @@ public class Ending : MonoBehaviour
 
         yield return new WaitForSeconds(17f);
         BGM.Stop();
-        SoundManager.Instance.PlaySound(SoundManager.Sound.Knock);
+        SoundManager.Instance.PlaySFX(SoundManager.Sound.Knock);
         FadeImage.color = new Color(0, 0, 0, 1);
 
         yield return new WaitForSeconds(2.5f);

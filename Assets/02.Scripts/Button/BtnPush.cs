@@ -27,7 +27,7 @@ public class BtnPush : MonoBehaviour
             if (bridge2.PushFlage == true)
             {
                 bridge.SetActive(true);
-                //SoundManager.Instance.PlaySound(SoundManager.Sound.Brigde);
+                SoundManager.Instance.PlaySFX(SoundManager.Sound.Bridge);
             }
         }
     }

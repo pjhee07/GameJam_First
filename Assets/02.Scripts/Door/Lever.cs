@@ -21,7 +21,7 @@ public class Lever : MonoBehaviour
         {
             _animator.SetTrigger(_onParamterHash);
             _door.enabled = true;
-            //SoundManager.Instance.PlaySound(SoundManager.Sound.Leber);
+            SoundManager.Instance.PlaySFX(SoundManager.Sound.Lever);
 
         }
     }

@@ -7,36 +7,38 @@ public class SoundManager : Singleton<SoundManager>
 {
     public enum Sound
     {
-       Walk,
+       Walk = 0,
        Attack,
        Hit,
-       Door,
-       Leber,
-       Brigde,
+       Lever,
+       Bridge,
        Breaking,
        Dash,
+       Door,
        Knock,
        Beep,
        Glass,
-       Die
+       Die,
+       End = 12
     }
 
-    AudioSource audioSource;
-    private Dictionary<Sound, AudioClip> soundAudioClipDictionary; //타입
+    AudioSource _audioSource;
+    float _sfxVolume = 1f;
+    private Dictionary<Sound, AudioClip> soundAudioClipDictionary; 
 
     private void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+        _audioSource = GetComponent<AudioSource>();
         soundAudioClipDictionary = new Dictionary<Sound, AudioClip>(); //enum, auidoClip
 
-        foreach (Sound sound in Enum.GetValues(typeof(Sound))) //Sound sound 객체에 enum Value의 01234값 가져옴
+        foreach (Sound sound in Enum.GetValues(typeof(Sound)))
         {
             soundAudioClipDictionary[sound] = Resources.Load<AudioClip>(sound.ToString()); //하나씩 할당
         }
     }
 
-    public void PlaySound(Sound sound)
+    public void PlaySFX(Sound sound)
     {
-        audioSource.PlayOneShot(soundAudioClipDictionary[sound]); //
+        _audioSource.PlayOneShot(soundAudioClipDictionary[sound], _sfxVolume);
     }
 }
