@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -36,8 +37,20 @@ public class PlayerHealth : MonoBehaviour
 
         if (_currentHp <= 0f)
         {
-            // TODO: Handle player death
+            Die();
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("DEADZONE"))
+            Die();
+    }
+
+    private void Die()
+    {
+        UIManager.Instance.ShowRetryPanel();
+        Destroy(gameObject);
     }
 
     private void UpdateHpUI()

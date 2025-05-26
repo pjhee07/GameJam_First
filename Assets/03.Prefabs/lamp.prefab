@@ -267,7 +267,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _light2D: {fileID: 2016147579204347174}
-  _movement: {fileID: 6018545829342046195}
+  _range: {fileID: 6721110216767625432}
+  _spriteRenderer: {fileID: 67610105833436186}
+  _blinkInterval: 15
+  _fadeDuration: 1
+  _stateDelay: 4
 --- !u!1 &6721110216767625432
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,7 +284,7 @@ GameObject:
   - component: {fileID: 1113198508233097483}
   - component: {fileID: 4083167207973187895}
   m_Layer: 0
-  m_Name: movement
+  m_Name: Range
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -313,6 +317,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be6c9fca939617548bda1b808f62ae93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 5
+  _damageCooldown: 1
 --- !u!70 &4083167207973187895
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
