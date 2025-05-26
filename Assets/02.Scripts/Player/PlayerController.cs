@@ -24,7 +24,6 @@ public class PlayerController : MonoBehaviour
     private float _direction;
 
     private Rigidbody2D _rigidbody;
-    private Camera _mainCamera;
     private SpriteRenderer _spriteRenderer;
     private TrailRenderer _trailRenderer;
 
@@ -46,7 +45,6 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
-        _mainCamera = Camera.main;
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _trailRenderer = GetComponentInChildren<TrailRenderer>();
         _playerHealth = GetComponent<PlayerHealth>();
@@ -66,7 +64,6 @@ public class PlayerController : MonoBehaviour
         HandleAttack();
         HandleDash();
         HandleJump();
-        HandleTalk();
 
         _currentTime += Time.deltaTime;
     }
@@ -81,7 +78,7 @@ public class PlayerController : MonoBehaviour
     {
         if (GameManager.Instance.textflage) return;
 
-        _horizontal = Input.GetAxisRaw("Horizontal");
+        _horizontal = Input.GetAxisRaw("Horizontal"); // 0 이 아니면 움직이는거
         _rigidbody.velocity = new Vector2(_horizontal * _moveSpeed, _rigidbody.velocity.y);
         OnRunChanged?.Invoke(_horizontal * _moveSpeed);
     }
@@ -111,7 +108,7 @@ public class PlayerController : MonoBehaviour
 
     private void HandleFacing()
     {
-        Vector2 mousePosition = _mainCamera.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         _direction = transform.position.x - mousePosition.x;
 
         bool isFacingLeft = _direction > 0;
@@ -150,14 +147,6 @@ public class PlayerController : MonoBehaviour
         {
             _currentTime = 0f;
             OnAttackChanged?.Invoke();
-        }
-    }
-
-    private void HandleTalk()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            // 대화 기능 추후 구현
         }
     }
 

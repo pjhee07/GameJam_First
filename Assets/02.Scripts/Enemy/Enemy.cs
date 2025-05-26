@@ -3,7 +3,7 @@ using System;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] private EnemyData _enemyData; // SO ÂüÁ¶
+    [SerializeField] private EnemyData _enemyData; 
 
     public string EnemyName => _enemyData.enemyName;
     public int MaxHp => _enemyData.maxHp;

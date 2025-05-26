@@ -4,6 +4,7 @@ public class PlayerAnimator : MonoBehaviour
 {
     private Animator _animator;
     private SpriteRenderer _spriteRenderer;
+    private PlayerController playerController;
 
     private void Awake()
     {
@@ -13,25 +14,24 @@ public class PlayerAnimator : MonoBehaviour
 
     private void OnEnable()
     {
-        PlayerController player = GetComponent<PlayerController>();
-        player.OnRunChanged += HandleRun;
-        player.OnJumpChanged += HandleJump;
-        player.OnAttackChanged += HandleAttack;
-        player.OnDashChanged += HandleDash;
+        playerController = GetComponent<PlayerController>();
+        playerController.OnRunChanged += HandleRun;
+        playerController.OnJumpChanged += HandleJump;
+        playerController.OnAttackChanged += HandleAttack;
+        playerController.OnDashChanged += HandleDash;
     }
 
     private void OnDisable()
     {
-        PlayerController player = GetComponent<PlayerController>();
-        player.OnRunChanged -= HandleRun;
-        player.OnJumpChanged -= HandleJump;
-        player.OnAttackChanged -= HandleAttack;
-        player.OnDashChanged -= HandleDash;
+        playerController.OnRunChanged -= HandleRun;
+        playerController.OnJumpChanged -= HandleJump;
+        playerController.OnAttackChanged -= HandleAttack;
+        playerController.OnDashChanged -= HandleDash;
     }
 
-    private void HandleRun(float runSpeed)
+    private void HandleRun(float moveAmount)
     {
-        _animator.SetFloat("Run", Mathf.Abs(runSpeed));
+        _animator.SetFloat("Run", Mathf.Abs(moveAmount));
     }
 
     private void HandleJump(bool isJumping)
