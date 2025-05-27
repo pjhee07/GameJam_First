@@ -3,7 +3,7 @@ using System;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] private EnemyData _enemyData; 
+    [SerializeField] private EnemyData _enemyData;
     public string EnemyName => _enemyData.enemyName;
     public int MaxHp => _enemyData.maxHp;
     public int AtkDmg => _enemyData.atkDmg;
@@ -13,7 +13,6 @@ public class Enemy : MonoBehaviour
     public int CurrentHp { get; private set; }
 
     private PlayerController _playerController;
-    private CircleCollider2D _coll;
 
     // 애니메이션
     public Action onHitChanged;
@@ -22,7 +21,6 @@ public class Enemy : MonoBehaviour
     private void Awake()
     {
         _playerController = GameObject.FindWithTag("PLAYER").GetComponent<PlayerController>();
-        _coll = GetComponent<CircleCollider2D>();
         CurrentHp = _enemyData.maxHp;
     }
     private void OnTriggerEnter2D(Collider2D col)
@@ -30,21 +28,21 @@ public class Enemy : MonoBehaviour
 
         if (col.CompareTag("HAMMER"))
         {
-                CurrentHp -= _playerController.AttackDamage;
+            CurrentHp -= _playerController.AttackDamage;
 
-                if (CurrentHp <= 0)
-                {
-                    _coll.enabled = false;
-                    onDeadChanged?.Invoke();
-                    Destroy(gameObject, 0.3f);
-                }
-                else
-                {
-                    onHitChanged?.Invoke();
-                }
+            if (CurrentHp <= 0)
+            {
+
+                onDeadChanged?.Invoke();
+                Destroy(gameObject, 0.3f);
+            }
+            else
+            {
+                onHitChanged?.Invoke();
             }
         }
     }
+}
 
 
 

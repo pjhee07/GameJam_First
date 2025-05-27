@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     private float _defaultSpeed = 3f;
     private float _dashSpeed = 7f;
     private float _direction;
+
     private bool _isAttacked;
     private float _attackedTime;
     [SerializeField] private float _attackedDuration = 0.3f; // 넉백 유지 시
@@ -31,6 +32,8 @@ public class PlayerController : MonoBehaviour
 
     private PlayerHealth _playerHealth;
     private GameObject _hammerCollider;
+    private BoxCollider2D _hammerBoxCollider;
+
 
     public Action<float> OnRunChanged;
     public Action<bool> OnJumpChanged;
@@ -51,6 +54,8 @@ public class PlayerController : MonoBehaviour
         _trailRenderer = GetComponentInChildren<TrailRenderer>();
         _playerHealth = GetComponent<PlayerHealth>();
         _hammerCollider = transform.GetChild(1).gameObject;
+        _hammerBoxCollider = _hammerCollider.GetComponent<BoxCollider2D>();
+
     }
 
     private void Start()
@@ -58,6 +63,7 @@ public class PlayerController : MonoBehaviour
         _moveSpeed = _defaultSpeed;
         _isJumping = false;
         _isDashing = false;
+        _hammerBoxCollider.enabled = false;
     }
 
     private void Update()
@@ -157,8 +163,19 @@ public class PlayerController : MonoBehaviour
         if (isMouseDown)
         {
             _currentTime = 0f;
+
+            // 공격할 때만 충돌체 켜고, 잠깐 후 꺼지게
+            StartCoroutine(EnableHammerColliderForSeconds(0.2f));
             OnAttackChanged?.Invoke();
+
         }
+    }
+
+    private IEnumerator EnableHammerColliderForSeconds(float duration)
+    {
+        _hammerBoxCollider.enabled = true;
+        yield return new WaitForSeconds(duration);
+        _hammerBoxCollider.enabled = false;
     }
 
     public void SetAttacked(bool value)

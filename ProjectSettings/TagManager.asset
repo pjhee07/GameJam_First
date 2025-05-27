@@ -10,6 +10,7 @@ TagManager:
   - ENEMY
   - Object
   - DEADZONE
+  - HPBar
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - UI
   - PLAYER
   - UI2
-  - 
+  - HpBar
   - 
   - 
   - 

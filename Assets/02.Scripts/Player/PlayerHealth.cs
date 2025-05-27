@@ -8,9 +8,9 @@ public class PlayerHealth : MonoBehaviour
     private Rigidbody2D _rb2d;
     //무적 시간이랑, hit 애니메이션 설정하기
      private float _currentHp;
-    private float knockbackForce = 3f;
+    private float knockbackForce = 5f;
     [SerializeField] private float _maxHp = 5f;
-    [SerializeField] private Image[] _hpImages;
+    private Image _hpBar;
 
     private PlayerController _playerController;
     public Action OnHitChanged;
@@ -26,6 +26,11 @@ public class PlayerHealth : MonoBehaviour
     private void OnEnable()
     {
         _currentHp = _maxHp;
+    }
+
+    private void Start()
+    {
+        _hpBar = GameObject.FindGameObjectWithTag("HPBar").GetComponent<Image>();
     }
 
 
@@ -66,9 +71,8 @@ public class PlayerHealth : MonoBehaviour
 
     private void UpdateHpUI()
     {
-        for (int i = 0; i < _hpImages.Length; i++)
-        {
-            _hpImages[i].enabled = i < _currentHp;
-        }
+        if(_hpBar == null) 
+            _hpBar = GameObject.FindGameObjectWithTag("HPBar").GetComponent<Image>();
+        _hpBar.fillAmount = _currentHp / _maxHp;
     }
 }

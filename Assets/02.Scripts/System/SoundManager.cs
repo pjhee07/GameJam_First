@@ -23,7 +23,7 @@ public class SoundManager : Singleton<SoundManager>
     }
 
     AudioSource _audioSource;
-    float _sfxVolume = 1f;
+    float _sfxVolume = 0.3f;
     private Dictionary<Sound, AudioClip> soundAudioClipDictionary; 
 
     private void Start()
