@@ -5,20 +5,25 @@ public class PlayerAnimator : MonoBehaviour
     private Animator _animator;
     private SpriteRenderer _spriteRenderer;
     private PlayerController playerController;
+    private PlayerHealth _playerHealth;
 
     private void Awake()
     {
         _animator = GetComponent<Animator>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
+
     }
 
     private void OnEnable()
     {
         playerController = GetComponent<PlayerController>();
+        _playerHealth = GetComponent<PlayerHealth>();
+
         playerController.OnRunChanged += HandleRun;
         playerController.OnJumpChanged += HandleJump;
         playerController.OnAttackChanged += HandleAttack;
         playerController.OnDashChanged += HandleDash;
+        _playerHealth.OnHitChanged += HandleHit;
     }
 
     private void OnDisable()
@@ -27,6 +32,8 @@ public class PlayerAnimator : MonoBehaviour
         playerController.OnJumpChanged -= HandleJump;
         playerController.OnAttackChanged -= HandleAttack;
         playerController.OnDashChanged -= HandleDash;
+        _playerHealth.OnHitChanged -= HandleHit;
+
     }
 
     private void HandleRun(float moveAmount)
@@ -47,5 +54,10 @@ public class PlayerAnimator : MonoBehaviour
     private void HandleDash()
     {
         _animator.SetTrigger("Dash");
+    }
+
+    private void HandleHit()
+    {
+        _animator.SetTrigger("Hit");
     }
 }

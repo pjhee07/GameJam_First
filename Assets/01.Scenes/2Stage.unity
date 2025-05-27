@@ -418,6 +418,10 @@ PrefabInstance:
       propertyPath: _attackDist
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6741209015424383564, guid: 3aeb994818e53ad4395eb23915229c5f, type: 3}
+      propertyPath: _attackDistance
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6959651863128663598, guid: 3aeb994818e53ad4395eb23915229c5f, type: 3}
       propertyPath: canvas
       value: 
@@ -514,6 +518,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6741209015424383564, guid: 3aeb994818e53ad4395eb23915229c5f, type: 3}
       propertyPath: _attackDist
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6741209015424383564, guid: 3aeb994818e53ad4395eb23915229c5f, type: 3}
+      propertyPath: _attackDistance
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6959651863128663598, guid: 3aeb994818e53ad4395eb23915229c5f, type: 3}
@@ -2853,6 +2861,10 @@ PrefabInstance:
       propertyPath: _attackDist
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6741209015424383564, guid: 3aeb994818e53ad4395eb23915229c5f, type: 3}
+      propertyPath: _attackDistance
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6959651863128663598, guid: 3aeb994818e53ad4395eb23915229c5f, type: 3}
       propertyPath: canvas
       value: 
@@ -3067,6 +3079,10 @@ PrefabInstance:
     - target: {fileID: 4147783482869768547, guid: 3aeb994818e53ad4395eb23915229c5f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6741209015424383564, guid: 3aeb994818e53ad4395eb23915229c5f, type: 3}
+      propertyPath: _attackDistance
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3619,6 +3635,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2003661816}
     - target: {fileID: 571997973476649799, guid: 5d66217ec6015c1449c14f0296c3cea1, type: 3}
+      propertyPath: _maxHp
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 571997973476649799, guid: 5d66217ec6015c1449c14f0296c3cea1, type: 3}
       propertyPath: ReTryPanel
       value: 
       objectReference: {fileID: 92973545}
@@ -3626,6 +3646,10 @@ PrefabInstance:
       propertyPath: currentHpBar
       value: 
       objectReference: {fileID: 1471459507}
+    - target: {fileID: 1623079139812132490, guid: 5d66217ec6015c1449c14f0296c3cea1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2277311456598809957, guid: 5d66217ec6015c1449c14f0296c3cea1, type: 3}
       propertyPath: m_IsActive
       value: 0

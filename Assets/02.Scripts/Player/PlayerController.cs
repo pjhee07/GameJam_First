@@ -11,9 +11,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool _isJumping;
     [SerializeField] private bool _isDashing;
     [SerializeField] private float _dashCooldown = 1f;
-    public int AttackDamage { get; private set; } = 1;
 
-    public bool IsAttacked { get; private set; }
+    public int AttackDamage { get; private set; } = 1;
 
     private float _dashDuration = 0.5f;
     private float _attackCooldown = 1f;
@@ -22,6 +21,9 @@ public class PlayerController : MonoBehaviour
     private float _defaultSpeed = 3f;
     private float _dashSpeed = 7f;
     private float _direction;
+    private bool _isAttacked;
+    private float _attackedTime;
+    [SerializeField] private float _attackedDuration = 0.3f; // 넉백 유지 시
 
     private Rigidbody2D _rigidbody;
     private SpriteRenderer _spriteRenderer;
@@ -70,9 +72,18 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (_isAttacked && Time.time - _attackedTime < _attackedDuration)
+        {
+            // 공격받은 상태, 이동 막기
+            UpdateMovementState();
+            return;
+        }
+
+        _isAttacked = false; // 넉백 지속시간 지나면 다시 이동 가능
         HandleRun();
         UpdateMovementState();
     }
+
 
     private void HandleRun()
     {
@@ -150,9 +161,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
     public void SetAttacked(bool value)
     {
-        IsAttacked = value;
+        _isAttacked = value;
+        if(value)
+        {
+            _attackedTime = Time.time;
+        }
     }
+
 }

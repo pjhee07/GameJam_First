@@ -38,7 +38,7 @@ public class Eyes : MonoBehaviour
         if (collider.CompareTag("PLAYER") && GameManager.Instance.Movement)
         {
             Debug.Log("불 켜있는데 움직임");
-            _playerHealth?.TakeDamage(_damage);
+            _playerHealth?.TakeDamage(_damage, 0);
             StartCoroutine(DamageCooldown());
         }
     }

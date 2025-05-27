@@ -30,8 +30,6 @@ public class Enemy : MonoBehaviour
 
         if (col.CompareTag("HAMMER"))
         {
-            if (_playerController.IsAttacked)
-            {
                 CurrentHp -= _playerController.AttackDamage;
 
                 if (CurrentHp <= 0)
@@ -50,5 +48,4 @@ public class Enemy : MonoBehaviour
 
 
 
-  
-}
+

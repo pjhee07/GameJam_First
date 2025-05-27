@@ -1,38 +1,47 @@
+using System;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
+    private Rigidbody2D _rb2d;
     //무적 시간이랑, hit 애니메이션 설정하기
-    [SerializeField] private float _currentHp = 3f;
-    [SerializeField] private float _maxHp = 3f;
+     private float _currentHp;
+    private float knockbackForce = 3f;
+    [SerializeField] private float _maxHp = 5f;
     [SerializeField] private Image[] _hpImages;
 
     private PlayerController _playerController;
+    public Action OnHitChanged;
 
     public bool IsDebugInvincible { get; set; } = false;
 
     private void Awake()
     {
         _playerController = GetComponent<PlayerController>();
+        _rb2d = GetComponent<Rigidbody2D>();    
     }
 
-    private void Update()
+    private void OnEnable()
     {
-        if (IsDebugInvincible && Input.GetKeyDown(KeyCode.H))
-        {
-            TakeDamage(1);
-        }
+        _currentHp = _maxHp;
     }
 
-    public void TakeDamage(float damage)
+
+    public void TakeDamage(float damage, int direction)
     {
         if (IsDebugInvincible || _currentHp <= 0f) return;
 
-        _playerController.SetAttacked(true);
+        Debug.Log("플레이어 공격당함");
+
         _currentHp -= damage;
         _currentHp = Mathf.Max(_currentHp, 0f);
+
+        OnHitChanged?.Invoke();
+        _rb2d.AddForce(Vector2.right * direction * knockbackForce, ForceMode2D.Impulse);
+
+        _playerController.SetAttacked(true);
 
         UpdateHpUI();
 
