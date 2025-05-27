@@ -4,65 +4,58 @@ using UnityEngine;
 //attackAnim?
 public class EnemyAnim : MonoBehaviour
 {
-    private Animator anim;
-    private Enemy enemy;
-    private EnemyMove enemyMove;
-    private TrailRenderer trailRenderer;
-    public float animationSpeed;
-    public AnimationClip attackAnim;
+    private Enemy _enemy;
+    private EnemyMove _enemyMove;
+
+    private Animator _animator;
+    private TrailRenderer _trailRenderer;
 
     private void Awake()
     {
-        anim = GetComponent<Animator>();
-        enemy = GetComponent<Enemy>();
-        enemyMove = GetComponent<EnemyMove>();
-        trailRenderer = GetComponentInChildren<TrailRenderer>(); //In
+        _enemy = GetComponent<Enemy>();
+        _enemyMove = GetComponent<EnemyMove>();
+
+        _animator = GetComponent<Animator>();
+        _trailRenderer = GetComponentInChildren<TrailRenderer>(); 
     }
 
-    private void Start()
+    private void OnEnable()
     {
-        enemy.onDeadChanged += OnDead;
-        enemyMove.OnEnemyAtkChanged += OnEnemyAtk;
-        enemyMove.onEnemyMoveChanged += OnWalk;
+        _enemyMove.onEnemyMoveChanged += OnWalk;
+        _enemyMove.onAttackChanged += OnAttack;
+        _enemy.onHitChanged += OnHit;
+        _enemy.onDeadChanged += OnDead;
     }
 
     private void OnDestroy()
     {
-        enemy.onDeadChanged -= OnDead;
-        enemyMove.OnEnemyAtkChanged -= OnEnemyAtk;
-        enemyMove.onEnemyMoveChanged -= OnWalk;
-    }
-
-    void OnDead()
-    {
-        anim.SetTrigger("Dead");
-        
+        _enemyMove.onEnemyMoveChanged -= OnWalk;
+        _enemyMove.onAttackChanged -= OnAttack;
+        _enemy.onDeadChanged -= OnDead;
     }
 
     public void DeadAniEvent()
     {
-        Destroy(GameObject.Find("bghp_bar(Clone)"));
-        Destroy(gameObject,0.5f);
+        Destroy(gameObject);
+    }
+ 
+    private void OnWalk(int nextMove)
+    {
+        _animator.SetInteger("WalkSpeed", nextMove);
     }
 
-    public void DashStartAniEvent()
+    private void OnAttack()
     {
-        trailRenderer.emitting = true; //(+앞으로 이동)
+        _animator.SetTrigger("Attack");
     }
 
-    public void DashEndAniEvent()
+    private void OnDead()
     {
-        trailRenderer.emitting = false;
-    }
-    void OnEnemyAtk()
-    {
-        anim.SetTrigger("Dash"); //ResetTrigger?
-        anim.SetTrigger("Attack");
+        _animator.SetTrigger("Dead");
     }
 
-    void OnWalk(int nextMove)
+    private void OnHit()
     {
-        anim.SetInteger("WalkSpeed", nextMove);
+        _animator.SetTrigger("Hit");
     }
-
 }

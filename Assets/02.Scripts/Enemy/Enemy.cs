@@ -4,7 +4,6 @@ using System;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private EnemyData _enemyData; 
-
     public string EnemyName => _enemyData.enemyName;
     public int MaxHp => _enemyData.maxHp;
     public int AtkDmg => _enemyData.atkDmg;
@@ -16,6 +15,8 @@ public class Enemy : MonoBehaviour
     private PlayerController _playerController;
     private CircleCollider2D _coll;
 
+    // 애니메이션
+    public Action onHitChanged;
     public Action onDeadChanged;
 
     private void Awake()
@@ -27,7 +28,7 @@ public class Enemy : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col)
     {
 
-        if (col.gameObject.CompareTag("HAMMER"))
+        if (col.CompareTag("HAMMER"))
         {
             if (_playerController.IsAttacked)
             {
@@ -38,6 +39,10 @@ public class Enemy : MonoBehaviour
                     _coll.enabled = false;
                     onDeadChanged?.Invoke();
                     Destroy(gameObject, 0.3f);
+                }
+                else
+                {
+                    onHitChanged?.Invoke();
                 }
             }
         }

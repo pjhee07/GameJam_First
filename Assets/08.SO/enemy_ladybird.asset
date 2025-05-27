@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: enemy_ladybird
   m_EditorClassIdentifier: 
   enemyName: LadyBird
-  maxHp: 1
+  maxHp: 3
   atkDmg: 3
   atkSpeed: 2
   chaseDist: 2
