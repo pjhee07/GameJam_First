@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
+    //무적 시간이랑, hit 애니메이션 설정하기
     [SerializeField] private float _currentHp = 3f;
     [SerializeField] private float _maxHp = 3f;
     [SerializeField] private Image[] _hpImages;

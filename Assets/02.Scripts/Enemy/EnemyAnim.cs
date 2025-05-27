@@ -21,7 +21,7 @@ public class EnemyAnim : MonoBehaviour
 
     private void OnEnable()
     {
-        _enemyMove.onEnemyMoveChanged += OnWalk;
+        _enemyMove.onMoveChanged += OnWalk;
         _enemyMove.onAttackChanged += OnAttack;
         _enemy.onHitChanged += OnHit;
         _enemy.onDeadChanged += OnDead;
@@ -29,7 +29,7 @@ public class EnemyAnim : MonoBehaviour
 
     private void OnDestroy()
     {
-        _enemyMove.onEnemyMoveChanged -= OnWalk;
+        _enemyMove.onMoveChanged -= OnWalk;
         _enemyMove.onAttackChanged -= OnAttack;
         _enemy.onDeadChanged -= OnDead;
     }
