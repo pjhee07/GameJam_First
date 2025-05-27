@@ -589,6 +589,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player_Hpbar
       objectReference: {fileID: 0}
+    - target: {fileID: 7723584271372558424, guid: 5808f29f513ecb34392953a615ab1795, type: 3}
+      propertyPath: m_TagString
+      value: HPBar
+      objectReference: {fileID: 0}
     - target: {fileID: 8231260005438478588, guid: 5808f29f513ecb34392953a615ab1795, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2539,7 +2543,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -880973165
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 456072530, guid: 9dfe4c414a5445d49a0a69803ce4395c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

@@ -626,7 +626,11 @@ PrefabInstance:
     - target: {fileID: 8471444597956272968, guid: 01e93c2436df7684aab224817a44ad0b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 764667484}
+      objectReference: {fileID: 1899707608}
+    - target: {fileID: 8471444597956272968, guid: 01e93c2436df7684aab224817a44ad0b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeScene
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1385,6 +1389,10 @@ PrefabInstance:
     - target: {fileID: 4995900866197969686, guid: 5808f29f513ecb34392953a615ab1795, type: 3}
       propertyPath: m_Name
       value: Player_Hpbar
+      objectReference: {fileID: 0}
+    - target: {fileID: 7723584271372558424, guid: 5808f29f513ecb34392953a615ab1795, type: 3}
+      propertyPath: m_TagString
+      value: HPBar
       objectReference: {fileID: 0}
     - target: {fileID: 8231260005438478588, guid: 5808f29f513ecb34392953a615ab1795, type: 3}
       propertyPath: m_Pivot.x

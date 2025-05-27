@@ -122,6 +122,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &29453066 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5948700166730822503, guid: 5d941594b65d876448ca077a95776089, type: 3}
+  m_PrefabInstance: {fileID: 231634937}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b0f2e797c649104caf088f21949486b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &73233867
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,8 +341,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1640798110260155200, guid: 138ed3791ae70184081af8aa05aa2223, type: 3}
       propertyPath: m_Name
-      value: buttn
+      value: button
       objectReference: {fileID: 0}
+    - target: {fileID: 3242050510739951829, guid: 138ed3791ae70184081af8aa05aa2223, type: 3}
+      propertyPath: bridge
+      value: 
+      objectReference: {fileID: 504395321077645271}
     - target: {fileID: 3242050510739951829, guid: 138ed3791ae70184081af8aa05aa2223, type: 3}
       propertyPath: brigde
       value: 
@@ -392,8 +407,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 906745349622076360, guid: 138ed3791ae70184081af8aa05aa2223, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1501,6 +1515,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8471444597956272968, guid: 01e93c2436df7684aab224817a44ad0b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 29453066}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2500,6 +2518,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player_Hpbar
       objectReference: {fileID: 0}
+    - target: {fileID: 7723584271372558424, guid: 5808f29f513ecb34392953a615ab1795, type: 3}
+      propertyPath: m_TagString
+      value: HPBar
+      objectReference: {fileID: 0}
     - target: {fileID: 8231260005438478588, guid: 5808f29f513ecb34392953a615ab1795, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2651,10 +2673,10 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 11.645372, y: -8.765066}
+  m_Offset: {x: 19.666111, y: -8.765066}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2665,7 +2687,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 24.290745, y: 1.4469423}
+  m_Size: {x: 40.332222, y: 1.4469414}
   m_EdgeRadius: 0
 --- !u!1001 &1949424711
 PrefabInstance:

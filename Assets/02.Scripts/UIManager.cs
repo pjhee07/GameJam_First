@@ -8,10 +8,7 @@ using Unity.VisualScripting;
 public class UIManager : Singleton<UIManager>   
 {
     private GameObject retryPanel;
-    public void QuitGame()
-    {
-        Application.Quit();
-    }
+
 
     public void ShowRetryPanel()
     {
